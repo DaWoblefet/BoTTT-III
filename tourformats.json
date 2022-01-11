@@ -405,8 +405,8 @@
     },
     "gen8inversevgc":
     {
-        "tourformat": "gen8vgc2021series11",
-        "tourname": "[Gen 8] VGC 2021 Inverse Battle",
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] VGC 2022 Inverse Battle",
         "tourrules": "inverse mod",
         "formatname": "",
         "formatDescription": "",
