@@ -380,6 +380,16 @@
         ],
         "tournote": ""
     },
+    "gen8pikachuparty":
+    {
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Pikachu Party",
+        "tourrules": "-All Pokemon, +Pikachu, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Pikachu Party",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Pikachu Party! Only Pikachu is allowed."
+    },
     "gen8doggyduel":
     {
         "tourformat": "gen8vgc2021series9",
