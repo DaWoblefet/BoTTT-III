@@ -425,9 +425,9 @@
     },
     "gen8series99":
     {
-        "tourformat": "gen8vgc2021series11",
+        "tourformat": "gen8vgc2022",
         "tourname": "[Gen 8] VGC Series 99",
-        "tourrules": "!Limit One Restricted, +Mythical, +Restricted Legendary, !! Min Source Gen = 5",
+        "tourrules": "!Limit Two Restricted, +Mythical, +Restricted Legendary, !! Min Source Gen = 5",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
