@@ -477,6 +477,7 @@ exports.commands =
 			arglist[0] + " has Van Gogh's ear for music.",
 			"__[[]]_NO SHOW__ outplaced " + arglist[0] + " in Player's Cup.",
 			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
+			arglist[0] + " is like a cloud. When they disappear, it's a beautiful day!",
 		];
 
 		let text = "";
