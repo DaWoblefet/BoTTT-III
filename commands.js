@@ -478,6 +478,8 @@ exports.commands =
 			"__[[]]_NO SHOW__ outplaced " + arglist[0] + " in Player's Cup.",
 			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
 			arglist[0] + " is like a cloud. When they disappear, it's a beautiful day!",
+			"I've seen people like " + arglist[0] + " before, but I had to pay an admission.",
+
 		];
 
 		let text = "";
