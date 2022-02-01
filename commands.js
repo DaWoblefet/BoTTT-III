@@ -479,7 +479,7 @@ exports.commands =
 			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
 			arglist[0] + " is like a cloud. When they disappear, it's a beautiful day!",
 			"I've seen people like " + arglist[0] + " before, but I had to pay an admission.",
-
+			"Why did " + arglist[0] + " catch hypothermia? They went to see the movie \"Closed for Winter\" at the drive-in theater."
 		];
 
 		let text = "";
