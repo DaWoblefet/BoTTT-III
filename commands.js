@@ -611,8 +611,8 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 12;
-		let year = 2021;
+		let month = 1;
+		let year = 2022;
 		const defaultFormat = "gen8vgc2022";
 		const defaultRank = "1760";
 		const pikalytics = "https://pikalytics.com";
