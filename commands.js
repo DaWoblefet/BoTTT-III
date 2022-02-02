@@ -251,7 +251,7 @@ exports.commands =
 					break;
 				case "nodynamax":
 				case "nomax":
-					tourObject = tourJSON["gen8vgc2021nodynamax"];
+					tourObject = tourJSON["gen8vgc2022nodynamax"];
 					break;
 				case "ultra":
 				case "ultraseries":
@@ -613,7 +613,7 @@ exports.commands =
 		let lastMonthRank;
 		let month = 12;
 		let year = 2021;
-		const defaultFormat = "gen8vgc2021series11";
+		const defaultFormat = "gen8vgc2022";
 		const defaultRank = "1760";
 		const pikalytics = "https://pikalytics.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/" + defaultFormat + "-1760.txt";
@@ -946,7 +946,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2021series11";
+		let defaultFormat = "gen8vgc2021";
 		let text = "";
 		if (this.isPM(room))
 		{

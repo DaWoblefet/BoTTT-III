@@ -11,9 +11,9 @@
     },
     "gen8vgc2021series11":
     {
-        "tourformat": "gen8vgc2021series11",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] VGC 2021 Series 11",
-        "tourrules": "",
+        "tourrules": "Limit One Restricted, *Restricted Legendary",
         "formatname": "VGC 2021 (Series 11)",
         "formatDescription": "VGC 2021 Series 8 / 11 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, including up to one restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
@@ -30,9 +30,9 @@
     },
     "gen8vgc2021series10":
     {
-        "tourformat": "gen8vgc2021series11",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] VGC 2021 Series 10",
-        "tourrules": "Dynamax Clause",
+        "tourrules": "Limit One Restricted, *Restricted Legendary, Dynamax Clause",
         "formatname": "VGC 2021 (Series 10)",
         "formatDescription": "VGC 2021 Series 10 allowed all Pokemon that be obtained with the Galar or battle-ready symbol in-game, in addition to one restricted legendary Pokemon, like Zacian, Kyogre, Xerneas, etc. Dynamaxing is also prohibited.",
         "sampleTeams": [
@@ -48,7 +48,7 @@
     },
     "gen8vgc2021series9":
     {
-        "tourformat": "gen8vgc2021series9",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] VGC 2021 Series 9",
         "tourrules": "",
         "formatname": "VGC 2021 (Series 9)",
@@ -353,7 +353,7 @@
     },
     "gen8craboff":
     {
-        "tourformat": "gen8vgc2021series9",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] Crab Off VGC",
         "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crawdaunt, +Crustle, +Kingler, +Anorith, +Clauncher, +Corphish, +Krabby, +Dwebble, +Regidrago, !species clause, !item clause",
         "formatname": "Crab Off",
@@ -392,7 +392,7 @@
     },
     "gen8doggyduel":
     {
-        "tourformat": "gen8vgc2021series9",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] Doggy Duel",
         "tourrules": "!! Min Source Gen = 3, -All Pokemon, +Growlithe, +Arcanine, +Suicune, +Entei, +Electrike, +Manectric, +Lillipup, +Herdier, +Stoutland, +Rockruff, +Lycanroc, +Zygarde-10, +Yamper, +Boltund, +Zacian, +Zamazenta",
         "formatname": "Doggy Duel",
@@ -423,15 +423,15 @@
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
     },
-    "gen8vgc2021nodynamax":
+    "gen8vgc2022nodynamax":
     {
-        "tourformat": "gen8vgc2021series9",
-        "tourname": "[Gen 8] VGC 2021 (No Dynamax)",
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] VGC 2022 (No Dynamax)",
         "tourrules": "Dynamax Clause",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "VGC 2021, but with no Dynamax or Gigantamax allowed!"
+        "tournote": "VGC 2022, but with no Dynamax or Gigantamax allowed!"
     },
     "gen8series99":
     {
@@ -445,7 +445,7 @@
     },
     "gen8vgchackmons":
     {
-        "tourformat": "gen8vgc2021series9",
+        "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] VGC Pure Hackmons",
         "tourrules": "-Nonexistent, !Obtainable Moves, !Obtainable Abilities, !Obtainable Formes, !EV Limit, +Mythical, +Restricted Legendary, !!Min Source Gen = 1, !Species Clause, !Item Clause",
         "formatname": "VGC Pure Hackmons",
