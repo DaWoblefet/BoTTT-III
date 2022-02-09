@@ -200,7 +200,7 @@ exports.commands =
 					break;
 				case "random":
 				case "randomvgc":
-					let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "series7"];
+					let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21"];
 					arglist[0] = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 					break;
 				default:
@@ -219,8 +219,6 @@ exports.commands =
 				case "series12":
 					tourObject = tourJSON["gen8vgc2022"];
 					break;
-				case "vgc21":
-				case "vgc2021":
 				case "s11":
 				case "series11":
 				case "8":
@@ -233,6 +231,8 @@ exports.commands =
 				case "series10":
 					tourObject = tourJSON["gen8vgc2021series10"];
 					break;
+				case "vgc21":
+				case "vgc2021":
 				case "7":
 				case "s7":
 				case "series7":
@@ -946,7 +946,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2021series11";
+		let defaultFormat = "gen8vgc2022";
 		let text = "";
 		if (this.isPM(room))
 		{
