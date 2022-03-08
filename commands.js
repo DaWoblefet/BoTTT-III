@@ -576,7 +576,8 @@ exports.commands =
 			"Why did the ghost go to the bar? To get some booze!",
 			"I'm super upset. Somebody glued my deck of cards together, and I just don't know how to deal with it!",
 			"My friend couldn't afford to pay her water bill, so I sent her a \"get well soon\" card.",
-			"What's the difference between in-laws and outlaws? Outlaws are wanted!"
+			"What's the difference between in-laws and outlaws? Outlaws are wanted!",
+			"I went to the zoo yesterday and saw a bagel in a cage. The zookeeper informed me it was bread in captivity!"
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
