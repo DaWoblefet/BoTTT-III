@@ -2,10 +2,10 @@
 	"name": "bottt-iii",
 	"version": "0.0.1",
 	"dependencies": {
-		"axios": "^0.21.1",
+		"axios": "^0.26.1",
 		"colors": "^1.4.0",
-		"probe-image-size": "^6.0.0",
-		"websocket": "^1.0.33"
+		"probe-image-size": "^7.2.3",
+		"websocket": "^1.0.34"
 	},
 	"scripts": {
 		"start": "node main.js"
