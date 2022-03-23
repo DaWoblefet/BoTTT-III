@@ -1,4 +1,6 @@
 exports.run = async (arg, by, room) => {
+    const tourJSON = require("./tourformats.json");
+
     let defaultFormat = "gen8vgc2022";
     let text = "";
     if (this.isPM(room)) {

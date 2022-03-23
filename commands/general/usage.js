@@ -1,4 +1,6 @@
 exports.run = async (arg, by, room) => {
+    const axios = require("axios");
+
     // Displays recent VGC usage stats. Also works in PM.
     let text = "";
     let JSONresponse;
