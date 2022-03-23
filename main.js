@@ -13,113 +13,97 @@
 
 
 // Logs various bits of information to the console based on config settings.
-global.info = function(text)
-{
+global.info = function (text) {
 	if (config.debuglevel > 3) return;
 	if (!colors) global.colors = require("colors");
 	console.log("info".cyan + "  " + text);
 };
 
-global.debug = function(text)
-{
+global.debug = function (text) {
 	if (config.debuglevel > 2) return;
 	if (!colors) global.colors = require("colors");
 	console.log("debug".blue + " " + text);
 };
 
-global.recv = function(text)
-{
+global.recv = function (text) {
 	if (config.debuglevel > 0) return;
 	if (!colors) global.colors = require("colors");
 	console.log("recv".grey + "  " + text);
 };
 
-global.cmdr = function(text) // Receiving commands
+global.cmdr = function (text) // Receiving commands
 {
 	if (config.debuglevel !== 1) return;
 	if (!colors) global.colors = require("colors");
 	console.log("cmdr".grey + "  " + text);
 };
 
-global.dsend = function(text)
-{
+global.dsend = function (text) {
 	if (config.debuglevel > 1) return;
 	if (!colors) global.colors = require("colors");
 	console.log("send".grey + "  " + text);
 };
 
-global.error = function(text)
-{
+global.error = function (text) {
 	if (!colors) global.colors = require("colors");
 	console.log("error".red + " " + text);
 };
 
-global.ok = function(text)
-{
+global.ok = function (text) {
 	if (config.debuglevel > 4) return;
 	if (!colors) global.colors = require("colors");
 	console.log("ok".green + "    " + text);
 };
 
 // Turns string to its lowercase equivalent, then removes all non-alphanumeric characters.
-global.toID = function(text)
-{
+global.toID = function (text) {
 	return text.toLowerCase().replace(/[^a-z0-9]/g, "");
 };
 
 // Prevent the bot from being fed commands to say maliciously
-global.stripCommands = function(text)
-{
+global.stripCommands = function (text) {
 	text = text.trim();
-	switch (text.charAt(0))
-	{
+	switch (text.charAt(0)) {
 		case '/':
 			return '/' + text;
 		case '!':
 			return '!' + text;
 		case '>':
 			if (text.substr(0, 3) === ">> " || text.substr(0, 4) === ">>> ") return " " + text;
-			// fall through
+		// fall through
 		default:
 			return text;
 	}
 };
 
-function runNpm(command)
-{
+function runNpm(command) {
 	console.log("Running `npm " + command + "`...");
 
 	let child_process = require("child_process");
 	let npm = child_process.spawn("npm", [command]);
 
-	npm.stdout.on("data", function(data)
-	{
+	npm.stdout.on("data", function (data) {
 		process.stdout.write(data);
 	});
 
-	npm.stderr.on("data", function(data)
-	{
+	npm.stderr.on("data", function (data) {
 		process.stderr.write(data);
 	});
 
-	npm.on("close", function(code)
-	{
-		if (!code)
-		{
+	npm.on("close", function (code) {
+		if (!code) {
 			child_process.fork("main.js").disconnect();
 		}
 	});
 }
 
 // Check if everything that is needed is available
-try
-{
+try {
 	require("colors");
 }
-catch (e)
-{
+catch (e) {
 	console.log("Dependencies are not installed!");
-	return runNpm("install");
+	runNpm("install");
 }
 
 // First dependencies and welcome message
@@ -133,23 +117,19 @@ console.log();
 
 // Config and config.js watching...
 global.fs = require('fs');
-if (!('existsSync' in fs))
-{
+if (!('existsSync' in fs)) {
 	fs.existsSync = require('path').existsSync;
 }
 
-if (!fs.existsSync("./config.js"))
-{
+if (!fs.existsSync("./config.js")) {
 	error("config.js doesn't exist; are you sure you renamed config-example.js to config.js?");
 	process.exit(-1);
 }
 
 global.config = require("./config.js");
 
-let checkCommandCharacter = function()
-{
-	if (!/[^a-z0-9 ]/i.test(config.commandcharacter))
-	{
+let checkCommandCharacter = function () {
+	if (!/[^a-z0-9 ]/i.test(config.commandcharacter)) {
 		error("invalid command character; should at least contain one non-alphanumeric character");
 		process.exit(-1);
 	}
@@ -157,30 +137,24 @@ let checkCommandCharacter = function()
 
 checkCommandCharacter();
 
-let watchFile = function()
-{
-	try
-	{
+let watchFile = function () {
+	try {
 		return fs.watchFile.apply(fs, arguments);
 	}
-	catch (e)
-	{
+	catch (e) {
 		error("your version of node does not support `fs.watchFile`");
 	}
 };
 
-if (config.watchconfig)
-{
-	watchFile("./config.js", function(curr, prev)
-	{
+if (config.watchconfig) {
+	watchFile("./config.js", function (curr, prev) {
 		if (curr.mtime <= prev.mtime) return;
-		try
-		{
+		try {
 			delete require.cache[require.resolve("./config.js")];
 			config = require("./config.js");
 			info("reloaded config.js");
 			checkCommandCharacter();
-		} catch (e) {}
+		} catch (e) { }
 	});
 }
 
@@ -198,23 +172,19 @@ let queue = [];
 let dequeueTimeout = null;
 let lastSentAt = 0;
 
-global.send = function(data)
-{
+global.send = function (data) {
 	if (!data || !Connection.connected) return false;
 
 	let now = Date.now();
-	if (now < lastSentAt + MESSAGE_THROTTLE - 5)
-	{
+	if (now < lastSentAt + MESSAGE_THROTTLE - 5) {
 		queue.push(data);
-		if (!dequeueTimeout)
-		{
+		if (!dequeueTimeout) {
 			dequeueTimeout = setTimeout(dequeue, now - lastSentAt + MESSAGE_THROTTLE);
 		}
 		return false;
 	}
 
-	if (!Array.isArray(data))
-	{
+	if (!Array.isArray(data)) {
 		data = [data.toString()];
 	}
 	data = JSON.stringify(data);
@@ -222,63 +192,52 @@ global.send = function(data)
 	Connection.send(data);
 
 	lastSentAt = now;
-	if (dequeueTimeout)
-	{
-		if (queue.length)
-		{
+	if (dequeueTimeout) {
+		if (queue.length) {
 			dequeueTimeout = setTimeout(dequeue, MESSAGE_THROTTLE);
 		}
-		else
-		{
+		else {
 			dequeueTimeout = null;
 		}
 	}
 };
 
-function dequeue()
-{
+function dequeue() {
 	send(queue.shift());
 }
 
-let connect = function(retry)
-{
-	if (retry)
-	{
+let connect = function (retry) {
+	if (retry) {
 		info("retrying...");
 	}
 
 	let ws = new WebSocketClient();
 
-	ws.on("connectFailed", function(err)
-	{
+	ws.on("connectFailed", function (err) {
 		error("Could not connect to server " + config.server + ": " + inspect(err));
 		info("retrying in one minute");
 		hasTourStarted = false;
 
-		setTimeout(function() {connect(true);}, 60000);
+		setTimeout(function () { connect(true); }, 60000);
 	});
 
-	ws.on("connect", function(con)
-	{
+	ws.on("connect", function (con) {
 		Connection = con;
 		ok("connected to server " + config.server);
 
-		con.on("error", function(err)
-		{
+		con.on("error", function (err) {
 			error("connection error: " + err);
 		});
 
-		con.on("close", function()
-		{
+		con.on("close", function () {
 			error("connection closed: " + inspect(arguments) + " at " + new Date().toLocaleString());
 			info("retrying in " + config.timeout + " seconds");
 			hasTourStarted = false;
 
-			setTimeout(function() {connect(true);}, config.timeout * 1000);
+			setTimeout(function () { connect(true); }, config.timeout * 1000);
 		});
 
-		con.on("message", function(response)
-		{
+		con.on("message", function (response) {
 			if (response.type !== 'utf8') return false;
 			let message = response.utf8Data;
 			recv(message);
@@ -294,8 +253,7 @@ let connect = function(retry)
 	let id = Math.floor(Math.random() * 1000);
 	let chars = "abcdefghijklmnopqrstuvwxyz0123456789_";
 	let str = "";
-	for (let i = 0, l = chars.length; i < 8; i++)
-	{
+	for (let i = 0, l = chars.length; i < 8; i++) {
 		str += chars.charAt(Math.floor(Math.random() * l));
 	}
 
