@@ -26,16 +26,14 @@ const MIN_BOLD_PROPORTION = 0.8;
 let initial_login = true;
 let ranks = " +^%@*&#";
 let rankMap = new Map();
-for (let i = 0, len = ranks.length; i < len; i++)
-{
+for (let i = 0, len = ranks.length; i < len; i++) {
 	rankMap.set(ranks.charAt(i), i);
 }
 
 const commandsJSON = require("./commandpermissions.json");
 const globalCommandsObject = commandsJSON["global"];
 
-exports.parse =
-{
+exports.parse = {
 	actionUrl: new URL("~~" + config.serverid + "/action.php", "https://play.pokemonshowdown.com"),
 	room: "lobby",
 	mostRecentUserPM: "DaWoblefet",
@@ -43,50 +41,38 @@ exports.parse =
 	ranks: {},
 	msgQueue: [],
 
-	data: function(data)
-	{
-		if (data.substr(0, 1) === 'a')
-		{
+	data: function(data) {
+		if (data.substr(0, 1) === 'a') {
 			data = JSON.parse(data.substr(1));
-			if (data instanceof Array)
-			{
-				for (let i = 0, len = data.length; i < len; i++)
-				{
+			if (data instanceof Array) {
+				for (let i = 0, len = data.length; i < len; i++) {
 					this.splitMessage(data[i]);
 				}
 			}
-			else
-			{
+			else {
 				this.splitMessage(data);
 			}
 		}
 	},
-	splitMessage: function(message)
-	{
+	splitMessage: function(message) {
 		if (!message) return;
 
 		let room = "lobby";
 		if (message.indexOf("\n") < 0) return this.message(message, room);
 
 		let spl = message.split("\n");
-		if (spl[0].charAt(0) === '>')
-		{
-			if (spl[1].substr(1, 4) === "init")
-			{
+		if (spl[0].charAt(0) === '>') {
+			if (spl[1].substr(1, 4) === "init") {
 				let roomTypeJoined = spl[1].substr(6);
 				let roomJoined = spl[2].substr(7);
-				if (roomTypeJoined === "battle")
-				{
+				if (roomTypeJoined === "battle") {
 					return ok("joined battle " + spl[2].substr(7));
 				}
-				else if (roomTypeJoined === "chat")
-				{
-					if (roomJoined === "Staff")
-					{
+				else if (roomTypeJoined === "chat") {
+					if (roomJoined === "Staff") {
 						send("|/leave staff");
 					}
-					else
-					{
+					else {
 						return ok("joined " + roomJoined);
 					}
 				}
@@ -94,8 +80,7 @@ exports.parse =
 			room = spl.shift().substr(1);
 		}
 
-		for (let i = 0, len = spl.length; i < len; i++)
-		{
+		for (let i = 0, len = spl.length; i < len; i++) {
 			this.message(spl[i], room);
 		}
 	},
@@ -103,20 +88,17 @@ exports.parse =
 	// Showdown chat messages are handled by sending a string with data separated by the | character.
 	// Read more here: https://github.com/smogon/pokemon-showdown/blob/master/PROTOCOL.md
 
-	message: function(message, room)
-	{
+	message: function(message, room) {
 		// console.log(message);
 		let spl = message.split('|');
 		let by; // The user sending the message
-		switch (spl[1])
-		{
+		switch (spl[1]) {
 			case "challstr":
 				info("received challstr, logging in...");
 				let id = spl[2];
 				let str = spl[3];
 
-				let requestOptions =
-				{
+				let requestOptions = {
 					hostname: this.actionUrl.hostname,
 					port: this.actionUrl.port,
 					path: this.actionUrl.pathname,
@@ -124,72 +106,56 @@ exports.parse =
 				};
 
 				let data = "";
-				if (!config.pass)
-				{
+				if (!config.pass) {
 					requestOptions.method = "GET";
 					requestOptions.path += "?act=getassertion&userid=" + toID(config.nick) + "&challengekeyid=" + id + "&challenge=" + str;
 				}
-				else
-				{
+				else {
 					requestOptions.method = "POST";
 					data = "act=login&name=" + config.nick + "&pass=" + config.pass + "&challengekeyid=" + id + "&challenge=" + str;
-					requestOptions.headers =
-					{
+					requestOptions.headers = {
 						"Content-Type": "application/x-www-form-urlencoded",
 						"Content-Length": data.length
 					};
 				}
 
-				let req = https.request(requestOptions, function(res)
-				{
+				let req = https.request(requestOptions, function(res) {
 					res.setEncoding("utf8");
 					data = "";
-					res.on("data", function(chunk)
-					{
+					res.on("data", function(chunk) {
 						data += chunk;
 					});
-					res.on("end", function()
-					{
-						if (data === ';')
-						{
+					res.on("end", function() {
+						if (data === ';') {
 							error("failed to log in; nick is registered - invalid or no password given");
 							process.exit(-1);
 						}
-						if (data.length < 50)
-						{
+						if (data.length < 50) {
 							error("failed to log in: " + data);
 							process.exit(-1);
 						}
-
-						if (data.indexOf("heavy load") !== -1)
-						{
+						if (data.indexOf("heavy load") !== -1) {
 							error("the login server is under heavy load; trying again in one minute");
-							setTimeout(function()
-							{
+							setTimeout(function() {
 								this.message(message);
 							}.bind(this), 60 * 1000);
 							return;
 						}
 
-						if (data.substr(0, 16) === "<!DOCTYPE html>")
-						{
+						if (data.startsWith("<!DOCTYPE html>")) {
 							error("Connection error 522; trying again in one minute");
-							setTimeout(function()
-							{
+							setTimeout(function() {
 								this.message(message);
 							}.bind(this), 60 * 1000);
 							return;
 						}
 
-						try
-						{
-							data = JSON.parse(data.substr(1));
-							if (data.actionsuccess)
-							{
+						try {
+							data = JSON.parse(data.substring(1));
+							if (data.actionsuccess) {
 								data = data.assertion;
 							}
-							else
-							{
+							else {
 								error("could not log in; action was not successful: " + JSON.stringify(data));
 								process.exit(-1);
 							}
@@ -199,8 +165,7 @@ exports.parse =
 					}.bind(this));
 				}.bind(this));
 
-				req.on("error", function(err)
-				{
+				req.on("error", function(err) {
 					error("login error: " + inspect(err));
 				});
 
@@ -208,38 +173,32 @@ exports.parse =
 				req.end();
 				break;
 			case "updateuser":	
-				if (spl[3] !== '1' && !initial_login) // if marked as a Guest and it's not the start of the login process
-				{
+				if (spl[3] !== '1' && !initial_login) { // if marked as a Guest and it's not the start of the login process
 					error("Switched off of main account " + config.nick + ". Reconnecting...");
 					Connection.close();
 					initial_login = true;
 					return;
 				}
 				// if it is the start of the login process, don't do anything until we're off of the Guest account
-				else if (initial_login && (toID(spl[2]) !== toID(config.nick)))
-				{
+				else if (initial_login && (toID(spl[2]) !== toID(config.nick))) {
 					return;
 				}
 
 				ok("logged in as " + spl[2] + " at " + new Date().toLocaleString());
 				initial_login = false;
-				if (config.avatar)
-				{
+				if (config.avatar) {
 					send("|/avatar " + config.avatar);
 				}
-				if (config.status)
-				{
+				if (config.status) {
 					send("|/status " + config.status);
 				}
 
 				// Joining the rooms
-				for (let i = 0, len = config.rooms.length; i < len; i++)
-				{
+				for (let i = 0, len = config.rooms.length; i < len; i++) {
 					let room = config.rooms[i];
 					send("|/join " + room);
 				}
-				for (let i = 0, len = config.privaterooms.length; i < len; i++)
-				{
+				for (let i = 0, len = config.privaterooms.length; i < len; i++) {
 					let room = config.privaterooms[i];
 					send("|/join " + room);
 				}
@@ -256,12 +215,10 @@ exports.parse =
 				break;
 			case "pm":
 				by = spl[2];
-				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1)
-				{
+				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1) {
 					this.ranks[room] = by.charAt(0);
 				}
-				if (toID(by) !== toID(config.nick) && (toID(spl[3]) === toID(config.nick)))
-				{
+				if (toID(by) !== toID(config.nick) && (toID(spl[3]) === toID(config.nick))) {
 					// Logs PMs to BoTTT III in the console.
 					info("PM from " + by + " at " + new Date().toLocaleString() + ": " + spl[4]);
 					if (toID(spl[4]) === "mish" && spl[4] !== ".mish")
@@ -273,46 +230,39 @@ exports.parse =
 				break;
 			case 'N': // Name changes with /nick or using the button
 				by = spl[2];
-				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1)
-				{
+				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1) {
 					this.ranks[room] = by.charAt(0);
 				}
 				by = this.trimStatus(by);
 				break;
 			case 'J': case 'j': // User joining the room
 				by = spl[2];
-				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1)
-				{
+				if (toID(by) === toID(config.nick) && ranks.indexOf(by.charAt(0)) > -1) {
 					this.ranks[room] = by.charAt(0);
 				}
 				break;
 			case 'l': case 'L': // User leaving the room
 				break;
 			case "tournament":
-				if (spl[2] === "update" || spl[2] === "create")
-				{
+				if (spl[2] === "update" || spl[2] === "create") {
 					hasTourStarted = true;
 				}
-				if (spl[2] === "end" || spl[2] === "forceend")
-				{
+				if (spl[2] === "end" || spl[2] === "forceend") {
 					hasTourStarted = false;
 				}
 				break;
 			case "html": // HTML was received
 				break;
 			case "raw":
-				if (spl[2].startsWith("<strong class=\"message-throttle-notice\">"))
-				{
+				if (spl[2].startsWith("<strong class=\"message-throttle-notice\">")) {
 					error("Message sent too fast at: " + new Date().toLocaleString() + ". MESSAGE_THROTTLE in main.js is likely set too low.");
 				}
 				break;
 			case "error": // this protocol is triggered whenever Showdown's errorReply() function is called
-				if (spl[2].includes("valid tournament") || spl[2].includes("restarting soon") || spl[2].includes("current room activity") || spl[2].includes("technical difficulties"))
-				{
+				if (spl[2].includes("valid tournament") || spl[2].includes("restarting soon") || spl[2].includes("current room activity") || spl[2].includes("technical difficulties")) {
 					this.say(room, spl[2]);
 				}
-				else if (spl[2].includes("who are not in this room"))
-				{
+				else if (spl[2].includes("who are not in this room")) {
 					send("|/pm " + this.mostRecentUserPM + ", You must be in the <<vgc>> room for this command to work in PMs (sorry, blame Showdown).");
 				}
 				error(new Date().toLocaleString() + ": Error message from Showdown: " + spl[2]);
@@ -322,14 +272,12 @@ exports.parse =
 				break;
 		}
 	},
-	chatMessage: function(message, by, room)
-	{
+	chatMessage: function(message, by, room) {
 		let cmdrMessage = "[\"" + room + '|' + by + '|' + message + "\"]";
 		message = message.trim();
 
 		// Auto-accepts invites to rooms if the global rank is % or higher.
-		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&"))
-		{
+		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&")) {
 			send("|/join " + message.substr(8));
 		}
 
@@ -342,30 +290,24 @@ exports.parse =
 		let cmd;
 
 		// Separate the command from its arguments, if any.
-		if (index > -1)
-		{
+		if (index > -1) {
 			cmd = message.substr(0, index);
 			arg = message.substr(index + 1).trim();
 		}
-		else
-		{
+		else {
 			cmd = message;
 		}
 
-		if (Commands[cmd])
-		{
+		if (Commands[cmd]) {
 			// Accounts for aliases
-			while (typeof Commands[cmd] !== "function")
-			{
+			while (typeof Commands[cmd] !== "function") {
 				cmd = Commands[cmd];
 			}
-			if (typeof Commands[cmd] === "function")
-			{
+			if (typeof Commands[cmd] === "function") {
 				cmdr(cmdrMessage); // Logs the command information if specified in config.
 
 				let canUse = this.canUse(cmd, room, by, arg);
-				switch (canUse)
-				{
+				switch (canUse) {
 					case 0:
 						this.say(room, "/pm " + by + ", You don't have access to this command.");
 						break;
@@ -379,38 +321,30 @@ exports.parse =
 						break;
 				}
 			}
-			else
-			{
+			else {
 				error("invalid command type for " + cmd + ": " + (typeof Commands[cmd]));
 			}
 		}
 	},
-	say: function(room, text)
-	{
+	say: function(room, text) {
 		text = "" + text; // ensure it's a string
 		let msg;
-		if (room.charAt(0) !== ',')
-		{
+		if (room.charAt(0) !== ',') {
 			msg = room + '|' + text;
 			send(msg);
 		}
-		else // if room has a comma, it was done in PM
-		{
+		else { // if room has a comma, it was done in PM
 			room = room.substr(1);
 			text = text.split('\n');
-			for (let i = 0; i < text.length; i++)
-			{
+			for (let i = 0; i < text.length; i++) {
 				msg = "|/pm " + room + ", " + text[i];
 				send(msg);
 			}
-			
 		}
 	},
 
-
 	// If the user has the specified rank or is on the command exception list, return true
-	hasRank: function(user, rank)
-	{
+	hasRank: function(user, rank) {
 		return rank.split("").indexOf(user.charAt(0)) !== -1;
 	},
 
@@ -419,8 +353,7 @@ exports.parse =
 	 * 1 = can use
 	 * 2 = can only use in PMs 
 	 */
-	canUse: function(cmd, room, user, arg)
-	{
+	canUse: function(cmd, room, user, arg) {
 		let canUse = 0;
 		let userRank;
 		let userID = toID(this.trimStatus(user));
@@ -438,68 +371,53 @@ exports.parse =
 
 		commandsObject = commandsJSON[room] ? commandsJSON[room] : false;
 
-		if (commandsObject)
-		{
+		if (commandsObject) {
 			// Check if the room has a direct rank for the command; allow explicitly defined regular user commands
-			if (commandsObject[cmd])
-			{
-				if (userRank >= commandsObject[cmd]["rank"])
-				{
+			if (commandsObject[cmd]) {
+				if (userRank >= commandsObject[cmd]["rank"]) {
 					canUse = 1;
 				}
 			}
 
 			// Check if the room has a special user/arg condition for the command
-			if (canUse === 0 && commandsObject["special"][cmd])
-			{
+			if (canUse === 0 && commandsObject["special"][cmd]) {
 				// TODO: make more generic
 				let userList = commandsObject["special"][cmd]["users"];
 				let specialArg = commandsObject["special"][cmd]["arg"];
 				if (specialArg === undefined) {specialArg = "";}
 
-				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0)
-				{
+				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0) {
 					canUse = 1;
 				}
 			}			
 		}
 		// Check that room owners of a room can use .custom in PMs
-		if (canUse === 0 && cmd === "custom" && room.charAt(0) === ",")
-		{
-			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1)
-			{
+		if (canUse === 0 && cmd === "custom" && room.charAt(0) === ",") {
+			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1) {
 				const targetRoom = arg.slice(1, arg.indexOf("]"));
-				if (commandsJSON[targetRoom])
-				{
+				if (commandsJSON[targetRoom]) {
 					let userList = commandsJSON[targetRoom]["roomowners"];
-					if (userList.indexOf(userID) >= 0)
-					{
+					if (userList.indexOf(userID) >= 0) {
 						canUse = 1;
 					}
 				}
 			}
 		}
 		// Fallback on global command settings if no local room commands were set
-		if (canUse === 0 && globalCommandsObject[cmd])
-		{
+		if (canUse === 0 && globalCommandsObject[cmd]) {
 			// Don't allow the command to be used directly in a room if it only has 0 globally
-			if (globalCommandsObject[cmd]["rank"] === 0 && this.isRegUser(user) && !this.isPM(room))
-			{
+			if (globalCommandsObject[cmd]["rank"] === 0 && this.isRegUser(user) && !this.isPM(room)) {
 				canUse = 2;
 			}
-			else if (userRank >= globalCommandsObject[cmd]["rank"])
-			{
+			else if (userRank >= globalCommandsObject[cmd]["rank"]) {
 				canUse = 1;
 			}
 		}
 
 		// Owners have access to every command.
-		if (config.owners)
-		{
-			for (let i = 0; i < config.owners.length; i++)
-			{
-				if (userID === toID(config.owners[i]))
-				{
+		if (config.owners) {
+			for (let i = 0; i < config.owners.length; i++) {
+				if (userID === toID(config.owners[i])) {
 					canUse = 1;
 					break;
 				}
@@ -509,24 +427,20 @@ exports.parse =
 		return canUse;
 	},
 
-	processChatData: function(user, room, msg, auth)
-	{
+	processChatData: function(user, room, msg, auth) {
 		if (!user || room.charAt(0) === ',') return;
 
 		// Removes extra spaces and null characters so messages that should trigger stretching do so
 
 		msg = msg.trim().replace(/[ \u0000\u200B-\u200F]+/g, " ");
 		let now = Date.now();
-		if (!this.chatData[user])
-		{
+		if (!this.chatData[user]) {
 			this.chatData[user] = {};
 		}
 		let userData = this.chatData[user];
 
-		if (!this.chatData[user][room])
-		{
-			this.chatData[user][room] =
-			{
+		if (!this.chatData[user][room]) {
+			this.chatData[user][room] = {
 				times: [],
 				points: 0,
 				lastAction: 0,
@@ -541,8 +455,7 @@ exports.parse =
 		if (msg.startsWith('/raw')) return;
 
 		// This deals with punishing rulebreakers. Note that the bot can't think, however, so it might make mistakes. It will not punish drivers+.
-		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "%@*&#".indexOf(auth) === -1)
-		{
+		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "%@*&#".indexOf(auth) === -1) {
 			let pointVal = 0;
 			let muteMessage = "";
 
@@ -552,51 +465,41 @@ exports.parse =
 			let isFlooding = (timesLen >= FLOOD_MESSAGE_NUM && (now - times[timesLen - FLOOD_MESSAGE_NUM]) < FLOOD_MESSAGE_TIME
 				&& (now - times[timesLen - FLOOD_MESSAGE_NUM]) > (FLOOD_PER_MSG_MIN * FLOOD_MESSAGE_NUM));
 
-			if (isFlooding)
-			{
-				if (pointVal < 2)
-				{
+			if (isFlooding) {
+				if (pointVal < 2) {
 					pointVal = 2;
 					muteMessage = ", Stop spamming the chat";
 				}
 			}
 			// Moderation for caps (over x% of the letters in a line of y characters are capital)
 			let capsMatch = msg.replace(/[^A-Za-z]/g, "").match(/[A-Z]/g);
-			if (capsMatch && toID(msg).length > MIN_CAPS_LENGTH && (capsMatch.length >= ~~(toID(msg).length * MIN_CAPS_PROPORTION)))
-			{
-				if (pointVal < 1)
-				{
+			if (capsMatch && toID(msg).length > MIN_CAPS_LENGTH && (capsMatch.length >= ~~(toID(msg).length * MIN_CAPS_PROPORTION))) {
+				if (pointVal < 1) {
 					pointVal = 1;
 					muteMessage = ", Watch the caps";
 				}
 			}
 
 			// Moderation for bold (over x% of the letters in a line of y characters are bold)
-			if (msg.includes("**"))
-			{
+			if (msg.includes("**")) {
 				// This almost certainly could be done with a regex but I'm bad
 				let i = msg.indexOf('**');
 				let boldIndexes = [i];
-				while (~(i = msg.indexOf("**", ++i)))
-				{
+				while (~(i = msg.indexOf("**", ++i))) {
 					boldIndexes.push(i);
 				}
-				if (boldIndexes.length % 2 === 1)
-				{
+				if (boldIndexes.length % 2 === 1) {
 					boldIndexes.pop(); // in case they just had ** somewhere with no other formatting, remove the last instance
 				}
 
 				let numBoldedCharacters = 0;
-				for (i = 0; i < boldIndexes.length; i = i + 2)
-				{
+				for (i = 0; i < boldIndexes.length; i = i + 2) {
 					numBoldedCharacters += boldIndexes[i + 1] - boldIndexes[i] - 2; // -2 is to avoid the first two asterisks
 				}
 
 				let msgIDlength = toID(msg).length;
-				if (msgIDlength > MIN_BOLD_LENGTH && ((numBoldedCharacters >= MIN_BOLD_LENGTH) || (numBoldedCharacters >= ~~(msgIDlength * MIN_BOLD_PROPORTION))))
-				{
-					if (pointVal < 1)
-					{
+				if (msgIDlength > MIN_BOLD_LENGTH && ((numBoldedCharacters >= MIN_BOLD_LENGTH) || (numBoldedCharacters >= ~~(msgIDlength * MIN_BOLD_PROPORTION)))) {
+					if (pointVal < 1) {
 						pointVal = 1;
 						muteMessage = ", Don't make everything in bold";
 					}
@@ -605,10 +508,8 @@ exports.parse =
 
 			// Moderation for stretching (over x consecutive characters in the message are the same)
 			let stretchMatch = /(.)\1{7,}/gi.test(msg) || /(..+)\1{4,}/gi.test(msg); // Matches the same character (or group of characters) 8 (or 5) or more times in a row
-			if (stretchMatch && !msg.startsWith('!'))
-			{
-				if (pointVal < 1)
-				{
+			if (stretchMatch && !msg.startsWith('!')) {
+				if (pointVal < 1) {
 					pointVal = 1;
 					muteMessage = ", Don't stretch out what you type";
 				}
@@ -652,10 +553,8 @@ exports.parse =
 				"Wolfey",
 			];
 
-			for (let i = 0; i < autocorrectRegexes.length; i++)
-			{
-				if (autocorrectRegexes[i].test(msg)) // If the message contains the regular expression
-				{
+			for (let i = 0; i < autocorrectRegexes.length; i++) {
+				if (autocorrectRegexes[i].test(msg)) { // If the message contains the regular expression
 					this.say(room, "*" + autocorrectMessages[i]);
 					roomData.triggeredAutocorrect++;
 				}
@@ -666,34 +565,28 @@ exports.parse =
 			Came with this PM bc of its controversial nature: Please do not use the abbreviation \"pdon\" for Primal Groudon. Say it out loud and you'll realize why. You can just say Groudon or don, and everyone will know what Pokemon you're talking about.
 			*/
 
-			if (((pointVal > 0 || roomData.triggeredAutocorrect >= 3)&& now - roomData.lastAction >= ACTION_COOLDOWN))
-			{
+			if (((pointVal > 0 || roomData.triggeredAutocorrect >= 3)&& now - roomData.lastAction >= ACTION_COOLDOWN)) {
 				let cmd = "mute";
 				// Defaults to the next punishment in config.punishVals instead of repeating the same action (so a second warn-worthy offense would result in a mute instead of a warn, and the third an hourmute, etc)
-				if (roomData.points >= pointVal && pointVal < 4)
-				{
+				if (roomData.points >= pointVal && pointVal < 4) {
 					roomData.points++;
 					cmd = config.punishvals[roomData.points] || cmd;
 				}
-				else // If the action hasn't been done before (is worth more points), it will be the one picked
-				{
+				else { // If the action hasn't been done before (is worth more points), it will be the one picked
 					cmd = config.punishvals[pointVal] || cmd;
 					roomData.points = pointVal; // next action will be one level higher than this one (in most cases)
 				}
 				// Can't warn in private rooms
-				if (config.privaterooms.indexOf(room) > -1 && cmd === "warn")
-				{
+				if (config.privaterooms.indexOf(room) > -1 && cmd === "warn") {
 					cmd = "mute";
 				}
 
 				// If the bot has % instead of @ or *, it will default to hourmuting as its highest level of punishment instead of roombanning
-				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#"))
-				{
+				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#")) {
 					cmd = "hourmute";
 				}
 
-				if (roomData.triggeredAutocorrect >= 3)
-				{
+				if (roomData.triggeredAutocorrect >= 3) {
 					cmd = "warn";
 					muteMessage = ", Stop triggering the autocorrect intentionally.";
 					roomData.triggeredAutocorrect = 2; // resets the count so it won't continually spam warnings
@@ -705,54 +598,41 @@ exports.parse =
 			}
 		}
 	},
-	cleanChatData: function()
-	{
+	cleanChatData: function() {
 		let chatData = this.chatData;
-		for (const user in chatData)
-		{
-			for (const room in chatData[user])
-			{
+		for (const user in chatData) {
+			for (const room in chatData[user]) {
 				let roomData = chatData[user][room];
-				if (!roomData.times || !roomData.times.length)
-				{
+				if (!roomData.times || !roomData.times.length) {
 					delete chatData[user][room];
 					continue;
 				}
 				let newTimes = [];
 				let now = Date.now();
 				let times = roomData.times;
-				for (let i = 0, len = times.length; i < len; i++)
-				{
-					if (now - times[i] < 5 * 1000)
-					{
+				for (let i = 0, len = times.length; i < len; i++) {
+					if (now - times[i] < 5 * 1000) {
 						newTimes.push(times[i]);
 					}
 				}
-				newTimes.sort(function (a, b)
-				{
+				newTimes.sort(function (a, b) {
 					return a - b;
 				});
 				roomData.times = newTimes;
-				if (roomData.points > 0 && roomData.points < 4)
-				{
+				if (roomData.points > 0 && roomData.points < 4) {
 					roomData.points--;
 				}
 			}
 		}
 	},
-	uncacheTree: function(root)
-	{
+	uncacheTree: function(root) {
 		let uncache = [require.resolve(root)];
-		do
-		{
+		do {
 			let newuncache = [];
-			for (let i = 0; i < uncache.length; ++i)
-			{
-				if (require.cache[uncache[i]])
-				{
+			for (let i = 0; i < uncache.length; ++i) {
+				if (require.cache[uncache[i]]) {
 					newuncache.push.apply(newuncache,
-						require.cache[uncache[i]].children.map(function(module)
-						{
+						require.cache[uncache[i]].children.map(function(module) {
 							return module.filename;
 						})
 					);
@@ -762,57 +642,47 @@ exports.parse =
 			uncache = newuncache;
 		} while (uncache.length > 0);
 	},
-	trimStatus: function(username)
-	{
+	trimStatus: function(username) {
 		let result;
 		username = username.split('@');
 
-		if (username[0].charAt(0) === '') // this was a mod applying their status
-		{
+		if (username[0].charAt(0) === '') { // this was a mod applying their status
 			result = username[1];
 		}
-		else // this was anyone else applying a status
-		{
+		else { // this was anyone else applying a status
 			result = username[0];
 		}
 
 		return result;
 	},
-	isRegUserOrPM: function(by, room)
-	{
+	isRegUserOrPM: function(by, room) {
 		return (by.charAt(0) === ' ' || room.charAt(0) === ',');
 	},
-	isRegUser: function(by)
-	{
+	isRegUser: function(by) {
 		return by.charAt(0) === ' ';
 	},
-	isPM: function(room)
-	{
+	isPM: function(room) {
 		return room.charAt(0) === ',';
 	},
 	
-	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM)
-	{
+	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM) {
 		let htmlText = "<strong>" + formatname + "</strong> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
-		for (let i = 0; i < sampleTeams.length; i++)
-		{
+		for (let i = 0; i < sampleTeams.length; i++) {
 			let j;
-			for (j = 0; j < 6; j++)
-			{
+			for (j = 0; j < 6; j++) {
 				htmlText += "<psicon ";
-				if (isPM) {htmlText += "style = 'width: 35px;'";}
+				if (isPM) htmlText += "style = 'width: 35px;'";
 				htmlText += "pokemon='" + sampleTeams[i][j] + "'>";
-				if (j !== 5) {htmlText += "|";}
+				if (j !== 5) htmlText += "|";
 			}
 			htmlText += "<a href= '" + sampleTeams[i][j] + "'>"; // pokepaste link
 			htmlText += "<span style = 'font-size: x-small'>(" + sampleTeams[i][j+1] + ")</span></a> <br>"; // description
-			if (isPM && (i !== sampleTeams.length - 1)) {htmlText += "<br>";}
+			if (isPM && (i !== sampleTeams.length - 1)) htmlText += "<br>";
 		}
 		htmlText += "</details>";
 		return htmlText;
 	},
-	generateHTMLContentCreators: function(creatorData, isPM)
-	{
+	generateHTMLContentCreators: function(creatorData, isPM) {
 		const twitchlogo = "https://pngimg.com/uploads/twitch/twitch_PNG49.png";
 		const youtubeLogo = "https://image.flaticon.com/icons/svg/1384/1384060.svg";
 		const twitterLogo = "https://image.flaticon.com/icons/svg/124/124021.svg";
@@ -824,35 +694,30 @@ exports.parse =
 		let htmlText = "<center style = 'margin-bottom: 10px;'><h2 style = 'margin: 0'>Sample of VGC Content Creators</h2>";
 		htmlText += "<em style = 'font-style: italic;'>Click the arrows to see links to a content creator's YouTube, Twitch, and Twitter!</em></center>";
 		htmlText += "<p style = 'font-size: x-small';>This sample of VGC content creators is a resource for new players to learn from. It is not intended to be an exhaustive list of all VGC content creators. If you are an active, primarily VGC content creator with a moderate following and wish to be added, please contact a member of VGC room staff for consideration. Not all applications will be accepted.</p>";
-		if (!isPM) {htmlText += "<details><summary>Click to expand the list of content creators</summary>";}
-		for (let j = 0; j < 3; j++)
-		{
+		if (!isPM) htmlText += "<details><summary>Click to expand the list of content creators</summary>";
+		for (let j = 0; j < 3; j++) {
 			listStart = (listEnd) ? listEnd : 0;
 			listEnd = listStart + Math.floor(creatorData.length / 3);
-			if ((remainder === 1 || remainder === 2) && j !== 2) {listEnd++;}
+			if ((remainder === 1 || remainder === 2) && j !== 2) listEnd++;
 			
 			if (!isPM) {htmlText += "<div style = 'width: 33%; float: left;'>";}
-			for (let i = listStart; i < listEnd; i++)
-			{
+			for (let i = listStart; i < listEnd; i++) {
 				htmlText += "<details><summary><psicon pokemon = \"" + creatorData[i][0] + "\">" + creatorData[i][1] + "</summary>";
 				htmlText += "<ul style = 'list-style-type: none; padding: 0;'>";
 
-				if (creatorData[i][2]) // If they have a Twitch
-				{
+				if (creatorData[i][2]) { // If they have a Twitch
 					htmlText += "<li>";
 					htmlText += "<img src = \"" + twitchlogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
 					htmlText += " <a href = \"" + creatorData[i][2] + "\">" + creatorData[i][3] + "</a> ";
 					htmlText += "</li>";
 				}
-				if (creatorData[i][4]) // If they have a YouTube
-				{
+				if (creatorData[i][4]) { // If they have a YouTube
 					htmlText += "<li>";
 					htmlText += "<img src = \"" + youtubeLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
 					htmlText += " <a href = \"" + creatorData[i][4] + "\">" + creatorData[i][5] + "</a>";
 					htmlText += "</li>";
 				}
-				if (creatorData[i][6]) // If they have a Twitter
-				{
+				if (creatorData[i][6]) { // If they have a Twitter
 					htmlText += "<li>";
 					htmlText += "<img src = \"" + twitterLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
 					htmlText += " <a href = \"" + creatorData[i][6] + "\">" + creatorData[i][7] + "</a>";
@@ -860,14 +725,13 @@ exports.parse =
 				}
 				htmlText += "</ul></details>";
 			}
-			if (!isPM) {htmlText += "</div>";}
+			if (!isPM) htmlText += "</div>";
 		}
-		if (!isPM) {htmlText += "</details>";}
+		if (!isPM) htmlText += "</details>";
 		htmlText += "<div style = 'clear: both'></div>";
 		return htmlText;
 	},
-	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
-	{
+	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank) {
 		let htmlText = "";
 		let pokemon = usageJSON.pokemon;
 		let rank = usageJSON.rank;
@@ -879,52 +743,43 @@ exports.parse =
 		let color;
 		let rankDifference;
 
-		if (Object.keys(abilities).length === 0) // if a Pokemon doesn't have ability data, it's not really being used
-		{
+		if (Object.keys(abilities).length === 0) { // if a Pokemon doesn't have ability data, it's not really being used
 			return "No usage data found for " + pokemon + ".";
 		}
 
 		let pokemonSprite;
 		// Obtain sprite info
-		if (pokemon.toLowerCase().includes("urshifu"))
-		{
+		if (pokemon.toLowerCase().includes("urshifu")) {
 			pokemonSprite = toID(pokemon).includes("rapidstrike") ? "https://play.pokemonshowdown.com/sprites/gen5/urshifu-rapidstrike.png" : "https://play.pokemonshowdown.com/sprites/gen5/urshifu.png";
 		}
-		else 
-		{
+		else {
 			pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase().replace("'", "") + ".gif";
 		}
 		let probe = require('probe-image-size');
 		let height;
 		let width;
-		try
-		{
-			await probe(pokemonSprite).then(result =>
-			{
+		try {
+			await probe(pokemonSprite).then(result => {
 				height = result.height;
 				width = result.width;
 			});
 		}
-		catch (err)
-		{
+		catch (err) {
 			pokemonSprite = "https://play.pokemonshowdown.com/sprites/rby/missingno.png";
 			height = 96;
 			width = 96;
 		}
 
 		// Rank since last month
-		if (rank - lastMonthRank < 0)
-		{
+		if (rank - lastMonthRank < 0) {
 			color = "green";
 			rankDifference = "+" + (lastMonthRank - rank);
 		}
-		else if (rank - lastMonthRank > 0)
-		{
+		else if (rank - lastMonthRank > 0) {
 			color = "red";
 			rankDifference = "-" + (rank - lastMonthRank);
 		}
-		else
-		{
+		else {
 			color = "darkblue";
 			rankDifference = "±0";
 		}
@@ -947,28 +802,25 @@ exports.parse =
 		// Abilities
 		htmlText += "<details open><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
 		let abilityNames = Object.keys(abilities);
-		for (let i = 0; i < abilityNames.length; i++)
-		{
+		for (let i = 0; i < abilityNames.length; i++) {
 			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details></div></div><div style = 'clear: both;'></div>";
 
 		// Moves
-		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
+		htmlText += "<div style = 'float: left; width: 40%;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let moveNames = Object.keys(moves);
-		for (let i = 0; i < moveNames.length; i++)
-		{
+		for (let i = 0; i < moveNames.length; i++) {
 			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details></div></div>";
 
 		// Items
-		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
+		htmlText += "<div style = 'float: left; width: 40%;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let itemNames = Object.keys(items);
-		for (let i = 0; i < itemNames.length; i++)
-		{
+		for (let i = 0; i < itemNames.length; i++) {
 			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details></div></div><div style = 'clear: both;'></div>";
@@ -977,19 +829,15 @@ exports.parse =
 		htmlText += "<div style = 'float: left;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let natures = Object.keys(spreads);
-		for (let i = 0; i < natures.length; i++)
-		{	
-			if (natures[i] !== "Other")
-			{
+		for (let i = 0; i < natures.length; i++) {	
+			if (natures[i] !== "Other") {
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (let j = 0; j < evs.length; j++)
-				{
+				for (let j = 0; j < evs.length; j++) {
 					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
 				}
 			}
-			else // Other is formatted differently.
-			{
+			else { // Other is formatted differently.
 				htmlText += "<li>" + natures[i] + ": " + spreads[natures[i]] + "</li>";
 			}
 				
@@ -999,8 +847,7 @@ exports.parse =
 		return htmlText;
 	},
 	// TODO refactor this into the normal usage command with an extra argument
-	generateHTMLUsagePM: async function(usageJSON, currentMonth, lastMonthRank)
-	{
+	generateHTMLUsagePM: async function(usageJSON, currentMonth, lastMonthRank) {
 		let htmlText = "";
 		let pokemon = usageJSON.pokemon;
 		let rank = usageJSON.rank;
@@ -1012,24 +859,20 @@ exports.parse =
 		let color;
 		let rankDifference;
 
-		if (Object.keys(abilities).length === 0) // if a Pokemon doesn't have ability data, it's not really being used
-		{
+		if (Object.keys(abilities).length === 0) { // if a Pokemon doesn't have ability data, it's not really being used
 			return "No usage data found for " + pokemon + ".";
 		}
 
 		// Rank since last month
-		if (rank - lastMonthRank < 0)
-		{
+		if (rank - lastMonthRank < 0) {
 			color = "green";
 			rankDifference = "+" + (lastMonthRank - rank);
 		}
-		else if (rank - lastMonthRank > 0)
-		{
+		else if (rank - lastMonthRank > 0) {
 			color = "red";
 			rankDifference = "-" + (rank - lastMonthRank);
 		}
-		else
-		{
+		else {
 			color = "darkblue";
 			rankDifference = "±0";
 		}
@@ -1052,8 +895,7 @@ exports.parse =
 		// Abilities
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
 		let abilityNames = Object.keys(abilities);
-		for (let i = 0; i < abilityNames.length; i++)
-		{
+		for (let i = 0; i < abilityNames.length; i++) {
 			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details>";
@@ -1061,8 +903,7 @@ exports.parse =
 		// Moves
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let moveNames = Object.keys(moves);
-		for (let i = 0; i < moveNames.length; i++)
-		{
+		for (let i = 0; i < moveNames.length; i++) {
 			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details>";
@@ -1070,8 +911,7 @@ exports.parse =
 		// Items
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let itemNames = Object.keys(items);
-		for (let i = 0; i < itemNames.length; i++)
-		{
+		for (let i = 0; i < itemNames.length; i++) {
 			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
 		}
 		htmlText += "</ul></details>";
@@ -1079,19 +919,15 @@ exports.parse =
 		// EV spreads
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let natures = Object.keys(spreads);
-		for (let i = 0; i < natures.length; i++)
-		{	
-			if (natures[i] !== "Other")
-			{
+		for (let i = 0; i < natures.length; i++) {	
+			if (natures[i] !== "Other") {
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (let j = 0; j < evs.length; j++)
-				{
+				for (let j = 0; j < evs.length; j++) {
 					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
 				}
 			}
-			else // Other is formatted differently.
-			{
+			else { // Other is formatted differently.
 				htmlText += "<li>" + natures[i] + ": " + spreads[natures[i]] + "</li>";
 			}
 				
@@ -1100,8 +936,7 @@ exports.parse =
 
 		return htmlText;
 	},
-	generateTextUsage: async function(usageJSON, currentMonth, lastMonthRank)
-	{
+	generateTextUsage: async function(usageJSON, currentMonth, lastMonthRank) {
 		let text = "";
 		let pokemon = usageJSON.pokemon;
 		let rank = usageJSON.rank;
@@ -1112,23 +947,18 @@ exports.parse =
 		let spreads = usageJSON.spreads;
 		let rankDifference;
 
-		if (Object.keys(abilities).length === 0) // if a Pokemon doesn't have ability data, it's not really being used
-		{
+		if (Object.keys(abilities).length === 0) { // if a Pokemon doesn't have ability data, it's not really being used
 			return "No usage data found for " + pokemon + ".";
 		}
 
-
 		// Rank since last month
-		if (rank - lastMonthRank < 0)
-		{
+		if (rank - lastMonthRank < 0) {
 			rankDifference = "+" + (lastMonthRank - rank);
 		}
-		else if (rank - lastMonthRank > 0)
-		{
+		else if (rank - lastMonthRank > 0) {
 			rankDifference = "-" + (rank - lastMonthRank);
 		}
-		else
-		{
+		else {
 			rankDifference = "±0";
 		}
 
@@ -1140,19 +970,16 @@ exports.parse =
 		text += pokemon + " was on " + usagePercent + " of teams; its rank has adjusted by " + rankDifference + " since " + (months !== 1 ? months[currentMonth - 2] : "December") + ".\n";
 		text += "**Abilities**:";
 		let abilityNames = Object.keys(abilities);
-		for (let i = 0; i < abilityNames.length; i++)
-		{
+		for (let i = 0; i < abilityNames.length; i++) {
 			text += abilityNames[i] + " - "  + abilities[abilityNames[i]] + "; ";
 		}
 		text += "\n";
 
 		text += "**Moves**:";
 		let moveNames = Object.keys(moves);
-		for (let i = 0; i < moveNames.length; i++)
-		{
+		for (let i = 0; i < moveNames.length; i++) {
 			text += moveNames[i] + " - "  + moves[moveNames[i]] + "; ";
-			if (i % 3 === 0 && i !== 0)
-			{
+			if (i % 3 === 0 && i !== 0) {
 				text += "\n";
 			}
 		}
@@ -1160,11 +987,9 @@ exports.parse =
 
 		text += "**Items**:";
 		let itemNames = Object.keys(items);
-		for (let i = 0; i < itemNames.length; i++)
-		{
+		for (let i = 0; i < itemNames.length; i++) {
 			text += itemNames[i] + " - "  + items[itemNames[i]] + "; ";
-			if (i % 3 === 0 && i !== 0)
-			{
+			if (i % 3 === 0 && i !== 0) {
 				text += "\n";
 			}
 		}
@@ -1172,19 +997,15 @@ exports.parse =
 
 		text += "**EV Spreads**:";
 		let natures = Object.keys(spreads);
-		for (let i = 0; i < natures.length; i++)
-		{	
-			if (natures[i] !== "Other")
-			{
+		for (let i = 0; i < natures.length; i++) {	
+			if (natures[i] !== "Other") {
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (let j = 0; j < evs.length; j++)
-				{
+				for (let j = 0; j < evs.length; j++) {
 					text += natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "; ";
 				}
 			}
-			else // Other is formatted differently.
-			{
+			else { // Other is formatted differently.
 				text += natures[i] + ": " + spreads[natures[i]] + "; ";
 			}
 			if (i !== natures.length - 1) {text += "\n";}		
@@ -1192,11 +1013,9 @@ exports.parse =
 
 		return text;
 	},
-	generateBO3Help(isPM)
-	{
+	generateBO3Help(isPM) {
 		let text;
-		if (isPM)
-		{
+		if (isPM) {
 			text =
 			'<h2 style = "margin: 0; text-align: center;">Best-of-Three Practice</h2> \
 			<p>Sign up to compete with other players in best-of-three VGC practice! [Coming Soon]</p> \
