@@ -75,34 +75,13 @@ global.stripCommands = function(text) {
 	}
 };
 
-function runNpm(command) {
-	console.log("Running `npm " + command + "`...");
-
-	let child_process = require("child_process");
-	let npm = child_process.spawn("npm", [command]);
-
-	npm.stdout.on("data", function(data) {
-		process.stdout.write(data);
-	});
-
-	npm.stderr.on("data", function(data) {
-		process.stderr.write(data);
-	});
-
-	npm.on("close", function(code) {
-		if (!code) {
-			child_process.fork("main.js").disconnect();
-		}
-	});
-}
-
 // Check if everything that is needed is available
 try {
 	require("colors");
 }
 catch (e) {
-	console.log("Dependencies are not installed!");
-	runNpm("install");
+	console.log("Dependencies are not installed! Please run `npm install` first.");
+	process.exit(-1);
 }
 
 // First dependencies and welcome message
