@@ -82,9 +82,9 @@
         {
            "rank": 0 
         },
-        "contentcreators":
+        "mish":
         {
-            "rank": 7
+            "rank": 0
         },
         "notice":
         {
@@ -146,10 +146,6 @@
         {
             "rank": 2
         },
-        "mish":
-        {
-            "rank": 2
-        },
         "uno":
         {
             "rank": 3
@@ -185,6 +181,10 @@
         "delet":
         {
             "rank": 2
+        },
+        "contentcreators":
+        {
+            "rank": 7
         },
         "custom":
         {
