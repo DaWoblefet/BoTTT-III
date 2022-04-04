@@ -681,7 +681,7 @@ exports.commands = {
 
 	mish: function(arg, by, room) {
 		if (room === 'vgc') return false;
-		this.say(room, "mish mish");
+		this.say(room, "get MISHED kiddo");
 
 		if (Math.floor(Math.random() * 10) === 1) { // 10% chance to roll
 			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
@@ -827,8 +827,14 @@ exports.commands = {
 		this.say(room, text);
 	},
 	dynamax: async function(arg, by, room) {
-		arg = arg.toLowerCase().replace("'", "");
-		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + arg + ".gif";
+		let arglist = arg.split(', ');
+		arglist[0] = arglist[0].toLowerCase().replace("'", "");
+		let pokemonSprite = "https://play.pokemonshowdown.com/sprites";
+		if (arglist[1] && arglist[1] === 'afd') {
+			pokemonSprite += '/afd/' + arglist[0] + ".png";
+		} else {
+			pokemonSprite += '/ani/' + arglist[0] + ".gif";
+		}
 
 		let probe = require('probe-image-size');
 		let height;
