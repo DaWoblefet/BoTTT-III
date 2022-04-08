@@ -405,9 +405,12 @@
         "tourname": "[Gen 8] Shuckle Shimmy",
         "tourrules": "-All Pokemon, +Shuckle, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
         "formatname": "Shuckle Shimmy",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Shuckle Shimmy! Only Shuckle is allowed."
+        "formatDescription": "Shuckle Shimmy! Only Shuckle is allowed.",
+        "sampleTeams":
+        [
+            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"]
+        ],
+        "tournote": ""
     },
     "gen8doggyduel":
     {
