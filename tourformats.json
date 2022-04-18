@@ -408,7 +408,8 @@
         "formatDescription": "Shuckle Shimmy! Only Shuckle is allowed.",
         "sampleTeams":
         [
-            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"]
+            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"],
+            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/2d48a5b31e03314b", "Choice Band Shuckle"]
         ],
         "tournote": ""
     },
