@@ -446,6 +446,16 @@
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
     },
+    "gen8vgc2022eternamax":
+    {
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] VGC 2022 (with Eternamax)",
+        "tourrules": "+Eternatus-Eternamax, -Eternatus-Eternamax+Substitute",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2022, but Eternamax is legal as one of your restricted Pokemon!"
+    },
     "gen8vgc2022nodynamax":
     {
         "tourformat": "gen8vgc2022",
