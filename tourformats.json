@@ -408,7 +408,8 @@
         "formatDescription": "Shuckle Shimmy! Only Shuckle is allowed.",
         "sampleTeams":
         [
-            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"]
+            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"],
+            ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/2d48a5b31e03314b", "Choice Band Shuckle"]
         ],
         "tournote": ""
     },
@@ -444,6 +445,16 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
+    },
+    "gen8vgc2022eternamax":
+    {
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] VGC 2022 (with Eternamax)",
+        "tourrules": "+Eternatus-Eternamax, -Eternatus-Eternamax+Substitute",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2022, but Eternamax is legal as one of your restricted Pokemon!"
     },
     "gen8vgc2022nodynamax":
     {

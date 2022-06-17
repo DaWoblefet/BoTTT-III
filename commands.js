@@ -342,6 +342,9 @@ exports.commands = {
 			case "vgc inverse":
 				tourObject = tourJSON["gen8inversevgc"];
 				break;
+			case "eternamax":
+				tourObject = tourJSON["gen8vgc2022eternamax"];
+				break;
 			case "99":
 			case "vgc99":
 			case "series99":
