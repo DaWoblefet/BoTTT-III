@@ -326,8 +326,9 @@ exports.parse = {
 			}
 		}
 	},
-	say: function(room, text) {
+	say: function(room, text, stripCommands = false) {
 		text = "" + text; // ensure it's a string
+		if (stripCommands) text = this.stripCommands(text);
 		let msg;
 		if (room.charAt(0) !== ',') {
 			msg = room + '|' + text;
@@ -340,6 +341,22 @@ exports.parse = {
 				msg = "|/pm " + room + ", " + text[i];
 				send(msg);
 			}
+		}
+	},
+
+	// Prevent the bot from being fed commands to say maliciously
+	stripCommands: function(text) {
+		text = text.trim();
+		switch (text.charAt(0)) {
+			case '/':
+				return '/' + text;
+			case '!':
+				return '!' + text;
+			case '>':
+				if (text.substr(0, 3) === ">> " || text.substr(0, 4) === ">>> ") return " " + text;
+				// fall through
+			default:
+				return text;
 		}
 	},
 

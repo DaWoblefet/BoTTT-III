@@ -11,6 +11,7 @@
 const { inspect } = require("util");
 const axios = require("axios");
 const tourJSON = require("./tourformats.json");
+const STRIP_COMMANDS = true;
 
 exports.commands = {
 	// Information/Help Commands
@@ -127,7 +128,7 @@ exports.commands = {
 	// Tells the bot something to say, and it says it. Won't say commands.
 	tell: "say",
 	say: function(arg, by, room) {
-		this.say(room, stripCommands(arg));
+		this.say(room, arg, STRIP_COMMANDS);
 	},
 
 	// Creates a tournament with custom options. Sample teams are provided for each format when applicable.
@@ -471,7 +472,7 @@ exports.commands = {
 			send("|/pm " + toID(by) +  ", You entered an invalid insult number, probably. Valid insult numbers are 0-" + (insultList.length - 1) + ".");
 		}
 
-		this.say(room, text);
+		this.say(room, text, STRIP_COMMANDS);
 	},
 
 	// Randomly picks one of my very funny jokes.
@@ -561,7 +562,7 @@ exports.commands = {
 			send("|/pm " + toID(by) + ", You entered an invalid joke number, probably. Valid joke numbers are 0-" + (jokeList.length - 1) + ".");
 		}
 
-		this.say(room, text);
+		this.say(room, text, STRIP_COMMANDS);
 	},
 
 	// Displays a notice in case I need to tweak the bot.
@@ -821,10 +822,7 @@ exports.commands = {
 		else {
 			text = bEmoji;
 		}
-		if (room.charAt(0) != ",") {
-			text = "/addhtmlbox " + text;
-		}
-		this.say(room, text);
+		this.say(room, text, STRIP_COMMANDS);
 	},
 	bacon: function(arg, by, room) {
 		let text = '/addhtmlbox <img src = "https://play.pokemonshowdown.com/sprites/ani-shiny/yveltal.gif" width = 201 height = 188>';

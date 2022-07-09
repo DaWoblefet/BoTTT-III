@@ -59,22 +59,6 @@ global.toID = function(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]/g, "");
 };
 
-// Prevent the bot from being fed commands to say maliciously
-global.stripCommands = function(text) {
-	text = text.trim();
-	switch (text.charAt(0)) {
-		case '/':
-			return '/' + text;
-		case '!':
-			return '!' + text;
-		case '>':
-			if (text.substr(0, 3) === ">> " || text.substr(0, 4) === ">>> ") return " " + text;
-			// fall through
-		default:
-			return text;
-	}
-};
-
 // Check if everything that is needed is available
 try {
 	require("colors");
