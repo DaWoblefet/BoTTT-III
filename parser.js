@@ -1030,45 +1030,5 @@ exports.parse = {
 
 		return text;
 	},
-	generateBO3Help(isPM) {
-		let text;
-		if (isPM) {
-			text =
-			'<h2 style = "margin: 0; text-align: center;">Best-of-Three Practice</h2> \
-			<p>Sign up to compete with other players in best-of-three VGC practice! [Coming Soon]</p> \
-			<details> \
-				<summary>Sign up for bo3s\</summary> \
-				<ul style = "margin: 0; padding-left: 18px"> \
-					<li>Use <strong>.bo3 add,</strong> [formats] (e.g. <strong>.bo3 add, series8</strong>).</li>\
-					<li>Use commas to add additional formats. For example, <strong>.bo3 add, series8, series9.</strong></li> \
-					<li>You must be in the VGC room to send and receive challenges.</li> \
-				</ul><br> \
-			</details> \
-			<details> \
-				<summary>Search for bo3s</summary> \
-				<ul style = "margin: 0; padding-left: 18px"> \
-					<li>Use <strong>.bo3 search</strong> to challenge another random opponent currently online and in the VGC room.</li>\
-					<li>Alternatively, use <strong>.bo3 view</strong> to view a list of all players participating. You can challenge them individually.</li> \
-				</ul><br> \
-			</details> \
-			<details> \
-				<summary>Remove yourself</summary> \
-				Use <strong>.bo3 remove</strong>.<br> \
-			</details> \
-			<details> \
-				<summary>Change preferences</summary> \
-				<ul style = "margin: 0; padding-left: 18px"> \
-					<li>Use <strong>.bo3 change,</strong> [formats] (e.g. <strong>.bo3 change, series8</strong>).</li>\
-					<li>Use commas to add additional formats. For example, <strong>.bo3 change, series8, series9.</strong></li> \
-					<li>Use <strong>.bo3 remove</strong> to completely take yourself off the list.</li> \
-				</ul><br> \
-			</details> \
-			<details> \
-				<summary>View all players</summary> \
-				Use <strong>.bo3 list</strong>. You can challenge opponents individually, instead of finding a random opponent. \
-			</details>';
-		}
-		return text;
-	},
 	// B emoji: \ud83c\udd71\ufe0f
 };
