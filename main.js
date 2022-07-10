@@ -127,7 +127,6 @@ let WebSocketClient = require("websocket").client;
 global.Commands = require("./commands.js").commands;
 global.Parse = require("./parser.js").parse;
 global.Connection = null;
-global.hasTourStarted = false;
 const MESSAGE_THROTTLE = 300;
 
 let queue = [];
@@ -178,7 +177,6 @@ let connect = function(retry) {
 	ws.on("connectFailed", function(err) {
 		error("Could not connect to server " + config.server + ": " + inspect(err));
 		info("retrying in one minute");
-		hasTourStarted = false;
 
 		setTimeout(function() {connect(true);}, 60000);
 	});
@@ -194,7 +192,6 @@ let connect = function(retry) {
 		con.on("close", function() {
 			error("connection closed: " + inspect(arguments) + " at " + new Date().toLocaleString());
 			info("retrying in " + config.timeout + " seconds");
-			hasTourStarted = false;
 
 			setTimeout(function() {connect(true);}, config.timeout * 1000);
 		});

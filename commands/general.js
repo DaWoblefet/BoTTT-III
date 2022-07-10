@@ -19,7 +19,7 @@ exports.commands = {
 		}
 		this.say(room, text);
 	},
-    
+
 	git: function(arg, by, room) {
 		let text;
 		if (config.git) {
@@ -39,21 +39,12 @@ exports.commands = {
 
 	// Creates a tournament with custom options. Sample teams are provided for each format when applicable.
 	tour: function(arg, by, room) {
-		let arglist = arg.split(', ');
-
-		if (arg === "reset" || arg === "restart") {
-			hasTourStarted = false;
-			this.say(room, "Tournament creation should be working again.");
-			send("|/pm " + toID(by) + ", Please let DaWoblefet know tours were broken.");
-			error("Tour reset was called. Better check it out. " + new Date().toLocaleString());
-			return;
-		}
-
-		if (hasTourStarted) {
+		if (this.tours[room]) {
 			this.say(room, "A tournament has already been started.");
 			return;
 		}
 
+        let arglist = arg.split(', ');
 		let tourformat;
 		let tourname;
 		let tourObject;

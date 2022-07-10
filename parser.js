@@ -39,6 +39,7 @@ exports.parse = {
 	mostRecentUserPM: "DaWoblefet",
 	chatData: {},
 	ranks: {},
+	tours: {},
 	msgQueue: [],
 
 	data: function(data) {
@@ -244,11 +245,9 @@ exports.parse = {
 			case 'l': case 'L': // User leaving the room
 				break;
 			case "tournament":
-				if (spl[2] === "update" || spl[2] === "create") {
-					hasTourStarted = true;
-				}
+				this.tours[room] = true;
 				if (spl[2] === "end" || spl[2] === "forceend") {
-					hasTourStarted = false;
+					this.tours[room] = false;
 				}
 				break;
 			case "html": // HTML was received
