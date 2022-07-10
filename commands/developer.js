@@ -18,6 +18,8 @@ exports.commands = {
 			Commands = require("../commands.js").commands;
 			this.uncacheTree("./parser.js");
 			Parse = require('../parser.js').parse;
+			this.uncacheTree("./aliases.js");
+			Aliases = require('../aliases.js').aliases;
 			this.say(room, "Commands reloaded.");
 		}
 		catch (e) {

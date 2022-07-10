@@ -52,15 +52,15 @@ exports.commands = {
 		const defaultTour = "vgc2022";
 		
 		// Handle default case, double elim, and random format options.
-		arglist[0] = toID(arglist[0]);
-		switch (arglist[0]) {
+		let formatArg = toID(arglist[0]);
+		switch (formatArg) {
 			case "": // No argument specified, use default tour.
-				arglist[0] = defaultTour;
+                formatArg = defaultTour;
 				break;
 			case "double":
 			case "doubleelim":
 			case "doubleelimination":
-				arglist[0] = defaultTour;
+				formatArg = defaultTour;
 				arglist[1] = "elimination";
 				arglist[2] = "128";
 				arglist[3] = "2";
@@ -70,202 +70,31 @@ exports.commands = {
 					this.say(room, "/pm " + by + ", You do not have permission to start official tours.");
 					return;
 				}
-				arglist[0] = defaultTour;
+				formatArg = defaultTour;
 				isOfficial = true;
 				break;
 			case "random":
 			case "randomvgc":
 				let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21"];
-				arglist[0] = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
+				formatArg = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 				break;
 			default:
 				break;
 		}
 
 		// Prepare tournament format.
-		switch (arglist[0]) {
-			case "gscup":
-			case "vgc22":
-			case "vgc2022":
-			case "22":
-			case "2022":
-			case "s12":
-			case "series12":
-				tourObject = tourJSON["gen8vgc2022"];
-				break;
-			case "s11":
-			case "series11":
-			case "8":
-			case "s8":
-			case "series8":
-				tourObject = tourJSON["gen8vgc2021series11"];
-				break;
-			case "s10":
-			case "series10":
-				tourObject = tourJSON["gen8vgc2021series10"];
-				break;
-			case "vgc21":
-			case "vgc2021":
-			case "21":
-			case "7":
-			case "s7":
-			case "series7":
-			case "9":
-			case "s9":
-			case "series9":
-				tourObject = tourJSON["gen8vgc2021series9"];
-				break;
-			case "vgc20":
-			case "vgc2020":
-			case "20":
-			case "5":
-			case "s5":
-			case "series5":
-				tourObject = tourJSON["gen8vgc2020"];
-				break;
-			case "nodynamax":
-			case "nomax":
-				tourObject = tourJSON["gen8vgc2022nodynamax"];
-				break;
-			case "ultra":
-			case "ultraseries":
-			case "vgc19":
-			case "vgc2019":
-			case "19":
-				tourObject = tourJSON["gen7vgc2019ultraseries"];
-				break;
-			case "moon":
-			case "moonseries":
-				tourObject = tourJSON["gen7vgc2019moonseries"];
-				break;
-			case "sun":
-			case "sunseries":
-				tourObject = tourJSON["gen7vgc2019sunseries"];
-				break;
-			case "vgc18":
-			case "vgc2018":
-			case "18":
-				tourObject = tourJSON["gen7vgc2018"];
-				break;
-			case "vgc17":
-			case "vgc2017":
-			case "17":
-				tourObject = tourJSON["gen7vgc2017"];
-				break;
-			case "vgc16":
-			case "vgc2016":
-			case "16":
-				tourObject = tourJSON["gen6vgc2016"];
-				break;
-			case "vgc15":
-			case "vgc2015":
-			case "15":
-				tourObject = tourJSON["gen6vgc2015"];
-				break;
-			case "vgc145":
-			case "vgc20145":
-			case "145":
-				tourObject = tourJSON["gen6vgc2014.5"];
-				break;
-			case "vgc14":
-			case "vgc2014":
-			case "14":
-				tourObject = tourJSON["gen6vgc2014"];
-				break;
-			case "vgc13":
-			case "vgc2013":
-			case "13":
-				tourObject = tourJSON["gen5vgc2013"];
-				break;
-			case "vgc12":
-			case "vgc2012":
-			case "12":
-				tourObject = tourJSON["gen5vgc2012"];
-				break;
-			case "vgc11":
-			case "vgc2011":
-			case "11":
-				tourObject = tourJSON["gen5vgc2011"];
-				break;
-			case "vgc10":
-			case "vgc2010":
-			case "10":
-				tourObject = tourJSON["gen4vgc2010"];
-				break;
-			case "vgc09":
-			case "vgc2009":
-			case "09":
-				tourObject = tourJSON["gen4vgc2009"];
-				break;
-			case "corsola":
-			case "corsolacup":
-				tourObject = tourJSON["gen8corsolacup"];
-				break;
-			case "bulu":
-			case "tapubulu":
-			case "tapubulucup":
-			case "bulucup":
-			case "bulubash":
-				tourObject = tourJSON["gen8bulubash"];
-				break;
-			case "crab":
-			case "craboff":
-				tourObject = tourJSON["gen8craboff"];
-				break;
-			case "chansey":
-			case "chanseycup":
-			case "chanseyclash":
-				tourObject = tourJSON["gen8chanseyclash"];
-				break;
-			case "pikachu":
-			case "pikachucup":
-			case "pikachuparty":
-				tourObject = tourJSON["gen8pikachuparty"];
-				break;
-			case "shuckle":
-			case "shucklecup":
-			case "shuckleshimmy":
-				tourObject = tourJSON["gen8shuckleshimmy"];
-				break;
-			case "dog":
-			case "doggy":
-			case "doggyduel":
-				tourObject = tourJSON["gen8doggyduel"];
-				break;
-			case "bdsp":
-				tourObject = tourJSON["gen8bdspvgc"];
-				break;
-			case "inverse":
-			case "inversevgc":
-			case "vgc inverse":
-				tourObject = tourJSON["gen8inversevgc"];
-				break;
-			case "eternamax":
-				tourObject = tourJSON["gen8vgc2022eternamax"];
-				break;
-			case "99":
-			case "vgc99":
-			case "series99":
-				tourObject = tourJSON["gen8series99"];
-				break;
-			case "hackmons":
-			case "vgchackmons":
-			case "hackmonsvgc":
-				tourObject = tourJSON["gen8vgchackmons"];
-				break;
-			default:
-				if (arglist[0].includes('random') || arglist[0].includes('randbat')) {
-					this.say(room, "Cannot start Random Battle tournaments.");
-					return;
-				} else if (arglist[0].includes('cap')) {
-					this.say(room, "Cannot start CAP tournaments.");
-					return;
-				} else {
-					tourformat = arglist[0];
-					tourname = "";
-				}
-				break;
-		}
+        if (Aliases.hasOwnProperty(formatArg)) {
+            tourObject = tourJSON[Aliases[formatArg]];
+        } else if (formatArg.includes('random') || formatArg.includes('randbat')) {
+            this.say(room, "Cannot start Random Battle tournaments.");
+			return;
+        } else if (formatArg.includes('cap')) {
+            this.say(room, "Cannot start CAP tournaments.");
+            return;
+        } else { // hopefully it's valid
+            tourformat = formatArg;
+			tourname = "";
+        }
 
 		// If no extra settings are specified, make the tour single elim with 128 player cap.
 		if (arglist[1] === undefined) {
@@ -430,19 +259,18 @@ exports.commands = {
 	samples: function(arg, by, room) {
 		let defaultFormat = "gen8vgc2022";
 		let text = "";
+        let formatArg = arg ? arg : defaultFormat;
+        if (Aliases.hasOwnProperty(formatArg)) {
+            formatArg = Aliases[formatArg];
+        }
+        
 		if (this.isPM(room)) {
 			room = toID(config.rooms[0]);
+            this.mostRecentUserPM = toID(by);
 
-			if (tourJSON.hasOwnProperty(arg) && tourJSON[arg].sampleTeams.length) {
-				this.mostRecentUserPM = toID(by);
-				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, true);
-			}
-			else if (arg === "") {
-				this.mostRecentUserPM = toID(by);
-				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, true);
-			}
-			else {
-				this.mostRecentUserPM = toID(by);
+			if (tourJSON.hasOwnProperty(formatArg) && tourJSON[formatArg].sampleTeams.length) {
+				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[formatArg].formatname, tourJSON[formatArg].formatDescription, tourJSON[formatArg].sampleTeams, true, true);
+			} else {
 				text = "/pminfobox " + this.mostRecentUserPM + ", " + "Invalid format specified. Valid formats are: ";
 				let validFormats = [];
 				let keys = Object.keys(tourJSON);
@@ -453,14 +281,9 @@ exports.commands = {
 				}
 				text += "all, " + validFormats.join(", ");
 			}
-		}
-		else if (tourJSON.hasOwnProperty(arg) && tourJSON[arg].sampleTeams.length) {
-			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, false);
-		}
-		else if (arg === "") {
-			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, false);
-		}
-		else if (arg === "all") {
+		} else if (tourJSON.hasOwnProperty(formatArg) && tourJSON[formatArg].sampleTeams.length) {
+			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[formatArg].formatname, tourJSON[formatArg].formatDescription, tourJSON[formatArg].sampleTeams, true, false);
+		} else if (arg === "all") {
 			text = "/addhtmlbox ";
 			let keys = Object.keys(tourJSON);
 			
@@ -469,8 +292,7 @@ exports.commands = {
 					text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false, false);
 				}
 			}
-		}
-		else {
+		} else {
 			text = "/addhtmlbox Invalid format specified. Valid formats are: ";
 			let validFormats = [];
 			let keys = Object.keys(tourJSON);

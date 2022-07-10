@@ -126,6 +126,7 @@ info("starting server");
 let WebSocketClient = require("websocket").client;
 global.Commands = require("./commands.js").commands;
 global.Parse = require("./parser.js").parse;
+global.Aliases = require("./aliases.js").aliases;
 global.Connection = null;
 const MESSAGE_THROTTLE = 300;
 
