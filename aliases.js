@@ -125,4 +125,7 @@ exports.aliases = {
     shuckle: "gen8shuckleshimmy",
     shucklecup: "gen8shuckleshimmy",
     shuckleshimmy: "gen8shuckleshimmy",
+    wooper: "gen8wooperwallop",
+    woopercup: "gen8wooperwallop",
+    wooperwallop: "gen8wooperwallop",
 };

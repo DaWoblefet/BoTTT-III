@@ -413,6 +413,21 @@
         ],
         "tournote": ""
     },
+    "gen8wooperwallop":
+    {
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Wooper Wallop",
+        "tourrules": "-All Pokemon, +Wooper, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Wooper Wallop",
+        "formatDescription": "Wooper Wallop! Only Wooper is allowed.",
+        "sampleTeams":
+        [
+            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/3ccc636f5ce1d1b6", "Choice Band Wooper"],
+            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/e252e6b942153515", "Toxic Infestation Wooper"],
+            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/3499d19ffb0abba0", "Yawn Special Wooper"]
+        ],
+        "tournote": ""
+    },
     "gen8doggyduel":
     {
         "tourformat": "gen8vgc2021",
