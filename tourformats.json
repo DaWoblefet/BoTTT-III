@@ -481,6 +481,16 @@
         "sampleTeams": [],
         "tournote": "VGC 2022, but with no Dynamax or Gigantamax allowed!"
     },
+    "gen8vgc2022series13":
+    {
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] (Maybe VGC 2022) Series 13",
+        "tourrules": "!Limit Two Restricted, +Mythical",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Series 13! Use as many Mythical and Restricted Pokemon as you like!"
+    },
     "gen8series99":
     {
         "tourformat": "gen8vgc2022",

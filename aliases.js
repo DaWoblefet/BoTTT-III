@@ -30,12 +30,16 @@ exports.aliases = {
     s5: "gen8vgc2020",
     series5: "gen8vgc2020",
 
+    s13: 'gen8vgc2022series13',
+    series13: 'gen8vgc2022series13',
+
     nodynamax: "gen8vgc2022nodynamax",
     nomax: "gen8vgc2022nodynamax",
     inverse: "gen8inversevgc",
     inversevgc: "gen8inversevgc",
     vgcinverse: "gen8inversevgc",
     eternamax: "gen8vgc2022eternamax",
+
     99: "gen8series99",
     vgc99: "gen8series99",
     series99: "gen8series99",
