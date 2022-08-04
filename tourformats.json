@@ -483,9 +483,9 @@
     },
     "gen8vgc2022series13":
     {
-        "tourformat": "gen8vgc2022",
+        "tourformat": "gen8battlestadiumdoublesseries13",
         "tourname": "[Gen 8] (Maybe VGC 2022) Series 13",
-        "tourrules": "!Limit Two Restricted, +Mythical",
+        "tourrules": "",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
