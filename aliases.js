@@ -33,8 +33,9 @@ exports.aliases = {
     s13: 'gen8vgc2022series13',
     series13: 'gen8vgc2022series13',
 
-    nodynamax: "gen8vgc2022nodynamax",
-    nomax: "gen8vgc2022nodynamax",
+    nodynamax: "gen8spikemuthcup",
+    nomax: "gen8spikemuthcup",
+    spikemuth: "gen8spikemuthcup",
     inverse: "gen8inversevgc",
     inversevgc: "gen8inversevgc",
     vgcinverse: "gen8inversevgc",

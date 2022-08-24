@@ -481,6 +481,16 @@
         "sampleTeams": [],
         "tournote": "VGC 2022, but with no Dynamax or Gigantamax allowed!"
     },
+    "gen8spikemuthcup":
+    {
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] Spikemuth Cup",
+        "tourrules": "Dynamax Clause",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2021 Series 9, but with no Dynamax or Gigantamax allowed!"
+    },
     "gen8vgc2022series13":
     {
         "tourformat": "gen8battlestadiumdoublesseries13",
