@@ -491,15 +491,15 @@
         "sampleTeams": [],
         "tournote": "VGC 2021 Series 9, but with no Dynamax or Gigantamax allowed!"
     },
-    "gen8vgc2022series13":
+    "gen8battlestadiumdoublesseries13":
     {
         "tourformat": "gen8battlestadiumdoublesseries13",
-        "tourname": "[Gen 8] (Maybe VGC 2022) Series 13",
+        "tourname": "[Gen 8] Battle Stadium Doubles Series 13",
         "tourrules": "",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "Series 13! Use as many Mythical and Restricted Pokemon as you like!"
+        "tournote": "Use as many Mythical and Restricted Pokemon as you like! Series 13 will not be played in official VGC events."
     },
     "gen8series99":
     {

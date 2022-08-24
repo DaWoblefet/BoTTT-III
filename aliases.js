@@ -30,8 +30,8 @@ exports.aliases = {
     s5: "gen8vgc2020",
     series5: "gen8vgc2020",
 
-    s13: 'gen8vgc2022series13',
-    series13: 'gen8vgc2022series13',
+    s13: 'gen8battlestadiumdoublesseries13',
+    series13: 'gen8battlestadiumdoublesseries13',
 
     nodynamax: "gen8spikemuthcup",
     nomax: "gen8spikemuthcup",
