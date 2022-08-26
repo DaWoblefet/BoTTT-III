@@ -486,10 +486,17 @@
         "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] Spikemuth Cup",
         "tourrules": "Dynamax Clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2021 Series 9, but with no Dynamax or Gigantamax allowed!"
+        "formatname": "Spikemuth Cup",
+        "formatDescription": "VGC 2021 Series 9, but with no Dynamax or Gigantamax allowed! With thanks to Zephyl for providing initial sample teams.",
+        "sampleTeams":
+        [
+            ["rillaboom", "volcarona", "landorus", "ninetalesalola", "porygon2", "primarina", "https://pokepast.es/fb9a851bd34c4dc2", "Volc Semiroom Setup"],
+            ["tapufini", "incineroar", "rillaboom", "urshifu", "landorus", "ninetalesalola", "https://pokepast.es/da1a1520cdccebfa", "Standard"],
+            ["glastrier", "incineroar", "porygon2", "rillaboom", "regieleki", "landorus", "https://pokepast.es/8ea078762c7fa63b", "Glastrier TR"],
+            ["spectrier", "regidrago", "incineroar", "whimsicott", "gothitelle", "urshifurapidstrike", "https://pokepast.es/100d1b42f3a27c11", "Hyper offense"],
+            ["incineroar", "gengar", "kartana", "landorus", "zapdosgalar", "tapufini", "https://pokepast.es/6bb208a871f3aaf8", "Goodstuffs"]
+        ],
+        "tournote": ""
     },
     "gen8battlestadiumdoublesseries13":
     {
