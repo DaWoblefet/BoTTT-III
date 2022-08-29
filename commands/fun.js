@@ -112,7 +112,7 @@ exports.commands = {
 			"There is a new government intiative to replace all cars with paper by 2030. This comes after a recently released study showing that 99% of car accidents could be prevented if all vehicles were stationery.",
 			"My brother can't seem to get anything completed. They say he's got a black belt in partial arts.",
 			"Did you hear Old MacDonald had a son in the military? His name was E.I. G.I. Joe.",
-			"What do you call someone who immigrates to Sweden? Artifical Swedener!",
+			"What do you call someone who immigrates to Sweden? Artificial Swedener!",
 			"My son told me he wanted to study burrowing rodents in college. I told him to gopher it!",
 			"In breaking news, the new Peek-a-Boo virus has infected a local baby. The baby was rushed to the ICU.",
 			"I asked a librarian if they had any books about paranoia. Whispering, she replied, \\\\\"They're right behind you\".\\\\",
