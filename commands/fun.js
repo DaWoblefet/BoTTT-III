@@ -175,6 +175,10 @@ exports.commands = {
 		this.say(room, "/addhtmlbox <a href='https://spo.ink/ansena'>ansena's blog</a>");
 	},
 
+	bannbuild: function(arg, by, room) {
+		this.say(room, "Bennbuild has been **banned** from the VGC room, Pokémon Showdown!, the Play Pokémon Program and all other Pokémon related platforms");
+	},
+
 	chef: function(arg, by, room) {
 		this.say(room, "!dt sheer cold");
 	},
