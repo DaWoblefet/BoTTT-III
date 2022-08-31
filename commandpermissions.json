@@ -33,6 +33,10 @@
             {
                 "users": ["ansena"]
             },
+            "bannbuild":
+            {
+                "users": ["bennbuild"]
+            },
             "chef":
             {
                 "users": ["chef17"]
@@ -111,6 +115,10 @@
             "rank": 1
         },
         "bacon":
+        {
+            "rank": 1
+        },
+	"bannbuild":
         {
             "rank": 1
         },
