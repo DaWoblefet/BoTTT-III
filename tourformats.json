@@ -8,11 +8,12 @@
         "formatDescription": "VGC 2022 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, including up to two restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
-            ["zaciancrowned", "groudon", "incineroar", "charizardgmax", "gastrodon", "grimmsnarl", "https://pokepast.es/8ed50920ce2df3ad", "ChongjunVGC's 1st Place Regional Team"],
-            ["zaciancrowned", "palkia", "incineroar", "amoonguss", "thundurus", "grimmsnarl", "https://pokepast.es/229e0b4b20442989", "Susej's 1st Place VR Series 12 Challenge Team"],
-            ["zaciancrowned", "calyrexshadow", "incineroar", "thundurus", "rillaboom", "gastrodon", "https://pokepast.es/1eeb4c92f7f29daa", "Tabu_24's 1st Place Penguin Fundraiser Cup Team"],
-            ["zaciancrowned", "yveltal", "landorustherian", "grimmsnarl", "rotomheat", "gastrodon", "https://pokepast.es/ebf4d7efafb01cb5", "JoeUX9's 1st Place Limitless VGC Kickoff Team"],
-            ["zaciancrowned", "kyogre", "incineroar", "amoonguss", "regieleki", "tornadus", "https://pokepast.es/1f55b1d407f3537a", "Huyubare_Poke's Zacian / Kyogre Standard Team"],
+            ["zaciancrowned", "calyrexshadow", "incineroar", "rillaboom", "gastrodon", "thundurus", "https://pokepast.es/a224c9ee7f04b715", "EmbC's 1st Place Worlds Team"],
+            ["groudon", "lunala", "incineroar", "regieleki", "charizardgmax", "grimmsnarl", "https://pokepast.es/dec878317a9e487d", "KastyTP's 2nd Place Worlds Team"],
+            ["zaciancrowned", "groudon", "incineroar", "charizardgmax", "gastrodon", "grimmsnarl", "https://pokepast.es/8bf63672727d8e50", "Rinya's Top 16 Worlds Team Team"],
+            ["zaciancrowned", "kyogre", "incineroar", "landorustherian", "kartana", "amoonguss", "https://pokepast.es/a7bac809028b7951", "InkVG's Top 16 NAIC Team"],
+            ["dialga", "yveltal", "gyarados", "ferrothorn", "landorustherian", "thundurus", "https://pokepast.es/26349828a2819969", "HamstermaniaCZ's Top 16 Worlds Team"],
+            ["reshiram", "calyrexice", "incineroar", "amoonguss", "gastrodon", "mimikyu", "https://pokepast.es/b83a04da25b60022", "Gilgamesh's Top 8 EUIC Team"],
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2022 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/3695848/", "More VGC 2022 Teams - Smogon"]
         ],
