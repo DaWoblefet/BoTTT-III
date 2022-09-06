@@ -484,9 +484,9 @@
     },
     "gen8spikemuthcup":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8spikemuthcup",
         "tourname": "[Gen 8] Spikemuth Cup",
-        "tourrules": "Dynamax Clause",
+        "tourrules": "",
         "formatname": "Spikemuth Cup",
         "formatDescription": "VGC 2021 Series 9, but with no Dynamax or Gigantamax allowed! With thanks to Zephyl for providing initial sample teams.",
         "sampleTeams":
