@@ -309,7 +309,7 @@
         "tourname": "[Gen 4] VGC 2010",
         "tourrules": "",
 		"formatname": "VGC 2010",
-        "formatDescription": "Two restricted Pokemon are allowed, with no Team Preview! Use [Gen 4] Doubles OU to create a team. Back in real VGC 2010, you could bring different Pokemon to a best-of-three set and even switch around items between games! You could also bring 4 restricted Pokemon, but of course could only use two in one game. On Showdown, you can only bring 4 Pokemon to a match, since there's no Team Preview and there's no support for choosing a Pokemon without Team Preview.",
+        "formatDescription": "Two restricted Pokemon are allowed, with no Team Preview! Back in real VGC 2010, you could bring different Pokemon to a best-of-three set and even switch around items between games! You could also bring 4 restricted Pokemon, but of course could only use two in one game. On Showdown, you can only bring 4 Pokemon to a match, since there's no Team Preview and there's no support for choosing a Pokemon without Team Preview.",
         "sampleTeams":
         [
             ["hariyama", "cresselia", "dialga", "kyogre", "unownx", "unownx", "https://pokepast.es/ff04471f648f6e55", "Ray Rizzo's 1st Place Worlds Team"],
