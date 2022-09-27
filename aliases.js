@@ -133,4 +133,8 @@ exports.aliases = {
     wooper: "gen8wooperwallop",
     woopercup: "gen8wooperwallop",
     wooperwallop: "gen8wooperwallop",
+    oranguru: "gen8oranguruonslaught",
+    harambe: "gen8oranguruonslaught",
+    orangurucup: "gen8oranguruonslaught",
+    oranguruonslaught: "gen8oranguruonslaught",
 };

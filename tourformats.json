@@ -429,6 +429,16 @@
         ],
         "tournote": ""
     },
+    "gen8oranguruonslaught":
+    {
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Oranguru Onslaught",
+        "tourrules": "-All Pokemon, +Oranguru, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Oranguru Onslaught! Only Oranguru is allowed."
+    },
     "gen8doggyduel":
     {
         "tourformat": "gen8vgc2021",
