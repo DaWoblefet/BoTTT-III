@@ -52,6 +52,7 @@ exports.aliases = {
     doggyduel: "gen8doggyduel",
     crab: "gen8craboff",
     craboff: "gen8craboff",
+    halloween: "gen8vgc2022halloween",
 
     // Gen 7 VGC formats
     ultra: "gen7vgc2019ultraseries",

@@ -531,6 +531,19 @@
         "sampleTeams": [],
         "tournote": "Series 99! Use as many Mythical and Restricted Pokemon as you like!"
     },
+    "gen8vgc2022halloween":
+    {
+        "tourformat": "gen8vgc2022",
+        "tourname": "[Gen 8] VGC 2022 (Halloween)",
+        "tourrules": "Force Monotype = Ghost, !Limit Two Restricted, +Mythical, !Min Source Gen",
+        "formatname": "[Gen 8] VGC 2022 (Halloween)",
+        "formatDescription": "VGC 2022, but only Ghost-types are allowed!",
+        "sampleTeams":
+        [
+            ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1", "Halloween Offense"]
+        ],
+        "tournote": ""
+    },
     "gen8vgchackmons":
     {
         "tourformat": "gen8vgc2021",
