@@ -138,4 +138,7 @@ exports.aliases = {
     harambe: "gen8oranguruonslaught",
     orangurucup: "gen8oranguruonslaught",
     oranguruonslaught: "gen8oranguruonslaught",
+    stunfisk: "gen8stunfiskscuffle",
+    stunfiskcup: "gen8stunfiskscuffle",
+    stunfiskscuffle: "gen8stunfiskscuffle",
 };

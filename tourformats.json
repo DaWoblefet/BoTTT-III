@@ -439,6 +439,16 @@
         "sampleTeams": [],
         "tournote": "Oranguru Onslaught! Only Oranguru is allowed."
     },
+    "gen8stunfiskscuffle":
+    {
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Stunfisk Scuffle",
+        "tourrules": "-All Pokemon, +Stunfisk, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Stunfisk Scuffle! Only Stunfisk (both Unovan and Galarian) is allowed."
+    },
     "gen8doggyduel":
     {
         "tourformat": "gen8vgc2021",
