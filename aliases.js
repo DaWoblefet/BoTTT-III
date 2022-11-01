@@ -30,9 +30,6 @@ exports.aliases = {
     s5: "gen8vgc2020",
     series5: "gen8vgc2020",
 
-    s13: 'gen8battlestadiumdoublesseries13',
-    series13: 'gen8battlestadiumdoublesseries13',
-
     nodynamax: "gen8spikemuthcup",
     nomax: "gen8spikemuthcup",
     spikemuth: "gen8spikemuthcup",
@@ -52,7 +49,6 @@ exports.aliases = {
     doggyduel: "gen8doggyduel",
     crab: "gen8craboff",
     craboff: "gen8craboff",
-    halloween: "gen8vgc2022halloween",
 
     // Gen 7 VGC formats
     ultra: "gen7vgc2019ultraseries",
