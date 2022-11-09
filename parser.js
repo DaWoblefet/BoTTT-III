@@ -398,12 +398,12 @@ exports.parse = {
 			// Check if the room has a special user/arg condition for the command
 			if (canUse === 0 && commandsObject["special"][cmd]) {
 				// TODO: make more generic
-				let userList = commandsObject["special"][cmd]["users"];
-				let specialArg = commandsObject["special"][cmd]["arg"];
-				if (specialArg === undefined) {specialArg = "";}
+				if(userID in commandsObject["special"][cmd]){
+					let specialArg = commandsObject["special"][cmd][userID];
 
-				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0) {
-					canUse = 1;
+					if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0) {
+						canUse = 1;
+					}
 				}
 			}			
 		}
