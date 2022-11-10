@@ -15,7 +15,7 @@
             }
         }
     },
-    "vgc":
+    "groupchat-vgc-86646922":
     {
         "roomowners":["blarajan", "dawoblefet", "zeefable"],
         "tour":
@@ -26,42 +26,43 @@
         {
             "tour":
             {
-                "legavgc" : ["vgc13"],
-                "bennbuild" : ["vgc18"]
+                "legavgc": ["vgc13"],
+                "bennbuild": ["vgc18"]
             },
             "blog":
             {
-                "ansena" : []
+                "ansena": []
             },
             "bannbuild":
             {
-                "bennbuild" : []
+                "bennbuild": []
             },
             "chef":
             {
-                "chef17" : []
+                "chef17": [],
+                "tortank23": []
             },
             "platypus":
             {
-                "platypusvgc" : [],
-                "awesomeplatypus" : []
+                "platypusvgc": [],
+                "awesomeplatypus": []
             },
             "nom":
             {
-                "seaco" : []
+                "seaco": []
             },
             "epic":
             {
-                "animus" : [],
-                "joeux9" : []
+                "animus": [],
+                "joeux9": []
             },
             "uno":
             {
-                "dingram" : []
+                "dingram": []
             },
             "mish":
             {
-                "demantoid" : []
+                "demantoid": []
             }
         }
 
@@ -120,7 +121,7 @@
         {
             "rank": 1
         },
-	    "bannbuild":
+        "bannbuild":
         {
             "rank": 2
         },
