@@ -401,7 +401,7 @@ exports.parse = {
 				if(userID in commandsObject["special"][cmd]){
 					let specialArg = commandsObject["special"][cmd][userID];
 
-					if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0) {
+					if (specialArg.indexOf(arg) >= 0) {
 						canUse = 1;
 					}
 				}
