@@ -397,13 +397,12 @@ exports.parse = {
 
 			// Check if the room has a special user/arg condition for the command
 			if (canUse === 0 && commandsObject["special"][cmd]) {
-				// TODO: make more generic
-				let userList = commandsObject["special"][cmd]["users"];
-				let specialArg = commandsObject["special"][cmd]["arg"];
-				if (specialArg === undefined) {specialArg = "";}
-
-				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0) {
-					canUse = 1;
+				if (userID in commandsObject["special"][cmd]) {
+					const specialArgs = commandsObject["special"][cmd][userID];
+					// If an argument is specified, it must match; if there was no argument specified, there needs to be nothing in special arguments either
+					if (specialArgs.includes(arg) || (!arg && !specialArgs.length)) {
+						canUse = 1;
+					}
 				}
 			}			
 		}

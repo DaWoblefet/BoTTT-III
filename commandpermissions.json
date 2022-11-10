@@ -26,40 +26,43 @@
         {
             "tour":
             {
-                "users": ["legavgc"],
-                "arg": ["vgc13"]
+                "legavgc": ["vgc13"],
+                "bennbuild": ["vgc18"]
             },
             "blog":
             {
-                "users": ["ansena"]
+                "ansena": []
             },
             "bannbuild":
             {
-                "users": ["bennbuild"]
+                "bennbuild": []
             },
             "chef":
             {
-                "users": ["chef17"]
+                "chef17": [],
+                "tortank23": []
             },
             "platypus":
             {
-                "users": ["platypusvgc", "awesomeplatypus"]
+                "platypusvgc": [],
+                "awesomeplatypus": []
             },
             "nom":
             {
-                "users": ["seaco"]
+                "seaco": []
             },
             "epic":
             {
-                "users": ["animus", "joeux9"]
+                "animus": [],
+                "joeux9": []
             },
             "uno":
             {
-                "users": ["dingram"]
+                "dingram": []
             },
             "mish":
             {
-                "users": ["demantoid"]
+                "demantoid": []
             }
         }
 
@@ -118,7 +121,7 @@
         {
             "rank": 1
         },
-	"bannbuild":
+        "bannbuild":
         {
             "rank": 2
         },
