@@ -1,4 +1,14 @@
 {
+    "gen9vgc2023":
+    {
+        "tourformat": "gen9doublesou",
+        "tourname": "[Gen 8] VGC 2023 (NOT OFFICIAL)",
+        "tourrules": "Species Clause, Item Clause, Adjust Level = 50, Picked Team Size=4, -Restricted Legendary, -Mythical",
+        "formatname": "VGC 2023 (NOT OFFICIAL)",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Speculated VGC 2023 ruleset; NOT OFFICIAL"
+    },
     "gen8vgc2022":
     {
         "tourformat": "gen8vgc2022",

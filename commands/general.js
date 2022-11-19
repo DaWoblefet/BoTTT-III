@@ -49,7 +49,7 @@ exports.commands = {
 		let tourname;
 		let tourObject;
 		let isOfficial = false;
-		const defaultTour = "vgc2022";
+		const defaultTour = "gen9vgc2023";
 		
 		// Handle default case, double elim, and random format options.
 		let formatArg = toID(arglist[0]);
