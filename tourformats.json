@@ -3,7 +3,7 @@
     {
         "tourformat": "gen9doublesou",
         "tourname": "[Gen 9] VGC 2023 (NOT OFFICIAL)",
-        "tourrules": "Item Clause, Adjust Level = 50, Picked Team Size=4, -Restricted Legendary, -Mythical",
+        "tourrules": "!Gravity Sleep Clause, Item Clause, Adjust Level = 50, Picked Team Size=4, -Restricted Legendary, -Mythical",
         "formatname": "VGC 2023 (NOT OFFICIAL)",
         "formatDescription": "",
         "sampleTeams": [],
