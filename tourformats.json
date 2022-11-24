@@ -1,10 +1,10 @@
 {
     "gen9vgc2023":
     {
-        "tourformat": "gen9doublesou",
-        "tourname": "[Gen 9] VGC 2023 (NOT OFFICIAL)",
-        "tourrules": "!Gravity Sleep Clause, Item Clause, Adjust Level = 50, Picked Team Size=4, -Restricted Legendary, -Mythical",
-        "formatname": "VGC 2023 (NOT OFFICIAL)",
+        "tourformat": "gen9battlestadiumdoubles",
+        "tourname": "[Gen 9] Battle Stadium Doubles (NOT OFFICIAL)",
+        "tourrules": "",
+        "formatname": "Battle Stadium Doubles (NOT OFFICIAL)",
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "Speculated VGC 2023 ruleset; NOT OFFICIAL"
