@@ -50,6 +50,9 @@ exports.commands = {
 		let tourObject;
 		let isOfficial = false;
 		const defaultTour = "vgc2023";
+		const defaultTourType = 'elimination';
+		const defaultTourPlayerCap = 128;
+		const isDoubleElimination = false;
 		
 		// Handle default case, double elim, and random format options.
 		let formatArg = toID(arglist[0]);
@@ -61,9 +64,7 @@ exports.commands = {
 			case "doubleelim":
 			case "doubleelimination":
 				formatArg = defaultTour;
-				arglist[1] = "elimination";
-				arglist[2] = "128";
-				arglist[3] = "2";
+				isDoubleElimination = true;
 				break;
 			case "official":
 				if (!this.hasRank(by, "%@*&#")) {
@@ -96,23 +97,8 @@ exports.commands = {
 			tourname = "";
         }
 
-		// If no extra settings are specified, make the tour single elim with 128 player cap.
-		if (arglist[1] === undefined) {
-			arglist[1] = "elimination";
-		}
-
-		if (arglist[1] === "double") {
-			arglist[1] = "elimination";
-			arglist[2] = "128";
-			arglist[3] = "2";
-		}
-
-		if (arglist[2] === undefined || isNaN(arglist[2])) {
-			arglist[2] = "128";
-		}
-
-		if (arglist[3] === undefined|| isNaN(arglist[3])) {
-			arglist[3] = "1";
+		if (['double', 'doubleelim', 'doubleelimination'].includes(arglist[1])) {
+			isDoubleElimination = true;
 		}
 
 		if (tourObject) {
@@ -120,7 +106,7 @@ exports.commands = {
 			tourname = tourObject.tourname;
 		}
 		
-		let tourCommand = "/tour create " + tourformat + ", " + arglist[1] + ", " + arglist[2] + ", " + arglist[3];
+		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
 		if (tourname) tourCommand += ", " + tourname;
 		this.say(room, tourCommand);
 		
