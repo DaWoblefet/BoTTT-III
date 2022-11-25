@@ -45,6 +45,10 @@ exports.commands = {
 		}
 
         let arglist = arg.split(', ');
+		if (arglist.length > 2) {
+			this.say(room, "Too many arguments specified.");
+			return;
+		}
 		let tourformat;
 		let tourname;
 		let tourObject;
@@ -52,7 +56,7 @@ exports.commands = {
 		const defaultTour = "vgc2023";
 		const defaultTourType = 'elimination';
 		const defaultTourPlayerCap = 128;
-		const isDoubleElimination = false;
+		let isDoubleElimination = false;
 		
 		// Handle default case, double elim, and random format options.
 		let formatArg = toID(arglist[0]);
