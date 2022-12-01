@@ -1,13 +1,13 @@
 {
     "gen9vgc2023":
     {
-        "tourformat": "gen9battlestadiumdoubles",
-        "tourname": "[Gen 9] Battle Stadium Doubles (NOT OFFICIAL)",
+        "tourformat": "gen9vgc2023series1",
+        "tourname": "[Gen 9] VGC 2023 Series 1",
         "tourrules": "",
-        "formatname": "Battle Stadium Doubles (NOT OFFICIAL)",
+        "formatname": "VGC 2023 Series 1",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "Speculated VGC 2023 ruleset; NOT OFFICIAL"
+        "tournote": ""
     },
     "gen8vgc2022":
     {
