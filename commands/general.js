@@ -129,7 +129,8 @@ exports.commands = {
 			tourRules = tourObject.tourules;
 		}
 		if (isOpenTeamSheet) {
-			tourRules += ", Open Team Sheets";
+			if (tourRules) tourRules += ", ";
+			tourRules += "Open Team Sheets";
 		}
 		if (tourRules) {
 			this.say(room, "/tour rules " + tourObject.tourrules);
