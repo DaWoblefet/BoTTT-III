@@ -75,6 +75,7 @@ exports.commands = {
 			case "openteamsheet":
 				formatArg = defaultTour;
 				isOpenTeamSheet = true;
+				break;
 			case "official":
 				if (!this.hasRank(by, "%@*&#")) {
 					this.say(room, "/pm " + by + ", You do not have permission to start official tours.");
