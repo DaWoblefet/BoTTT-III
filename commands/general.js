@@ -122,18 +122,19 @@ exports.commands = {
 		
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
 		if (tourname) tourCommand += ", " + tourname;
+		if (tourname && isOpenTeamSheet) tourCommand += " (OTS)";
 		this.say(room, tourCommand);
 
 		let tourRules = '';
-		if (tourObject && tourObject.tourules) {
-			tourRules = tourObject.tourules;
+		if (tourObject && tourObject.tourrules) {
+			tourRules = tourObject.tourrules;
 		}
 		if (isOpenTeamSheet) {
 			if (tourRules) tourRules += ", ";
 			tourRules += "Open Team Sheets";
 		}
 		if (tourRules) {
-			this.say(room, "/tour rules " + tourObject.tourrules);
+			this.say(room, "/tour rules " + tourRules);
 		}
 		
 		if (tourObject) {
