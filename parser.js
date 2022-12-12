@@ -470,7 +470,7 @@ exports.parse = {
 		if (msg.startsWith('/raw')) return;
 
 		// This deals with punishing rulebreakers. Note that the bot can't think, however, so it might make mistakes. It will not punish drivers+.
-		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "%@*&#".indexOf(auth) === -1) {
+		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "+%@*&#".indexOf(auth) === -1) {
 			let pointVal = 0;
 			let muteMessage = "";
 
