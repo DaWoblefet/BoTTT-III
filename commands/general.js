@@ -167,9 +167,9 @@ exports.commands = {
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 10;
-		let year = 2022;
-		const defaultFormat = "gen8vgc2022";
+		let month = 1;
+		let year = 2023;
+		const defaultFormat = "gen9vgc2023series1";
 		const defaultRank = "1760";
 		const pikalytics = "https://pikalytics.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/" + defaultFormat + "-1760.txt";
