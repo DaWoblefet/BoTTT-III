@@ -1,5 +1,15 @@
-{
-    "gen9vgc2023":
+{   
+    "gen9vgc2023series2":
+    {
+        "tourformat": "gen9vgc2023series2",
+        "tourname": "[Gen 9] VGC 2023 Series 2",
+        "tourrules": "",
+        "formatname": "VGC 2023 Series 2",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": ""
+    },
+    "gen9vgc2023series1":
     {
         "tourformat": "gen9vgc2023series1",
         "tourname": "[Gen 9] VGC 2023 Series 1",
