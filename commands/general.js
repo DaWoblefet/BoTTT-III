@@ -57,7 +57,7 @@ exports.commands = {
 		const defaultTourType = 'elimination';
 		const defaultTourPlayerCap = 128;
 		let isDoubleElimination = false;
-		let isOpenTeamSheet = false;
+		let isForceOpenTeamSheet = false;
 		
 		// Handle default case, double elim, and random format options.
 		let formatArg = toID(arglist[0]);
@@ -74,7 +74,7 @@ exports.commands = {
 			case "ots":
 			case "openteamsheet":
 				formatArg = defaultTour;
-				isOpenTeamSheet = true;
+				isForceOpenTeamSheet = true;
 				break;
 			case "official":
 				if (!this.hasRank(by, "%@*&#")) {
@@ -112,7 +112,7 @@ exports.commands = {
 		}
 
 		if (['ots', 'openteamsheet'].includes(arglist[1])) {
-			isOpenTeamSheet = true;
+			isForceOpenTeamSheet = true;
 		}		
 
 		if (tourObject) {
@@ -122,16 +122,16 @@ exports.commands = {
 		
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
 		if (tourname) tourCommand += ", " + tourname;
-		if (tourname && isOpenTeamSheet) tourCommand += " (OTS)";
+		if (tourname && isForceOpenTeamSheet) tourCommand += " (Forced OTS)";
 		this.say(room, tourCommand);
 
 		let tourRules = '';
 		if (tourObject && tourObject.tourrules) {
 			tourRules = tourObject.tourrules;
 		}
-		if (isOpenTeamSheet) {
+		if (isForceOpenTeamSheet) {
 			if (tourRules) tourRules += ", ";
-			tourRules += "Open Team Sheets";
+			tourRules += "Force Open Team Sheets";
 		}
 		if (tourRules) {
 			this.say(room, "/tour rules " + tourRules);
