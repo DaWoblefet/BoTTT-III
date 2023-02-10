@@ -278,6 +278,32 @@ exports.commands = {
 		this.say(room, "/addhtmlbox " + text);
 	},
 
+	clod: "clodsire",
+	clodsire: function(arg, by, room) {
+		let text =
+		'<div style = "width: 590px; margin: auto; margin-bottom: 5px;"> \
+		<a href = "https://www.youtube.com/watch?v=ZVllS9y6mBg" style = "text-align: center; font-size: 200%; display: block; color: black;border: 3px solid black; margin: auto; border-radius: 10px; background-color: #977f7b; padding: 5px 0;"> \
+						<psicon pokemon="wooperpaldea"> \
+						<strong>Applaud the Clod</strong> \
+						<psicon pokemon="wooperpaldea"> \
+		</a> \
+		</div> \
+		<div style = "width: 590px; margin: auto;"> \
+		<div style = "display: inline-block; vertical-align: 50%; padding-right: 10px;"> \
+				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block; padding-bottom: 20px;"> \
+				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block;"> \
+		</div> \
+				<div style = "display: inline-block;"> \
+						<a href = "https://www.youtube.com/watch?v=ZVllS9y6mBg"><img src = "https://cdn.discordapp.com/attachments/501809148329984011/1066534011062718525/applaudtheclod.gif" width="360" height="202"></a> \
+				</div> \
+				<div style = "display: inline-block; vertical-align: 50%; padding-left: 10px;"> \
+						<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="display: block; padding-bottom: 20px;"> \
+						<img class = "fa fa-spin" src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="display: block;"> \
+				</div> \
+		</div>';
+		this.say(room, "/addhtmlbox " + text);
+	},
+
 	thinking: function(arg, by, room) {
 		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=24 height=27>";
 		this.say(room, "/addhtmlbox " + text);
