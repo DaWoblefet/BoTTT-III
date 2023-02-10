@@ -53,7 +53,7 @@ exports.commands = {
 		let tourname;
 		let tourObject;
 		let isOfficial = false;
-		const defaultTour = "gen9vgc2023series2";
+		const defaultTour = "series2";
 		const defaultTourType = 'elimination';
 		const defaultTourPlayerCap = 128;
 		let isDoubleElimination = false;
@@ -94,6 +94,7 @@ exports.commands = {
 		}
 
 		// Prepare tournament format.
+		// TODO fix if the format is not an alias
         if (Aliases.hasOwnProperty(formatArg)) {
             tourObject = tourJSON[Aliases[formatArg]];
         } else if (formatArg.includes('random') || formatArg.includes('randbat')) {
@@ -131,7 +132,7 @@ exports.commands = {
 		}
 		if (isForceOpenTeamSheet) {
 			if (tourRules) tourRules += ", ";
-			tourRules += "Force Open Team Sheets";
+			tourRules += "Force Open Team Sheets, !Open Team Sheets";
 		}
 		if (tourRules) {
 			this.say(room, "/tour rules " + tourRules);
