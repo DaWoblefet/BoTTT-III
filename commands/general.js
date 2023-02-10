@@ -163,6 +163,8 @@ exports.commands = {
 	// Displays recent VGC usage stats. Also works in PM.
 	usgae: "usage",
 	usage: async function(arg, by, room) {
+		this.say(room, 'This command is currently under maintenance. Sorry :(');
+		return;
 		let text = "";
 		let JSONresponse;
 		let wasSuccessful = true;
