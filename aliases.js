@@ -5,7 +5,7 @@ exports.aliases = {
     vgc2023: "gen9vgc2023series2",
 
     series3: "gen9vgc2023series3",
-    s3: "gen9vgc2023series2",
+    s3: "gen9vgc2023series3",
     series2: "gen9vgc2023series2",
     s2: "gen9vgc2023series2",
 
