@@ -330,7 +330,7 @@ exports.commands = {
 	},
 
 	wochien: function(arg, by, room) {
-		let text = "<img src = \"https://cdn.discordapp.com/attachments/325354020539727872/1080499224870912020/wo-chien-was-caught-prerecording-his-latest-reaction-making-v0-ast9wmeozyea1.png\" width=276 height=246 style='border: 1px solid black;'>";
+		let text = "<img src = \"https://i.snipboard.io/W9cDaj.jpg\" width=276 height=246 style='border: 1px solid black;'>";
 		this.say(room, "/addhtmlbox " + text);
 	},
 
