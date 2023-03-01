@@ -1,4 +1,14 @@
 {   
+    "gen9vgc2023series3":
+    {
+        "tourformat": "gen9vgc2023series2",
+        "tourname": "[Gen 9] VGC 2023 Series 3 / Regulation C",
+        "tourrules": "+Sub-Legendary",
+        "formatname": "VGC 2023 Series 3",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": ""
+    },
     "gen9vgc2023series2":
     {
         "tourformat": "gen9vgc2023series2",
