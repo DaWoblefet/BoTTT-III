@@ -1,20 +1,20 @@
 {   
-    "gen9vgc2023series3":
+    "gen9vgc2023regulationc":
     {
-        "tourformat": "gen9vgc2023series2",
-        "tourname": "[Gen 9] VGC 2023 Series 3 / Regulation C",
-        "tourrules": "+Sub-Legendary",
-        "formatname": "VGC 2023 Series 3",
-        "formatDescription": "All Pokemon in the Paldea Pokedex are allowed! This includes the 4 Treasures of Ruin Chien-Pao, Chi-Yu, Ting-Lu, and Wo-Chien.",
+        "tourformat": "gen9vgc2023regulationc",
+        "tourname": "[Gen 9] VGC 2023 Regulation C",
+        "tourrules": "",
+        "formatname": "VGC 2023 Regulation C",
+        "formatDescription": "",
         "sampleTeams": [],
         "tournote": ""
     },
     "gen9vgc2023series2":
     {
         "tourformat": "gen9vgc2023series2",
-        "tourname": "[Gen 9] VGC 2023 Series 2",
+        "tourname": "[Gen 9] VGC 2023 Regulation B",
         "tourrules": "",
-        "formatname": "VGC 2023 Series 2",
+        "formatname": "VGC 2023 Regulation B",
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": ""
