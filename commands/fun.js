@@ -446,6 +446,13 @@ exports.commands = {
 					Yes! \
 				</p> \
 			</details> \
+			<details> \
+			<summary>Hall of Fame</summary> \
+			<p>Since the creation of this Hall of Fame, the following users have defeated me in the National Dex AG Gauntlet:</p> \
+			<ul> \
+				<li>Mean Mice</li> \
+			</ul> \
+			</details> \
 			<div style="clear: both"></div> \
 		</div>';
 		this.say(room, "/adduhtml ndaggauntlet, " + text);
