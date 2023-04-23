@@ -393,4 +393,57 @@ exports.commands = {
 
 		this.say(room, "/addhtmlbox " + text);
 	},
+
+	gauntlet: function(arg, by, room) {
+		let challengeString = "";
+		if (arg === 'start') {
+			challengeString = "I challenge Lobby to a game of National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
+		} else if (arg.startsWith('finish')){
+			const arglist = arg.split(', ');
+			if (arglist.length < 2 || isNaN(arglist[1])) {
+				this.say(room, "/pm " + by + ", You forgot to include the number of wins you finished at.");
+				return;
+			}
+			challengeString = "I finished " + arglist[1] + "-0 vs Lobby in National Dex AG! That means nobody wins the <strong>special prize</strong> :(. Better luck next time!";
+		} else if (!isNaN(arg)) {
+			challengeString = "I am " + arg + "-0 vs Lobby in National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
+		}
+		let text =
+		'<div class="infobox"> \
+			<h1>National Dex AG Gauntlet</h1> \
+			<p><i>Hosted by DaWoblefet</i></p> \
+			<img src="https://play.pokemonshowdown.com/sprites/trainers-custom/dawoblefet.png" style="float: left" height="80" width="80"> \
+			<p>' + challengeString + '</p> \
+			<details open> \
+				<summary>FAQs</summary> \
+				<p> \
+					<strong>How do I participate?</strong> \
+					<br> \
+					Send me a challenge in [Gen 9] National Dex AG! \
+				</p> \
+				<p> \
+					<strong>Why aren\'t you accepting my challenge?</strong> \
+					<br> \
+					I accept challenges on a first-come, first-served basis. If you have played with me many times in the past, I may also give newer players a chance first. I can only play one game at a time, so please be patient! \
+				</p> \
+				<p> \
+					<strong>What is the special prize?</strong> \
+					<br> \
+					You\'ll find out if you win! \
+				</p> \
+				<p> \
+					<strong>Do I have to beat you to win the special prize?</strong> \
+					<br> \
+					Yes, you must defeat me. Ties do not count. \
+				</p> \
+				<p> \
+					<strong>Have you ever been defeated before?</strong> \
+					<br> \
+					Yes! \
+				</p> \
+			</details> \
+			<div style="clear: both"></div> \
+		</div>';
+		this.say(room, "/adduhtml ndaggauntlet, " + text);
+	}
 };
