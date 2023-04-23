@@ -395,6 +395,10 @@ exports.commands = {
 	},
 
 	gauntlet: function(arg, by, room) {
+		if (!arg) {
+			this.say(room, "/pm " + by + ", No argument provided.");
+			return;
+		}
 		let challengeString = "";
 		if (arg === 'start') {
 			challengeString = "I challenge Lobby to a game of National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
@@ -407,13 +411,10 @@ exports.commands = {
 			challengeString = "I finished " + arglist[1] + "-0 vs Lobby in National Dex AG! That means nobody wins the <strong>special prize</strong> :(. Better luck next time!";
 		} else if (!isNaN(arg)) {
 			challengeString = "I am " + arg + "-0 vs Lobby in National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
-		} else {
-			this.say(room, "/pm " + by + ", No argument provided.");
-			return;
 		}
 		let text =
 		'<div class="infobox"> \
-			<h1 style="font-size: 1.5em">National Dex AG Gauntlet</h1> \
+			<h1 style="font-size: 1.75em;">National Dex AG Gauntlet</h1> \
 			<p><i>Hosted by DaWoblefet</i></p> \
 			<img src="https://play.pokemonshowdown.com/sprites/trainers-custom/dawoblefet.png" style="float: left" height="80" width="80"> \
 			<p>' + challengeString + '</p> \
