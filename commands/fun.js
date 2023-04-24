@@ -451,6 +451,7 @@ exports.commands = {
 			<p>Since the creation of this Hall of Fame, the following users have defeated me in the National Dex AG Gauntlet:</p> \
 			<ul> \
 				<li>Mean Mice</li> \
+				<li>abyssalcrusader27</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
