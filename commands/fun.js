@@ -452,6 +452,8 @@ exports.commands = {
 			<ul> \
 				<li>Mean Mice</li> \
 				<li>abyssalcrusader27</li> \
+				<li>Fuckitweballhard</li> \
+				<li>bydy2</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
