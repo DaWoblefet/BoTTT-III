@@ -270,7 +270,7 @@ exports.commands = {
 
 	sample: "samples",
 	samples: function(arg, by, room) {
-		let defaultFormat = "gen8vgc2022";
+		let defaultFormat = "gen9vgc2023regulationc";
 		let text = "";
         let formatArg = arg ? arg : defaultFormat;
         if (Aliases.hasOwnProperty(formatArg)) {
