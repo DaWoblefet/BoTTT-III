@@ -5,8 +5,16 @@
         "tourname": "[Gen 9] VGC 2023 Regulation C",
         "tourrules": "",
         "formatname": "VGC 2023 Regulation C",
-        "formatDescription": "",
-        "sampleTeams": [],
+        "formatDescription": "VGC 2023 Regulation C allows all Pokemon in the Paldea Pokedex, except Miraidon and Koraidon.",
+        "sampleTeams":
+        [
+            ["fluttermane", "arcanine", "palafinhero", "amoonguss", "tinglu", "baxcalibur", "https://pokepast.es/2c0bdebffe469f5a", "Agati's 2nd Place EUIC Team"],
+            ["dondozo", "tatsugiri", "ironbundle", "chiyu", "glimmora", "dragonite", "https://pokepast.es/7b439d1da3e04ede", "Lexar and Cicciott's Top 4 EUIC Team"],
+            ["fluttermane", "ironhands", "chienpao", "amoonguss", "palafinhero", "gothitelle", "https://pokepast.es/2c0bdebffe469f5a", "Gilbo's 1st Place Regionals Team"],
+            ["fluttermane", "greattusk", "ironbundle", "abomasnow", "dragonite", "kingambit", "https://pokepast.es/396356d29a036e00", "Nails's Top 4 Regionals Team"],
+            ["fluttermane", "chiyu", "baxcalibur", "tinglu", "gyarados", "amoonguss", "https://pokepast.es/cd77782d02f493fa", "yoshiandlugia's Top 4 Regionals Team"],
+            ["fluttermane", "greattusk", "torkoal", "jumpluff", "chienpao", "kingambit", "https://pokepast.es/2f671f14ab4bec02", "supahsanti's Fun in the Sun"]
+        ],
         "tournote": ""
     },
     "gen9vgc2023series2":
