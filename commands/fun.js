@@ -411,6 +411,7 @@ exports.commands = {
 			challengeString = "I am " + arg + "-0 vs Lobby in National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
 		} else {
 			this.say(room, "/pm " + by + ", Invalid argument for gauntlet command.");
+			return;
 		}
 		let text =
 		'<div class="infobox"> \
