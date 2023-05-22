@@ -409,6 +409,8 @@ exports.commands = {
 			challengeString = "I finished " + arglist[1] + "-0 vs Lobby in National Dex AG! That means nobody wins the <strong>special prize</strong> :(. Better luck next time!";
 		} else if (!isNaN(parseInt(arg))) {
 			challengeString = "I am " + arg + "-0 vs Lobby in National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
+		} else {
+			this.say(room, "/pm " + by + ", Invalid argument for gauntlet command.");
 		}
 		let text =
 		'<div class="infobox"> \
