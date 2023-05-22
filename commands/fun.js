@@ -395,21 +395,19 @@ exports.commands = {
 	},
 
 	gauntlet: function(arg, by, room) {
-		if (!arg) {
-			this.say(room, "/pm " + by + ", No argument provided.");
-			return;
-		}
 		let challengeString = "";
-		if (arg === 'start') {
+		if (!arg) {
+			challengeString = "The National Dex AG Gauntlet a set of 10 consecutive games. Challengers attempt to beat me in a game of National Dex AG. Defeating me at any point will result in the gauntlet ending for that day and the player winning a <strong>special prize</strong>!";
+		} else if (arg === 'start') {
 			challengeString = "I challenge Lobby to a game of National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
 		} else if (arg.startsWith('finish')){
 			const arglist = arg.split(', ');
-			if (arglist.length < 2 || isNaN(arglist[1])) {
+			if (arglist.length < 2 || isNaN(parseInt(arglist[1]))) {
 				this.say(room, "/pm " + by + ", You forgot to include the number of wins you finished at.");
 				return;
 			}
 			challengeString = "I finished " + arglist[1] + "-0 vs Lobby in National Dex AG! That means nobody wins the <strong>special prize</strong> :(. Better luck next time!";
-		} else if (!isNaN(arg)) {
+		} else if (!isNaN(parseInt(arg))) {
 			challengeString = "I am " + arg + "-0 vs Lobby in National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
 		}
 		let text =
