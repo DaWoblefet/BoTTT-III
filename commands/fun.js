@@ -397,7 +397,7 @@ exports.commands = {
 	gauntlet: function(arg, by, room) {
 		let challengeString = "";
 		if (!arg) {
-			challengeString = "The National Dex AG Gauntlet a set of 10 consecutive games. Challengers attempt to beat me in a game of National Dex AG. Defeating me at any point will result in the gauntlet ending for that day and the player winning a <strong>special prize</strong>!";
+			challengeString = "The National Dex AG Gauntlet is challenge where I attempt to win 10 consecutive games in National Dex AG. Defeating me at any point will result in the gauntlet ending for that day and the player winning a <strong>special prize</strong>!";
 		} else if (arg === 'start') {
 			challengeString = "I challenge Lobby to a game of National Dex AG! If you can defeat me, I'll give you a <strong>special prize</strong>!";
 		} else if (arg.startsWith('finish')){
@@ -449,7 +449,7 @@ exports.commands = {
 				<p> \
 					<strong>Have you ever been defeated before?</strong> \
 					<br> \
-					Yes! \
+					Yes! The Hall of Fame section below catalogs my losses since I started maintaining a list. \
 				</p> \
 			</details> \
 			<details> \
