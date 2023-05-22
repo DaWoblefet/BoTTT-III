@@ -431,6 +431,11 @@ exports.commands = {
 					I accept challenges on a first-come, first-served basis. If you have played with me many times in the past, I may also give newer players a chance first. I can only play one game at a time, so please be patient! \
 				</p> \
 				<p> \
+					<strong>Do you accept rematches?</strong> \
+					<br> \
+					No. There are usually lots of people waiting in line to play, and I want to give as many people a turn as I can. You can rematch in another gauntlet, though! \
+				</p> \
+				<p> \
 					<strong>What is the special prize?</strong> \
 					<br> \
 					You\'ll find out if you win! \
