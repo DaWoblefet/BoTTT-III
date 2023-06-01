@@ -4,6 +4,9 @@ exports.aliases = {
     vgc23: "gen9vgc2023regulationc",
     vgc2023: "gen9vgc2023regulationc",
 
+    regd: "gen9vgc2023regulationd",
+    series4: "gen9vgc2023regulationd",
+    s4: "gen9vgc2023regulationd",
     regc: "gen9vgc2023regulationc",
     series3: "gen9vgc2023regulationc",
     s3: "gen9vgc2023regulationc",
