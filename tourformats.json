@@ -1,9 +1,9 @@
 { 
     "gen9vgc2023regulationd":
     {
-        "tourformat": "gen9vgc2023regulationc",
+        "tourformat": "gen9vgc2023regulationd",
         "tourname": "[Gen 9] VGC 2023 Regulation D",
-        "tourrules": "!Paldea Pokedex, -Walking Wake, -Iron Leaves",
+        "tourrules": "",
         "formatname": "VGC 2023 Regulation D",
         "formatDescription": "",
         "sampleTeams": [],
