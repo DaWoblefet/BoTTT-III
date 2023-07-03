@@ -1,8 +1,8 @@
 exports.aliases = {
     // Gen 9 VGC formats
-    23: "gen9vgc2023regulationc",
-    vgc23: "gen9vgc2023regulationc",
-    vgc2023: "gen9vgc2023regulationc",
+    23: "gen9vgc2023regulationd",
+    vgc23: "gen9vgc2023regulationd",
+    vgc2023: "gen9vgc2023regulationd",
 
     regd: "gen9vgc2023regulationd",
     series4: "gen9vgc2023regulationd",

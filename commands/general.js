@@ -53,7 +53,7 @@ exports.commands = {
 		let tourname;
 		let tourObject;
 		let isOfficial = false;
-		const defaultTour = "series3";
+		const defaultTour = "regd";
 		const defaultTourType = 'elimination';
 		const defaultTourPlayerCap = 128;
 		let isDoubleElimination = false;
