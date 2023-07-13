@@ -464,6 +464,7 @@ exports.commands = {
 				<li>undefeatedAGenius</li> \
 				<li>Elec-ant1234</li> \
 				<li>f1r35t0rm_96</li> \
+				<li>slainey</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
