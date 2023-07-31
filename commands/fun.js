@@ -447,6 +447,11 @@ exports.commands = {
 					Yes, you must defeat me. Ties do not count. \
 				</p> \
 				<p> \
+					<strong>Can I challenge you on an alt?</strong> \
+					<br> \
+					Not if you are trying to trick me into thinking you are somebody else. \
+				</p> \
+				<p> \
 					<strong>Have you ever been defeated before?</strong> \
 					<br> \
 					Yes! The Hall of Fame section below catalogs my losses since I started maintaining a list. \
@@ -465,6 +470,7 @@ exports.commands = {
 				<li>Elec-ant1234</li> \
 				<li>f1r35t0rm_96</li> \
 				<li>slainey</li> \
+				<li>Dregone</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
