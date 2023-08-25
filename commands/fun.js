@@ -474,6 +474,7 @@ exports.commands = {
 				<li>wafflecone67</li> \
 				<li>Future king of ou</li> \
 				<li>Zabertooth Tiger</li> \
+				<li>mardydu</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
