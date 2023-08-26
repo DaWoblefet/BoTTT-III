@@ -59,9 +59,6 @@ exports.aliases = {
     hackmons: "gen8vgchackmons",
     vgchackmons: "gen8vgchackmons",
     hackmonsvgc: "gen8vgchackmons",
-    dog: "gen8doggyduel",
-    doggy: "gen8doggyduel",
-    doggyduel: "gen8doggyduel",
     crab: "gen8craboff",
     craboff: "gen8craboff",
 
