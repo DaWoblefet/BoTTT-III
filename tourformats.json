@@ -494,19 +494,6 @@
         "sampleTeams": [],
         "tournote": "Stunfisk Scuffle! Only Stunfisk (both Unovan and Galarian) is allowed."
     },
-    "gen8doggyduel":
-    {
-        "tourformat": "gen8vgc2021",
-        "tourname": "[Gen 8] Doggy Duel",
-        "tourrules": "!! Min Source Gen = 3, -All Pokemon, +Growlithe, +Arcanine, +Suicune, +Entei, +Electrike, +Manectric, +Lillipup, +Herdier, +Stoutland, +Rockruff, +Lycanroc, +Zygarde-10, +Yamper, +Boltund, +Zacian, +Zamazenta",
-        "formatname": "Doggy Duel",
-        "formatDescription": "Doggy Duel! Only dog-related Pokemon are allowed. Use Series 9 to create your teams in the teambuilder.",
-        "sampleTeams":
-        [
-            ["zaciancrowned", "zamazentacrowned", "arcanine", "suicune", "lycanrocdusk", "zygarde10", "https://pokepast.es/c610bba3accb1e19", "TillDerDill's Team"]
-        ],
-        "tournote": ""
-    },
     "gen8bdspvgc":
     {
         "tourformat": "gen8bdspbattlefestivaldoubles",
