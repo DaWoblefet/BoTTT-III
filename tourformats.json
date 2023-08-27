@@ -499,36 +499,6 @@
         "sampleTeams": [],
         "tournote": "Battle Festival allows VGC-style play in Brilliant Diamond / Shining Pearl; only Pokemon available in BDSP are allowed. Restricted / mythical Pokemon are also not allowed. Please note VGC play will continue officially on Sword/Shield."
     },
-    "gen8inversevgc":
-    {
-        "tourformat": "gen8vgc2022",
-        "tourname": "[Gen 8] VGC 2022 Inverse Battle",
-        "tourrules": "inverse mod",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
-    },
-    "gen8vgc2022eternamax":
-    {
-        "tourformat": "gen8vgc2022",
-        "tourname": "[Gen 8] VGC 2022 (with Eternamax)",
-        "tourrules": "+Eternatus-Eternamax, -Eternatus-Eternamax+Substitute",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2022, but Eternamax is legal as one of your restricted Pokemon!"
-    },
-    "gen8vgc2022nodynamax":
-    {
-        "tourformat": "gen8vgc2022",
-        "tourname": "[Gen 8] VGC 2022 (No Dynamax)",
-        "tourrules": "Dynamax Clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2022, but with no Dynamax or Gigantamax allowed!"
-    },
     "gen8spikemuthcup":
     {
         "tourformat": "gen8spikemuthcup",
@@ -546,26 +516,6 @@
             ["moltresgalar", "tsareena", "weavile", "landorus", "urshifurapidstrike", "volcarona", "https://pokepast.es/6f358063352a9047", "estockelly's Top 100 Ladder Team"]
         ],
         "tournote": ""
-    },
-    "gen8battlestadiumdoublesseries13":
-    {
-        "tourformat": "gen8battlestadiumdoublesseries13",
-        "tourname": "[Gen 8] Battle Stadium Doubles Series 13",
-        "tourrules": "",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Use as many Mythical and Restricted Pokemon as you like! Series 13 will not be played in official VGC events."
-    },
-    "gen8series99":
-    {
-        "tourformat": "gen8vgc2022",
-        "tourname": "[Gen 8] VGC Series 99",
-        "tourrules": "!Limit Two Restricted, +Mythical, +Restricted Legendary, !! Min Source Gen = 5",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Series 99! Use as many Mythical and Restricted Pokemon as you like!"
     },
     "gen8vgchackmons":
     {
