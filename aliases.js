@@ -121,7 +121,6 @@ exports.aliases = {
     2010: "gen4vgc2010",
     vgc09: "gen4vgc2009",
     vgc2009: "gen4vgc2009",
-    09: "gen4vgc2009",
     2009: "gen4vgc2009",
 
     // 1v1 formats
@@ -139,9 +138,9 @@ exports.aliases = {
     shuckle: "gen8shuckleshimmy",
     shucklecup: "gen8shuckleshimmy",
     shuckleshimmy: "gen8shuckleshimmy",
-    wooper: "gen8wooperwallop",
-    woopercup: "gen8wooperwallop",
-    wooperwallop: "gen8wooperwallop",
+    wooper: "gen9wooperwallop",
+    woopercup: "gen9wooperwallop",
+    wooperwallop: "gen9wooperwallop",
     oranguru: "gen8oranguruonslaught",
     harambe: "gen8oranguruonslaught",
     orangurucup: "gen8oranguruonslaught",

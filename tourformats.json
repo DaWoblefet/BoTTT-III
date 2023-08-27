@@ -379,6 +379,16 @@
         ],
         "tournote": ""
     },
+    "gen9wooperwallop":
+    {
+        "tourformat": "gen91v1",
+        "tourname": "[Gen 9] Wooper Wallop",
+        "tourrules": "-All Pokemon, +Wooper, +Focus Sash, +Focus Band, +Quick Claw, +King's Rock, !Evasion Items Clause, !Accuracy Moves Clause, !Endless Battle Clause, !Sleep Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Wooper Wallop",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Wooper Wallop! Only Wooper is allowed."
+    },
     "gen8corsolacup":
     {
         "tourformat": "gen81v1",
@@ -456,21 +466,6 @@
         [
             ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/39f705b23deffd7a", "Power Trick Shell Smash Shuckle"],
             ["shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "shuckle", "https://pokepast.es/2d48a5b31e03314b", "Choice Band Shuckle"]
-        ],
-        "tournote": ""
-    },
-    "gen8wooperwallop":
-    {
-        "tourformat": "gen81v1",
-        "tourname": "[Gen 8] Wooper Wallop",
-        "tourrules": "-All Pokemon, +Wooper, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
-        "formatname": "Wooper Wallop",
-        "formatDescription": "Wooper Wallop! Only Wooper is allowed.",
-        "sampleTeams":
-        [
-            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/3ccc636f5ce1d1b6", "Choice Band Wooper"],
-            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/e252e6b942153515", "Toxic Infestation Wooper"],
-            ["wooper", "wooper", "wooper", "wooper", "wooper", "wooper", "https://pokepast.es/3499d19ffb0abba0", "Yawn Special Wooper"]
         ],
         "tournote": ""
     },
