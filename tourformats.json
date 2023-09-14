@@ -1,4 +1,14 @@
-{ 
+{
+    "gen9vgc2023regulatione":
+    {
+        "tourformat": "gen9vgc2023regulatione",
+        "tourname": "[Gen 9] VGC 2023 Regulation E",
+        "tourrules": "",
+        "formatname": "VGC 2023 Regulation E",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Please note that the full details of Regulation E are not yet confirmed."
+    }, 
     "gen9vgc2023regulationd":
     {
         "tourformat": "gen9vgc2023regulationd",
