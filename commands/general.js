@@ -125,6 +125,7 @@ exports.commands = {
 		
 		if (['bo3', 'bestofthree'].includes(arglist[1])) {
 			isBestOfThree = true;
+			isForceOpenTeamSheet = true;
 		}
 
 		if (tourObject) {
