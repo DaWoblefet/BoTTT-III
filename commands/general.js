@@ -136,7 +136,7 @@ exports.commands = {
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
 		if (tourname) tourCommand += ", " + tourname;
 		if (tourname && isForceOpenTeamSheet) {
-			tourCommand += isBestOfThree ? "(Bo3 OTS)" : "(Forced OTS)";
+			tourCommand += isBestOfThree ? " (Bo3 OTS)" : " (Forced OTS)";
 		}
 		this.say(room, tourCommand);
 
