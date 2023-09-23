@@ -58,6 +58,7 @@ exports.commands = {
 		const defaultTourPlayerCap = 128;
 		let isDoubleElimination = false;
 		let isForceOpenTeamSheet = false;
+		let isBestOfThree = false;
 		
 		// Handle default case, double elim, and random format options.
 		let formatArg = toID(arglist[0]);
@@ -75,6 +76,12 @@ exports.commands = {
 			case "openteamsheet":
 				formatArg = defaultTour;
 				isForceOpenTeamSheet = true;
+				break;
+			case "bo3":
+			case "bestofthree":
+				formatArg = defaultTour;
+				isForceOpenTeamSheet = true;
+				isBestOfThree = true;
 				break;
 			case "official":
 				if (!this.hasRank(by, "%@*&#")) {
@@ -114,7 +121,11 @@ exports.commands = {
 
 		if (['ots', 'openteamsheet'].includes(arglist[1])) {
 			isForceOpenTeamSheet = true;
-		}		
+		}
+		
+		if (['bo3', 'bestofthree'].includes(arglist[1])) {
+			isBestOfThree = true;
+		}
 
 		if (tourObject) {
 			tourformat = tourObject.tourformat;
@@ -123,7 +134,9 @@ exports.commands = {
 		
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
 		if (tourname) tourCommand += ", " + tourname;
-		if (tourname && isForceOpenTeamSheet) tourCommand += " (Forced OTS)";
+		if (tourname && isForceOpenTeamSheet) {
+			tourCommand += isBestOfThree ? "(Bo3 OTS)" : "(Forced OTS)";
+		}
 		this.say(room, tourCommand);
 
 		let tourRules = '';
@@ -132,7 +145,15 @@ exports.commands = {
 		}
 		if (isForceOpenTeamSheet) {
 			if (tourRules) tourRules += ", ";
-			tourRules += "Force Open Team Sheets, !Open Team Sheets";
+			if (tourformat.startsWith("gen9vgc2023")) {
+				tourRules += "Force Open Team Sheets, !Open Team Sheets";
+			} else {
+				tourRules += "Force Open Team Sheets";
+			}
+		}
+		if (isBestOfThree) {
+			if (tourRules) tourRules += ", ";
+			tourRules += "Best of = 3";
 		}
 		if (tourRules) {
 			this.say(room, "/tour rules " + tourRules);
