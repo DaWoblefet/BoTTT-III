@@ -476,6 +476,7 @@ exports.commands = {
 				<li>Zabertooth Tiger</li> \
 				<li>mardydu</li> \
 				<li>1hfkqhwhrelk%◕‿‿◕%</li> \
+				<li>Friendship is key</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
