@@ -146,7 +146,7 @@ exports.commands = {
 		}
 		if (isForceOpenTeamSheet) {
 			if (tourRules) tourRules += ", ";
-			if (tourformat.startsWith("gen9vgc2023")) {
+			if (tourformat.startsWith("gen9vgc202")) {
 				tourRules += "Force Open Team Sheets, !Open Team Sheets";
 			} else {
 				tourRules += "Force Open Team Sheets";
