@@ -38,11 +38,11 @@
     }, 
     "gen9vgc2023regulationc":
     {
-        "tourformat": "gen9vgc2023regulationc",
+        "tourformat": "gen9vgc2023regulationd",
         "tourname": "[Gen 9] VGC 2023 Regulation C",
-        "tourrules": "",
+        "tourrules": "-Charmander, -Charmeleon, -Charizard, -Raichu-Alola, -Diglett-Alola, -Dugtrio-Alola, -Meowth-Alola, -Meowth-Galar, -Persian-Alola, -Growlithe-Hisui, -Arcanine-Hisui, -Slowpoke-Galar, -Slowbro-Galar, -Grimer-Alola, -Muk-Alola, -Voltorb-Hisui, -Electrode-Hisui, -Tauros-Base, -Articuno, -Zapdos, -Moltres, -Cyndaquil, -Quilava, -Typhlosion, -Wooper-Base, -Quagsire, -Slowking-Galar, -Qwilfish-Hisui, -Sneasel-Hisui, -Uxie, -Mesprit, -Azelf, -Heatran, -Cresselia, -Oshawott, -Dewott, -Samurott, -Lilligant-Hisui, -Basculin-White-Striped, -Zorua-Hisui, -Zoroark-Hisui, -Braviary-Hisui, -Tornadus, -Thundurus, -Landorus, -Chespin, -Quilladin, -Chesnaught, -Fennekin, -Braixen, -Delphox, -Froakie, -Frogadier, -Greninja, -Carbink, -Sliggoo-Hisui, -Goodra-Hisui, -Avalugg-Hisui, -Rowlet, -Dartrix, -Decidueye, -Grookey, -Thwackey, -Rillaboom, -Scorbunny, -Raboot, -Cinderace, -Sobble, -Drizzile, -Inteleon, -Perrserker, -Kubfu, -Urshifu, -Regieleki, -Regidrago, -Glastrier, -Spectrier, -Wyrdeer, -Kleavor, -Ursaluna, -Basculegion, -Sneasler, -Overqwil, -Enamorus",
         "formatname": "VGC 2023 Regulation C",
-        "formatDescription": "VGC 2023 Regulation C allows all Pokemon in the Paldea Pokedex, except Miraidon and Koraidon.",
+        "formatDescription": "VGC 2023 Regulation C allowed all Pokemon in the Paldea Pokedex, except Miraidon and Koraidon. Pokemon obtainable only in Pokemon HOME were not usable.",
         "sampleTeams":
         [
             ["fluttermane", "arcanine", "palafinhero", "amoonguss", "tinglu", "baxcalibur", "https://pokepast.es/da7f2602c0355115", "Agati's 2nd Place EUIC Team"],
@@ -52,16 +52,6 @@
             ["fluttermane", "chiyu", "baxcalibur", "tinglu", "gyarados", "amoonguss", "https://pokepast.es/cd77782d02f493fa", "yoshiandlugia's Top 4 Regionals Team"],
             ["fluttermane", "greattusk", "torkoal", "jumpluff", "chienpao", "kingambit", "https://pokepast.es/2f671f14ab4bec02", "supahsanti's Fun in the Sun"]
         ],
-        "tournote": ""
-    },
-    "gen9vgc2023series2":
-    {
-        "tourformat": "gen9vgc2023series2",
-        "tourname": "[Gen 9] VGC 2023 Regulation B",
-        "tourrules": "",
-        "formatname": "VGC 2023 Regulation B",
-        "formatDescription": "",
-        "sampleTeams": [],
         "tournote": ""
     },
     "gen8vgc2022":
@@ -398,6 +388,16 @@
             ["zapdos", "garchomp", "metagross", "abomasnow", "unownx", "unownx", "https://pokepast.es/c1f8b8f932529500", "zerowing's 1st Place Regionals Team"]
         ],
         "tournote": ""
+    },
+    "gen9hitmonchanrps":
+    {
+        "tourformat": "gen91v1",
+        "tourname": "[Gen 9] Hitmonchan RPS",
+        "tourrules": "-All Pokemon, -All Items, -All Moves, +Hitmonchan, +Upper Hand, +Mach Punch, +Focus Punch, -Iron Fist, -Inner Focus, EV Limits = HP 56-56 / Atk 0-0 / Def 4-4 / Spe 0-0 !! Max Team Size = 1, !! Adjust Level = 50, !Picked Team Size, !Team Preview",
+        "formatname": "Wooper Wallop",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Wooper Wallop! Only Wooper is allowed."
     },
     "gen9wooperwallop":
     {

@@ -146,4 +146,7 @@ exports.aliases = {
     stunfisk: "gen8stunfiskscuffle",
     stunfiskcup: "gen8stunfiskscuffle",
     stunfiskscuffle: "gen8stunfiskscuffle",
+    hitmonchan: "gen9hitmonchanrps",
+    hitmon: "gen9hitmonchanrps",
+    rps: "gen9hitmonchanrps"
 };
