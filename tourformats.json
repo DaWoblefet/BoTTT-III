@@ -395,11 +395,12 @@
         "tourname": "[Gen 9] Hitmonchan RPS",
         "tourrules": "-All Pokemon, -All Items, -All Moves, +Hitmonchan, +Upper Hand, +Mach Punch, +Focus Punch, +Big Nugget, -Iron Fist, -Inner Focus, EV Limits = HP 52-52 / Atk 92-92 / Def 4-4 / Spe 0-0, !! Max Team Size = 1, Adjust Level = 50, !Picked Team Size, !Team Preview",
         "formatname": "Hitmonchan RPS",
-        "formatDescription": "",
-        "sampleTeams": [
+        "formatDescription": "Hitmonchan RPS! You must use this sample team. Upper Hand beats Mach Punch, Mach Punch beats Focus Punch, and Focus Punch beats Upper Hand!",
+        "sampleTeams":
+        [
             ["hitmonchan", "hitmonchan", "hitmonchan", "hitmonchan", "hitmonchan", "hitmonchan", "https://pokepast.es/b85a031d71e70f8f", "Hitmonchan RPS"]
         ],
-        "tournote": ""
+        "tournote": "Hitmonchan RPS! You must use this sample team. Upper Hand beats Mach Punch, Mach Punch beats Focus Punch, and Focus Punch beats Upper Hand!"
     },
     "gen9wooperwallop":
     {
