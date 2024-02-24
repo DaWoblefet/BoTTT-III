@@ -292,7 +292,7 @@ exports.commands = {
 
 	sample: "samples",
 	samples: function(arg, by, room) {
-		let defaultFormat = "gen9vgc2023regulationd";
+		let defaultFormat = "gen9vgc2024regf";
 		let text = "";
         let formatArg = arg ? arg : defaultFormat;
         if (Aliases.hasOwnProperty(formatArg)) {

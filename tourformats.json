@@ -6,22 +6,20 @@
         "tourrules": "",
         "formatname": "VGC 2024 Regulation F",
         "formatDescription": "",
-        "sampleTeams": [],
+        "sampleTeams": [
+            ["incineroar", "gholdengo", "ogerponwellspring", "tornadus", "ragingbolt", "urshifu", "https://pokepast.es/be75bd3316fedc0f", "dimsun's 1st Place Regionals Team"],
+            ["rillaboom", "incineroar", "farigiraf", "fluttermane", "urshifurapidstrike", "ogerponhearthflame", "https://pokepast.es/b37eac7592d6b22f", "Wolfey's 1st Place Regionals Team"],
+            ["ursalunabloodmoon", "incineroar", "fluttermane", "urshifu", "ogerponwellspring", "farigiraf", "https://pokepast.es/1dae6140e92c4bc4", "trobuz's 1st Place Regionals Team"],
+            ["gougingfire", "ogerponwellspring", "kingambit", "rillaboom", "chienpao", "fluttermane", "https://pokepast.es/16a4a187df3a3efe", "Zephyl's Top 4 Regionals Team"],
+            ["amoonguss", "incineroar", "tinglu", "gholdengo", "kommoo", "porygon2", "https://pokepast.es/be75bd3316fedc0f", "riopaser / PokeAlex's Top 8 Place Regionals Team"],
+            ["ironcrown", "indeedeef", "tornadus", "ogerponhearthflame", "fluttermane", "urshifurapidstrike", "https://pokepast.es/5f54f77c8ed667ce", "dimsun / Azazel's Top 8 Regionals Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/sv-rental-teams/", "More Regulation F Teams - Victory Road"]
+        ],
         "tournote": ""
-    }, 
-    "gen9vgc2023regulatione":
-    {
-        "tourformat": "gen9vgc2023regulatione",
-        "tourname": "[Gen 9] VGC 2023 Regulation E",
-        "tourrules": "",
-        "formatname": "VGC 2023 Regulation E",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": ""
-    }, 
+    },
     "gen9vgc2023regulationd":
     {
-        "tourformat": "gen9vgc2023regulationd",
+        "tourformat": "gen9vgc2023regd",
         "tourname": "[Gen 9] VGC 2023 Regulation D",
         "tourrules": "",
         "formatname": "VGC 2023 Regulation D",
@@ -38,7 +36,7 @@
     }, 
     "gen9vgc2023regulationc":
     {
-        "tourformat": "gen9vgc2023regulationd",
+        "tourformat": "gen9vgc2023regd",
         "tourname": "[Gen 9] VGC 2023 Regulation C",
         "tourrules": "-Charmander, -Charmeleon, -Charizard, -Raichu-Alola, -Diglett-Alola, -Dugtrio-Alola, -Meowth-Alola, -Meowth-Galar, -Persian-Alola, -Growlithe-Hisui, -Arcanine-Hisui, -Slowpoke-Galar, -Slowbro-Galar, -Grimer-Alola, -Muk-Alola, -Voltorb-Hisui, -Electrode-Hisui, -Tauros-Base, -Articuno, -Zapdos, -Moltres, -Cyndaquil, -Quilava, -Typhlosion, -Wooper-Base, -Quagsire, -Slowking-Galar, -Qwilfish-Hisui, -Sneasel-Hisui, -Uxie, -Mesprit, -Azelf, -Heatran, -Cresselia, -Oshawott, -Dewott, -Samurott, -Lilligant-Hisui, -Basculin-White-Striped, -Zorua-Hisui, -Zoroark-Hisui, -Braviary-Hisui, -Tornadus, -Thundurus, -Landorus, -Chespin, -Quilladin, -Chesnaught, -Fennekin, -Braixen, -Delphox, -Froakie, -Frogadier, -Greninja, -Carbink, -Sliggoo-Hisui, -Goodra-Hisui, -Avalugg-Hisui, -Rowlet, -Dartrix, -Decidueye, -Grookey, -Thwackey, -Rillaboom, -Scorbunny, -Raboot, -Cinderace, -Sobble, -Drizzile, -Inteleon, -Perrserker, -Kubfu, -Urshifu, -Regieleki, -Regidrago, -Glastrier, -Spectrier, -Wyrdeer, -Kleavor, -Ursaluna, -Basculegion, -Sneasler, -Overqwil, -Enamorus",
         "formatname": "VGC 2023 Regulation C",
