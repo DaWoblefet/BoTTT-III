@@ -166,10 +166,6 @@ exports.commands = {
 	mish: function(arg, by, room) {
 		if (room === 'vgc') return false;
 		this.say(room, "get MISHED kiddo");
-
-		if (Math.floor(Math.random() * 10) === 1) { // 10% chance to roll
-			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
-		}
 	},
     
 	blog: function(arg, by, room) {
@@ -192,7 +188,7 @@ exports.commands = {
 			<img src = "https://i.ibb.co/ws6dDYg/rsz-platypus-png.png" class = "fa fa-spin" width = "100" height = "100"> \
 			<br> \
 			<br> \
-			<img src = "https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif" height = "175" width = "170"> \
+			<img src = "https://i.ibb.co/Zx8JqhM/platypusprowl.gif" height = "175" width = "170"> \
 		</center>';
 		this.say(room, "/addhtmlbox " + text);
 	},
@@ -268,7 +264,7 @@ exports.commands = {
         		<img src = "https://play.pokemonshowdown.com/sprites/ani/quagsire.gif" width="48" height="77" style="transform: scaleX(-1); display: block;"> \
     		</div> \
 			<div style = "display: inline-block;"> \
-				<a href = "https://www.youtube.com/watch?v=buc64u6Q_oA"><img src = "https://cdn.discordapp.com/attachments/656292565242347520/749657145305202748/acquirethesire.gif" width="360" height="202"></a> \
+				<a href = "https://www.youtube.com/watch?v=buc64u6Q_oA"><img src = "https://i.ibb.co/0fjCs5w/acquirethesire.gif" width="360" height="202"></a> \
 			</div> \
 			<div style = "display: inline-block; vertical-align: 50%; padding-left: 10px;"> \
 				<img src = "https://play.pokemonshowdown.com/sprites/ani/quagsire.gif" width="48" height="77" style="display: block; padding-bottom: 20px;"> \
@@ -294,7 +290,7 @@ exports.commands = {
 				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block;"> \
 		</div> \
 				<div style = "display: inline-block;"> \
-						<a href = "https://www.youtube.com/watch?v=ZVllS9y6mBg"><img src = "https://cdn.discordapp.com/attachments/501809148329984011/1066534011062718525/applaudtheclod.gif" width="360" height="202"></a> \
+						<a href = "https://www.youtube.com/watch?v=ZVllS9y6mBg"><img src = "https://i.ibb.co/tht6ykw/applaudtheclod.gif" width="360" height="202"></a> \
 				</div> \
 				<div style = "display: inline-block; vertical-align: 50%; padding-left: 10px;"> \
 						<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="display: block; padding-bottom: 20px;"> \
