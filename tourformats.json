@@ -1,4 +1,14 @@
 {
+    "gen9vgc2024regulationg":
+    {
+        "tourformat": "gen9vgc2024regg",
+        "tourname": "[Gen 9] VGC 2024 Regulation G",
+        "tourrules": "",
+        "formatname": "VGC 2024 Regulation G",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "One restricted legendary is allowed in Regulation G. The format officially starts May 1."
+    },
     "gen9vgc2024regulationf":
     {
         "tourformat": "gen9vgc2024regf",
