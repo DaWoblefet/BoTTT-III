@@ -351,6 +351,11 @@ exports.commands = {
 		this.say(room, text);
 	},
 
+	toothpaste: function(arg, by, room) {
+		let text = '/addhtmlbox <img src = "https://play.pokemonshowdown.com/sprites/ani-shiny/zygarde.gif" width = 96 height = 107>';
+		this.say(room, text);
+	},
+
 	vgc: function(arg, by, room) {
 		let text = 'indeed \ud83c\udd71\ufe0frother, vgc';
 		this.say(room, text);
