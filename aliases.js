@@ -150,5 +150,5 @@ exports.aliases = {
     hitmonchan: "gen9hitmonchanrps",
     hitmon: "gen9hitmonchanrps",
     rps: "gen9hitmonchanrps",
-    cacnea: "gen9cacneattacknea",
+    cacnea: "gen9cacneaattacknea",
 };
