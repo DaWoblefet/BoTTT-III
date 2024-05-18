@@ -397,6 +397,16 @@
         ],
         "tournote": ""
     },
+    "gen9cacneaattacknea":
+    {
+        "tourformat": "gen91v1",
+        "tourname": "[Gen 9] Cacnea Attacknea",
+        "tourrules": "-All Pokemon, +Cacnea, +Focus Sash, +Focus Band, +Quick Claw, +King's Rock, !Evasion Items Clause, !Accuracy Moves Clause, !Endless Battle Clause, !Sleep Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Cacnea Attacknea",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Cacnea Attacknea! Only Cacnea is allowed."
+    },
     "gen9hitmonchanrps":
     {
         "tourformat": "gen91v1",

@@ -149,5 +149,6 @@ exports.aliases = {
     stunfiskscuffle: "gen8stunfiskscuffle",
     hitmonchan: "gen9hitmonchanrps",
     hitmon: "gen9hitmonchanrps",
-    rps: "gen9hitmonchanrps"
+    rps: "gen9hitmonchanrps",
+    cacnea: "gen9cacneattacknea",
 };
