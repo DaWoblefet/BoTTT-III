@@ -217,7 +217,7 @@ let connect = function(retry) {
 		str += chars.charAt(Math.floor(Math.random() * l));
 	}
 
-	let conStr = "ws://" + config.server + ':' + config.port + "/showdown/" + id + '/' + str + "/websocket";
+	let conStr = "wss://" + config.server + ':' + config.port + "/showdown/" + id + '/' + str + "/websocket";
 	info("connecting to " + conStr + " - secondary protocols: " + (config.secprotocols.join(", ") || "none"));
 	ws.connect(conStr, config.secprotocols);
 };

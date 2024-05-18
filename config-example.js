@@ -3,7 +3,7 @@
 /* Websocket server and port the bot should connect to. Check the 'Request URL'
  * of the websocket. If you don't know what that means, just leave this as-is. */
 exports.server = "sim3.psim.us";
-exports.port = 80;
+exports.port = 443;
 
 /* The server ID. This should almost certainly be "showdown", but just in case,
  * check where the AJAX call "goes to" when you log in. For example, on the PS server,
