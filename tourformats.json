@@ -6,7 +6,15 @@
         "tourrules": "",
         "formatname": "VGC 2024 Regulation G",
         "formatDescription": "",
-        "sampleTeams": [],
+        "sampleTeams": [
+            ["miraidon", "incineroar", "ogerponcornerstone", "ursalunabloodmoon", "whimsicott", "farigiraf", "https://pokepast.es/bc75e11fee2077b1f", "blarajan's 1st Place Regionals Team"],
+            ["calyrexice", "incineroar", "amoonguss", "urshifu", "ragingbolt", "gholdengo", "https://pokepast.es/ca98e071e6eeaa74", "marcofiero's Top 4 Regionals Team"],
+            ["zamazentacrowned", "rillaboom", "chienpao", "moltresgalar", "latios", "pelipper", "https://pokepast.es/530c7547f31fdc83", "MichaelDerBeste's 1st Place Regionals Team"],
+            ["terapagosstellar", "ogerponcornerstone", "fluttermane", "chiyu", "amoonguss", "tornadus", "https://pokepast.es/931c1fe7907bb1f0", "Suica's 2nd Place Regionals Team"],
+            ["calyrexshadow", "incineroar", "rillaboom", "clefairy", "urshifurapidstrike", "tornadus", "https://pokepast.es/9bb31eb53c75b856", "Wolfe's 1st Place Honolulu Challenge Team"],
+            ["koraidon", "fluttermane", "chiyu", "amoonguss", "ragingbolt", "tornadus", "https://pokepast.es/37a9a90b73a4a4d7", "Bright Size's Day 2 Regionals Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
+        ],
         "tournote": ""
     },
     "gen9vgc2024regulationf":
