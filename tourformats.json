@@ -1,4 +1,14 @@
 {
+    "gen9vgc2024regulationh":
+    {
+        "tourformat": "gen9vgc2024regh",
+        "tourname": "[Gen 9] VGC 2024 Regulation h",
+        "tourrules": "",
+        "formatname": "VGC 2024 Regulation H",
+        "formatDescription": "VGC 2024 Regulation G allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including one Restricted Legendary Pokemon.",
+        "sampleTeams": [],
+        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
+    },
     "gen9vgc2024regulationg":
     {
         "tourformat": "gen9vgc2024regg",
