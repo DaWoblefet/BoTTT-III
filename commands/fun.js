@@ -164,8 +164,16 @@ exports.commands = {
 	},
 
 	mish: function(arg, by, room) {
-		if (room === 'vgc') return false;
 		this.say(room, "get MISHED kiddo");
+
+		const rand = Math.floor(100 * Math.random());
+		if (rand % 10 === 0) {
+			if (rand > 50) {
+				this.say(room, "!show https://i.ibb.co/TLz2fsn/uh-oh.png");
+			} else {
+				this.say(room, "!show https://www.youtube.com/watch?v=xmp589AZqEE");
+			}
+		}
 	},
     
 	blog: function(arg, by, room) {
