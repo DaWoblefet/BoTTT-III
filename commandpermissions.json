@@ -26,7 +26,8 @@
         {
             "tour":
             {
-                "legavgc": ["vgc13"]
+                "legavgc": ["vgc13"],
+                "bennbuild": ["vgc18"]
             },
             "blog":
             {
