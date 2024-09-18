@@ -93,7 +93,7 @@ exports.commands = {
 				break;
 			case "random":
 			case "randomvgc":
-				let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21", "vgc22"];
+				let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21", "vgc22", "vgc23", "vgc24"];
 				formatArg = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 				break;
 			default:
