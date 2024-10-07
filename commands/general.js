@@ -84,7 +84,7 @@ exports.commands = {
 				isBestOfThree = true;
 				break;
 			case "official":
-				if (!this.hasRank(by, "%@*&#")) {
+				if (!this.hasRank(by, "%@*~#")) {
 					this.say(room, "/pm " + by + ", You do not have permission to start official tours.");
 					return;
 				}

@@ -24,7 +24,7 @@ const MIN_BOLD_LENGTH = 18;
 const MIN_BOLD_PROPORTION = 0.8;
 
 let initial_login = true;
-let ranks = " +^%@*&#";
+let ranks = " +^%@*~#";
 let rankMap = new Map();
 for (let i = 0, len = ranks.length; i < len; i++) {
 	rankMap.set(ranks.charAt(i), i);
@@ -276,7 +276,7 @@ exports.parse = {
 		message = message.trim();
 
 		// Auto-accepts invites to rooms if the global rank is % or higher.
-		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&")) {
+		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*~")) {
 			send("|/join " + message.substr(8));
 		}
 
@@ -597,7 +597,7 @@ exports.parse = {
 				}
 
 				// If the bot has % instead of @ or *, it will default to hourmuting as its highest level of punishment instead of roombanning
-				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#")) {
+				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*~#")) {
 					cmd = "hourmute";
 				}
 
