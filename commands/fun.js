@@ -486,6 +486,7 @@ exports.commands = {
 				<li>mardydu</li> \
 				<li>1hfkqhwhrelk%◕‿‿◕%</li> \
 				<li>Friendship is key</li> \
+				<li>The power of ROCK</li> \
 			</ul> \
 			</details> \
 			<div style="clear: both"></div> \
