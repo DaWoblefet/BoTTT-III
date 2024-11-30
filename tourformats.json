@@ -17,13 +17,13 @@
         "formatname": "VGC 2024 Regulation G",
         "formatDescription": "VGC 2024 Regulation G allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including one Restricted Legendary Pokemon.",
         "sampleTeams": [
-            ["miraidon", "incineroar", "ogerponcornerstone", "ursalunabloodmoon", "whimsicott", "farigiraf", "https://pokepast.es/bc75e11fee2077b1", "blarajan's 1st Place Regionals Team"],
-            ["calyrexice", "incineroar", "amoonguss", "urshifu", "ragingbolt", "gholdengo", "https://pokepast.es/ca98e071e6eeaa74", "marcofiero's Top 4 Regionals Team"],
-            ["zamazentacrowned", "rillaboom", "chienpao", "moltresgalar", "latios", "pelipper", "https://pokepast.es/530c7547f31fdc83", "MichaelDerBeste's 1st Place Regionals Team"],
-            ["terapagosstellar", "ogerponcornerstone", "fluttermane", "chiyu", "amoonguss", "tornadus", "https://pokepast.es/931c1fe7907bb1f0", "Suica's 2nd Place Regionals Team"],
-            ["calyrexshadow", "incineroar", "rillaboom", "clefairy", "urshifurapidstrike", "tornadus", "https://pokepast.es/9bb31eb53c75b856", "Wolfey's 1st Place Honolulu Challenge Team"],
-            ["koraidon", "fluttermane", "chiyu", "amoonguss", "ragingbolt", "tornadus", "https://pokepast.es/37a9a90b73a4a4d7", "Bright Size's Day 2 Regionals Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
+            ["miraidon", "whimsicott", "ogerponhearthflame", "urshifurapidstrike", "ironhands", "farigiraf", "https://pokepast.es/a30d70a02bc41f6f", "ceree's 1st Place Worlds Team"],
+            ["calyrexice", "incineroar", "rillaboom", "urshifurapidstrike", "ragingbolt", "pelipper", "https://pokepast.es/8cf21636d953265c", "pat_con5's 1st Place NAIC Team"],
+            ["terapagosstellar", "chiyu", "fluttermane", "urshifurapidstrike", "ironhands", "grimmsnarl", "https://pokepast.es/c464355e4933b65b", "Aurélien Soula's 2nd Place Regionals Team"],
+            ["zamazentacrowned", "rillaboom", "chienpao", "moltresgalar", "latios", "pelipper", "https://pokepast.es/bd0019441ed522ed", "MichaelDerBeste's Top 4 Worlds Team"],
+            ["calyrexshadow", "incineroar", "rillaboom", "urshifurapidstrike", "ragingbolt", "amoonguss", "https://pokepast.es/c04ed92d1b5f2e2e", "xx_z2z's Top Cut Worlds Team"],
+            ["kyogre", "incineroar", "wochien", "urshifurapidstrike", "grimmsnarl", "ironjugulus", "https://pokepast.es/59543d896b26f688", "tsltang0508's Top 8 NAIC Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
         ],
         "tournote": ""
     },
@@ -41,7 +41,7 @@
             ["gougingfire", "ogerponwellspring", "kingambit", "rillaboom", "chienpao", "fluttermane", "https://pokepast.es/5ef54a4c137c46b2", "Zephyl's Top 4 Regionals Team"],
             ["amoonguss", "incineroar", "tinglu", "gholdengo", "kommoo", "porygon2", "https://pokepast.es/dde0d6a6294caf6d", "riopaser / PokeAlex's Top 8 Place Regionals Team"],
             ["ironcrown", "indeedeef", "tornadus", "ogerponhearthflame", "fluttermane", "urshifurapidstrike", "https://pokepast.es/5f54f77c8ed667ce", "dimsun / Azazel's Top 8 Regionals Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/sv-rental-teams/", "More Regulation F Teams - Victory Road"]
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation F Teams - Victory Road"]
         ],
         "tournote": ""
     },
@@ -58,7 +58,7 @@
             ["fluttermane", "urshifurapidstrike", "tornadus", "landorustherian", "gholdengo", "rillaboom", "https://pokepast.es/b4f4e4cc0685a714", "MattieMooVGC's Top 8 Worlds Team"],
             ["urshifurapidstrike", "ironhands", "amoonguss", "pelipper", "chienpao", "gholdengo", "https://pokepast.es/773614bd74607b9a", "sempra's Top 8 Worlds Team"],
             ["fluttermane", "urshifurapidstrike", "landorustherian", "tornadus", "heatran", "amoonguss", "https://pokepast.es/43d9d8922880cee7", "Robbie35646's 2nd Place Seniors Worlds Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/sv-rental-teams-2023/", "More Regulation D Teams - Victory Road"]
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation D Teams - Victory Road"]
         ],
         "tournote": ""
     }, 
@@ -95,7 +95,7 @@
             ["palkia", "calyrexice", "incineroar", "amoonguss", "tapufini", "porygon2", "https://pokepast.es/f0eb7ee38b0d8e14", "Spurrific's Top 4 NAIC Team"],
             ["zaciancrowned", "kyogre", "tornadus", "landorustherian", "kartana", "amoonguss", "https://pokepast.es/27ffb481f77cc9cb", "InkVG's Top 16 NAIC Team"],
             ["dialga", "yveltal", "gyarados", "ferrothorn", "landorustherian", "thundurus", "https://pokepast.es/26349828a2819969", "HamstermaniaCZ's Top 16 Worlds Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2022 Teams - Victory Road"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2022 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/3695848/", "More VGC 2022 Teams - Smogon"]
         ],
         "tournote": ""
@@ -114,7 +114,7 @@
             ["groudon", "charizardgmax", "venusaurgmax", "grimmsnarl", "porygon2", "incineroar", "https://pokepast.es/ce5f734fa47c4419", "BattleRoom / ck49's 2x Top 6 PCIII NA Qualifier Team"],
             ["zaciancrowned", "dragapult", "coalossalgmax", "urshifurapidstrike", "incineroar", "amoonguss", "https://pokepast.es/374c8fb6795d6a16", "Mike D'Angelo's 2nd Place VR Qualifier Team"],
             ["calyrexice", "indeedeef", "incineroar", "mimikyu", "venusaurgmax", "torkoal", "https://pokepast.es/54ffba2ab35fd141", "Namuko Pro's Top 4 PCIII NA Qualifier Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-8-sample-team-thread-accepting-submissions.3677426/", "More VGC 2021 Teams - Smogon"]
         ],
         "tournote": ""
@@ -132,7 +132,7 @@
             ["calyrexshadow", "tapulele", "whimsicott", "entei", "ditto", "urshifurapidstrike", "https://pokepast.es/077e68dfd0e335a1", "Human's Top 4 Victory Road World Cup Open Team"],
             ["kyogre", "tornadus", "tsareena", "naganadel", "incineroar", "regieleki", "https://pokepast.es/ca72c17690afc7a5", "Chulainn's Top 8 Victory Road World Cup Open Team"],
             ["xerneas", "volcarona", "rillaboom", "regieleki", "indeedeef", "incineroar", "https://pokepast.es/9248793c3b99c54b", "Frigo / Midnights's Top 4 Creators Cup III Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-10-sample-teams-thread-submissions-open.3689153/", "More VGC 2021 Teams - Smogon"]
         ],
         "tournote": ""
@@ -152,7 +152,7 @@
             ["venusaurgmax", "torkoal", "grimmsnarl", "porygon2", "registeel", "landorustherian", "https://pokepast.es/933f7bc0d25d06dc", "Wilfire70's 4th Place Players Cup IV Team"],
             ["coalossalgmax", "dragapult", "urshifurapidstrikegmax", "rillaboomgmax", "togekiss", "incineroar", "https://pokepast.es/8b7f59ae61fae0a6", "marc0fiero's 1st Place VR Circuit Spring Series Team"],
             ["regieleki", "clefairy", "rillaboomgmax", "glastrier", "celesteela", "urshifugmax", "https://pokepast.es/9a51f8cd7c2d3de5", "Liakos's 1st Place Smogon Major Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-9-sample-teams.3682855/", "More VGC 2021 Teams - Smogon"]
         ],
         "tournote": ""
@@ -173,7 +173,7 @@
             ["cinderacegmax", "rillaboomgmax", "milotic", "tyranitar", "incineroar", "clefairy", "https://pokepast.es/1481948857a3d5b7", "Ezrael's Top 6 NA Player's Cup Team"],
             ["rillaboomgmax", "urshifurapidstrikegmax", "porygonz", "duraludon", "togekiss", "talonflame", "https://pokepast.es/7ec261e1fc9bd3a8", "Namuko Pro's Top 16 NA Player's Cup Team"],
             ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "venusaurgmax", "indeedeef", "https://pokepast.es/2abb12ecc02f3618", "TobySxE's 1st Place Regionals Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
     },
@@ -226,7 +226,7 @@
             ["kyogre", "yveltal", "incineroar", "toxicroak", "stakataka", "tapulele", "https://pokepast.es/f1920b826ec13ed8", "Spurrific's 1st Place Regionals Team"],
             ["xerneas", "groudon", "incineroar", "venusaur", "kartana", "heatran", "https://pokepast.es/e490e7d567ecfc72", "Angel Miranda's Top 4 Regionals Team"],
             ["groudon", "yveltal", "incineroar", "venusaur", "stakataka", "tapukoko", "https://pokepast.es/48ba4f586289ec2b", "HamstermaniaCZ's Top 8 Regionals Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/resources/sample-teams-for-vgc-2019-sun-series/", "More Sun Series Samples"]
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/resources/sample-teams-for-vgc-2019-sun-series/", "More Sun Series Samples"]
         ],
         "tournote": ""
     },
