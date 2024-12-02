@@ -4,7 +4,7 @@ exports.aliases = {
     vgc25: "gen9vgc2025regulationg",
     vgc2025: "gen9vgc2025regulationg",
     regh: "gen9vgc2024regulationh",
-    regg: "gen9vgc2024regulationg",
+    regg: "gen9vgc2025regulationg",
     regf: "gen9vgc2024regulationf",
     rege: "gen9vgc2023regulatione",
 
