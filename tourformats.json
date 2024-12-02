@@ -1,21 +1,11 @@
 {
-    "gen9vgc2024regulationh":
+    "gen9vgc2025regulationg":
     {
-        "tourformat": "gen9vgc2024regh",
-        "tourname": "[Gen 9] VGC 2024 Regulation H",
+        "tourformat": "gen9vgc2025regg",
+        "tourname": "[Gen 9] VGC 2025 Regulation G",
         "tourrules": "",
-        "formatname": "VGC 2024 Regulation H",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
-    },
-    "gen9vgc2024regulationg":
-    {
-        "tourformat": "gen9vgc2024regg",
-        "tourname": "[Gen 9] VGC 2024 Regulation G",
-        "tourrules": "",
-        "formatname": "VGC 2024 Regulation G",
-        "formatDescription": "VGC 2024 Regulation G allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including one Restricted Legendary Pokemon.",
+        "formatname": "VGC 2025 Regulation G",
+        "formatDescription": "VGC 2025 Regulation G allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including one Restricted Legendary Pokemon.",
         "sampleTeams": [
             ["miraidon", "whimsicott", "ogerponhearthflame", "urshifurapidstrike", "ironhands", "farigiraf", "https://pokepast.es/a30d70a02bc41f6f", "ceree's 1st Place Worlds Team"],
             ["calyrexice", "incineroar", "rillaboom", "urshifurapidstrike", "ragingbolt", "pelipper", "https://pokepast.es/8cf21636d953265c", "pat_con5's 1st Place NAIC Team"],
@@ -26,6 +16,16 @@
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
         ],
         "tournote": ""
+    },
+    "gen9vgc2024regulationh":
+    {
+        "tourformat": "gen9vgc2024regh",
+        "tourname": "[Gen 9] VGC 2024 Regulation H",
+        "tourrules": "",
+        "formatname": "VGC 2024 Regulation H",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
     },
     "gen9vgc2024regulationf":
     {
