@@ -479,9 +479,7 @@ exports.commands = {
 				<li>Elec-ant1234</li> \
 				<li>f1r35t0rm_96</li> \
 				<li>slainey</li> \
-				<li>Dregone</li> \
 				<li>wafflecone67</li> \
-				<li>Future king of ou</li> \
 				<li>Zabertooth Tiger</li> \
 				<li>mardydu</li> \
 				<li>1hfkqhwhrelk%◕‿‿◕%</li> \
