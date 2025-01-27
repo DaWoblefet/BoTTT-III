@@ -21,7 +21,7 @@
     {
         "tourformat": "gen9vgc2025regg",
         "tourname": "[Gen 9] VGC 2024 Regulation H",
-        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted",
+        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2024 Regulation H",
         "formatDescription": "",
         "sampleTeams": [],
@@ -31,7 +31,7 @@
     {
         "tourformat": "gen9vgc2025regg",
         "tourname": "[Gen 9] VGC 2024 Regulation F",
-        "tourrules": "!Limit One Restricted",
+        "tourrules": "!Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2024 Regulation F",
         "formatDescription": "VGC 2024 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
