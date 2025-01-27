@@ -19,9 +19,9 @@
     },
     "gen9vgc2024regulationh":
     {
-        "tourformat": "gen9vgc2024regh",
+        "tourformat": "gen9vgc2025regg",
         "tourname": "[Gen 9] VGC 2024 Regulation H",
-        "tourrules": "",
+        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted",
         "formatname": "VGC 2024 Regulation H",
         "formatDescription": "",
         "sampleTeams": [],
@@ -29,9 +29,9 @@
     },
     "gen9vgc2024regulationf":
     {
-        "tourformat": "gen9vgc2024regf",
+        "tourformat": "gen9vgc2025regg",
         "tourname": "[Gen 9] VGC 2024 Regulation F",
-        "tourrules": "",
+        "tourrules": "!Limit One Restricted",
         "formatname": "VGC 2024 Regulation F",
         "formatDescription": "VGC 2024 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
@@ -207,7 +207,7 @@
         [
             ["xerneas", "lunala", "smeargle", "incineroar", "stakataka", "tsareena", "https://pokepast.es/dcd39a7c47343e97", "EmbC's 1st Place Australia Internationals Team"],
             ["xerneas", "groudon", "incineroar", "tapukoko", "amoonguss", "volcarona", "https://pokepast.es/219d14b47c930571", "Spurrific's Top 4 Australia Internationals Team"],
-            ["lunala", "groudon", "incineroar", "tapufini", "stakataka", "tsareena", "https://pokepast.es/e5fe7bd11d94cffd", "Lexicon's 2nd Place Regionals Team"],
+            ["lunala", "groudon", "incineroar", "tapufini", "stakataka", "tsareena", "https://pokepast.es/f78158731c190684", "Lexicon's 2nd Place Regionals Team"],
             ["kyogre", "hooh", "ludicolo", "raichu", "incineroar", "ferrothorn", "https://pokepast.es/e57dd4e6e100974d", "Weeblewobs's 1st Place Regionals Team"]
         ],
         "tournote": ""
