@@ -6,7 +6,7 @@ exports.aliases = {
     regh: "gen9vgc2024regulationh",
     regg: "gen9vgc2025regulationg",
     regf: "gen9vgc2024regulationf",
-    rege: "gen9vgc2023regulatione",
+    // rege: "gen9vgc2023regulatione",
 
     24: "gen9vgc2024regulationh",
     vgc24: "gen9vgc2024regulationh",
