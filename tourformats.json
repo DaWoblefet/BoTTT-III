@@ -1,4 +1,14 @@
 {
+    "gen9vgc2025regulationi":
+    {
+        "tourformat": "gen9vgc2025regi",
+        "tourname": "[Gen 9] VGC 2025 Regulation I",
+        "tourrules": "",
+        "formatname": "VGC 2025 Regulation I",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2025 Regulation I allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon."
+    },
     "gen9vgc2025regulationg":
     {
         "tourformat": "gen9vgc2025regg",
