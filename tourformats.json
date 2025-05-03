@@ -11,7 +11,7 @@
     },
     "gen9vgc2025regulationg":
     {
-        "tourformat": "gen9vgc2025regg",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2025 Regulation G",
         "tourrules": "",
         "formatname": "VGC 2025 Regulation G",
@@ -29,7 +29,7 @@
     },
     "gen9vgc2024regulationh":
     {
-        "tourformat": "gen9vgc2025regg",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2024 Regulation H",
         "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2024 Regulation H",
@@ -39,7 +39,7 @@
     },
     "gen9vgc2024regulationf":
     {
-        "tourformat": "gen9vgc2025regg",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2024 Regulation F",
         "tourrules": "!Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2024 Regulation F",
