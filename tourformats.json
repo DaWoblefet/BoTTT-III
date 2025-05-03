@@ -425,6 +425,16 @@
         ],
         "tournote": ""
     },
+    "gen9oricoriooverload":
+    {
+        "tourformat": "gen91v1",
+        "tourname": "[Gen 9] Oricorio Overload",
+        "tourrules": "-All Pokemon, +Oricorio, +Focus Sash, +Focus Band, +Quick Claw, +King's Rock, !Evasion Items Clause, !Accuracy Moves Clause, !Endless Battle Clause, !Sleep Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Oricorio Overload",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Oricorio Overload! Only Oricorio is allowed."
+    },
     "gen9cacneaattacknea":
     {
         "tourformat": "gen91v1",

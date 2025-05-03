@@ -152,4 +152,5 @@ exports.aliases = {
     hitmon: "gen9hitmonchanrps",
     rps: "gen9hitmonchanrps",
     cacnea: "gen9cacneaattacknea",
+    oricorio: "gen9oricoriooverload",
 };
