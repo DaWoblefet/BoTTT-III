@@ -292,7 +292,7 @@ exports.commands = {
 						<psicon pokemon="wooperpaldea"> \
 		</a> \
 		</div> \
-		<div style = "width: 590px; margin: auto;"> \
+		<div style = "width: 590px; margin: auto; margin-bottom: 10px;"> \
 		<div style = "display: inline-block; vertical-align: 50%; padding-right: 10px;"> \
 				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block; padding-bottom: 20px;"> \
 				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block;"> \
