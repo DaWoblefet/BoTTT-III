@@ -9,7 +9,17 @@
         "sampleTeams": [],
         "tournote": "VGC 2025 Regulation I allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon."
     },
-    "gen9vgc2025regulationg":
+    "gen9vgc2024regulationh":
+    {
+        "tourformat": "gen9vgc2024regg",
+        "tourname": "[Gen 9] VGC 2024 Regulation H",
+        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted, -Restricted Legendary",
+        "formatname": "VGC 2024 Regulation H",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
+    },
+    "gen9vgc2024regulationg":
     {
         "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2025 Regulation G",
@@ -26,16 +36,6 @@
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
         ],
         "tournote": ""
-    },
-    "gen9vgc2024regulationh":
-    {
-        "tourformat": "gen9vgc2024regg",
-        "tourname": "[Gen 9] VGC 2024 Regulation H",
-        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted, -Restricted Legendary",
-        "formatname": "VGC 2024 Regulation H",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
     },
     "gen9vgc2024regulationf":
     {
