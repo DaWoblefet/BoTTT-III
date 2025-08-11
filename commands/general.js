@@ -115,6 +115,11 @@ exports.commands = {
 			tourname = "";
         }
 
+		if (tourObject) {
+			tourformat = tourObject.tourformat;
+			tourname = tourObject.tourname;
+		}
+
 		if (['double', 'doubleelim', 'doubleelimination'].includes(arglist[1])) {
 			isDoubleElimination = true;
 		}
@@ -129,11 +134,6 @@ exports.commands = {
 			if (tourformat.startsWith("gen9vgc202")) {
 				isForceOpenTeamSheet = true;
 			}
-		}
-
-		if (tourObject) {
-			tourformat = tourObject.tourformat;
-			tourname = tourObject.tourname;
 		}
 		
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
