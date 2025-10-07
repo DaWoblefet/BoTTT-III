@@ -53,7 +53,7 @@ exports.commands = {
 		let tourname;
 		let tourObject;
 		let isOfficial = false;
-		const defaultTour = "regg";
+		const defaultTour = "regh";
 		const defaultTourType = 'elimination';
 		const defaultTourPlayerCap = 128;
 		let isDoubleElimination = false;
@@ -93,7 +93,7 @@ exports.commands = {
 				break;
 			case "random":
 			case "randomvgc":
-				let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21", "vgc22", "vgc23", "vgc24"];
+				let vgcFormats = ["vgc09", "vgc10", "vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "vgc21", "vgc22", "regc", "regd", "regf", "regg", "regh"];
 				formatArg = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 				break;
 			default:
@@ -115,6 +115,11 @@ exports.commands = {
 			tourname = "";
         }
 
+		if (tourObject) {
+			tourformat = tourObject.tourformat;
+			tourname = tourObject.tourname;
+		}
+
 		if (['double', 'doubleelim', 'doubleelimination'].includes(arglist[1])) {
 			isDoubleElimination = true;
 		}
@@ -125,12 +130,10 @@ exports.commands = {
 		
 		if (['bo3', 'bestofthree'].includes(arglist[1])) {
 			isBestOfThree = true;
-			isForceOpenTeamSheet = true;
-		}
 
-		if (tourObject) {
-			tourformat = tourObject.tourformat;
-			tourname = tourObject.tourname;
+			if (tourformat.startsWith("gen9vgc202")) {
+				isForceOpenTeamSheet = true;
+			}
 		}
 		
 		let tourCommand = "/tour create " + tourformat + ", " + defaultTourType + ", " + defaultTourPlayerCap + ", " + (isDoubleElimination ? 2 : 1);
@@ -284,7 +287,7 @@ exports.commands = {
 	},
 
 	uno: function(arg, by, room) {
-		this.say(room, "/uno create 10");
+		this.say(room, "/uno create");
 		this.say(room, "/uno autostart 30");
 		let timer = toID(by) === "dingram" ? 5 : 10;
 		this.say(room, "/uno timer " + timer);
@@ -292,7 +295,7 @@ exports.commands = {
 
 	sample: "samples",
 	samples: function(arg, by, room) {
-		let defaultFormat = "gen9vgc2024regulationg";
+		let defaultFormat = "gen9vgc2025regulationg";
 		let text = "";
         let formatArg = arg ? arg : defaultFormat;
         if (Aliases.hasOwnProperty(formatArg)) {

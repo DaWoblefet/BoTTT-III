@@ -1,16 +1,17 @@
 exports.aliases = {
     // Gen 9 VGC formats
-    25: "gen9vgc2025regulationg",
-    vgc25: "gen9vgc2025regulationg",
-    vgc2025: "gen9vgc2025regulationg",
-    regh: "gen9vgc2024regulationh",
-    regg: "gen9vgc2025regulationg",
+    25: "gen9vgc2025regulationi",
+    vgc25: "gen9vgc2025regulationi",
+    vgc2025: "gen9vgc2025regulationi",
+    regj: "gen9vgc2025regulationj",
+    regi: "gen9vgc2025regulationi",
+    regh: "gen9vgc2025regulationh",
+    regg: "gen9vgc2024regulationg",
     regf: "gen9vgc2024regulationf",
-    rege: "gen9vgc2023regulatione",
 
-    24: "gen9vgc2024regulationh",
-    vgc24: "gen9vgc2024regulationh",
-    vgc2024: "gen9vgc2024regulationh",
+    24: "gen9vgc2024regulationg",
+    vgc24: "gen9vgc2024regulationg",
+    vgc2024: "gen9vgc2024regulationg",
     23: "gen9vgc2023regulationd",
     vgc23: "gen9vgc2023regulationd",
     vgc2023: "gen9vgc2023regulationd",
@@ -20,9 +21,6 @@ exports.aliases = {
     regc: "gen9vgc2023regulationc",
     series3: "gen9vgc2023regulationc",
     s3: "gen9vgc2023regulationc",
-    regb: "gen9vgc2023series2",
-    series2: "gen9vgc2023series2",
-    s2: "gen9vgc2023series2",
 
     // Gen 8 VGC formats
     gscup: "gen8vgc2022",
@@ -155,4 +153,5 @@ exports.aliases = {
     hitmon: "gen9hitmonchanrps",
     rps: "gen9hitmonchanrps",
     cacnea: "gen9cacneaattacknea",
+    oricorio: "gen9oricoriooverload",
 };

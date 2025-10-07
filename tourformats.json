@@ -1,7 +1,37 @@
 {
-    "gen9vgc2025regulationg":
+    "gen9vgc2025regulationj":
     {
-        "tourformat": "gen9vgc2025regg",
+        "tourformat": "gen9vgc2025regj",
+        "tourname": "[Gen 9] VGC 2025 Regulation J",
+        "tourrules": "",
+        "formatname": "VGC 2025 Regulation J",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2025 Regulation J allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon (including Mythicals)."
+    },
+    "gen9vgc2025regulationi":
+    {
+        "tourformat": "gen9vgc2025regi",
+        "tourname": "[Gen 9] VGC 2025 Regulation I",
+        "tourrules": "",
+        "formatname": "VGC 2025 Regulation I",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2025 Regulation I allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon."
+    },
+    "gen9vgc2025regulationh":
+    {
+        "tourformat": "gen9vgc2025regh",
+        "tourname": "[Gen 9] VGC 2025 Regulation H",
+        "tourrules": "",
+        "formatname": "VGC 2025 Regulation H",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2025 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
+    },
+    "gen9vgc2024regulationg":
+    {
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2025 Regulation G",
         "tourrules": "",
         "formatname": "VGC 2025 Regulation G",
@@ -10,28 +40,18 @@
             ["miraidon", "whimsicott", "ogerponhearthflame", "urshifurapidstrike", "ironhands", "farigiraf", "https://pokepast.es/a30d70a02bc41f6f", "ceree's 1st Place Worlds Team"],
             ["calyrexice", "incineroar", "rillaboom", "urshifurapidstrike", "ragingbolt", "pelipper", "https://pokepast.es/8cf21636d953265c", "pat_con5's 1st Place NAIC Team"],
             ["terapagosstellar", "chiyu", "fluttermane", "urshifurapidstrike", "ironhands", "grimmsnarl", "https://pokepast.es/c464355e4933b65b", "Aurélien Soula's 2nd Place NAIC Team"],
-            ["zamazentacrowned", "rillaboom", "chienpao", "urshifurapidstrike", "fluttermane", "entei", "https://pokepast.es/bd0019441ed522ed", "MichaelDerBeste's Top 4 Worlds Team"],
+            ["zamazentacrowned", "rillaboom", "chienpao", "urshifurapidstrike", "fluttermane", "entei", "https://pokepast.es/bdf321f1edcdca83", "MichaelDerBeste's Top 4 Worlds Team"],
             ["calyrexshadow", "incineroar", "rillaboom", "urshifurapidstrike", "ragingbolt", "amoonguss", "https://pokepast.es/c04ed92d1b5f2e2e", "xx_z2z's Top Cut Worlds Team"],
             ["kyogre", "incineroar", "wochien", "urshifurapidstrike", "grimmsnarl", "ironjugulis", "https://pokepast.es/59543d896b26f688", "tsltang0508's Top 8 NAIC Team"],
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation G Teams - Victory Road"]
         ],
         "tournote": ""
     },
-    "gen9vgc2024regulationh":
-    {
-        "tourformat": "gen9vgc2024regh",
-        "tourname": "[Gen 9] VGC 2024 Regulation H",
-        "tourrules": "",
-        "formatname": "VGC 2024 Regulation H",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2024 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
-    },
     "gen9vgc2024regulationf":
     {
-        "tourformat": "gen9vgc2024regf",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2024 Regulation F",
-        "tourrules": "",
+        "tourrules": "!Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2024 Regulation F",
         "formatDescription": "VGC 2024 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
@@ -207,7 +227,7 @@
         [
             ["xerneas", "lunala", "smeargle", "incineroar", "stakataka", "tsareena", "https://pokepast.es/dcd39a7c47343e97", "EmbC's 1st Place Australia Internationals Team"],
             ["xerneas", "groudon", "incineroar", "tapukoko", "amoonguss", "volcarona", "https://pokepast.es/219d14b47c930571", "Spurrific's Top 4 Australia Internationals Team"],
-            ["lunala", "groudon", "incineroar", "tapufini", "stakataka", "tsareena", "https://pokepast.es/e5fe7bd11d94cffd", "Lexicon's 2nd Place Regionals Team"],
+            ["lunala", "groudon", "incineroar", "tapufini", "stakataka", "tsareena", "https://pokepast.es/f78158731c190684", "Lexicon's 2nd Place Regionals Team"],
             ["kyogre", "hooh", "ludicolo", "raichu", "incineroar", "ferrothorn", "https://pokepast.es/e57dd4e6e100974d", "Weeblewobs's 1st Place Regionals Team"]
         ],
         "tournote": ""
@@ -409,11 +429,21 @@
         "formatDescription": "National Dex in Gen 4, with no Team Preview! Autolevel scaling did not yet exist yet, so Pokemon like Tyranitar are not usable. Back in real VGC 2009, you could bring different Pokemon to a best-of-three set and even switch around items between games! On Showdown, you can only bring 4 Pokemon to a match, since there's no Team Preview and there's no support for choosing a Pokemon without Team Preview.",
         "sampleTeams":
         [
-            ["toxicroak", "empoleon", "snorlax", "salamence", "unownx", "unownx", "https://pokepast.es/1aac6d1f28c4e47a", "Kazayuki Tsuji's 1st Place Worlds Team"],
-            ["smeargle", "dusknoir", "snorlax", "spiritomb", "unownx", "unownx", "https://pokepast.es/e40f21a367dcdcd6", "Diesel's 2nd Place Regionals Team"],
-            ["zapdos", "garchomp", "metagross", "abomasnow", "unownx", "unownx", "https://pokepast.es/c1f8b8f932529500", "zerowing's 1st Place Regionals Team"]
+            ["toxicroak", "empoleon", "snorlax", "salamence", "metagross", "ludicolo", "https://pokepast.es/456414d7617a9557", "Kazayuki Tsuji's 1st Place Worlds Team"],
+            ["smeargle", "dusknoir", "snorlax", "spiritomb", "hariyama", "bronzong", "https://pokepast.es/d09dbf8e1ccd2197", "Diesel's 2nd Place Regionals Team"],
+            ["infernape", "metagross", "togekiss", "snorlax", "cresselia", "empoleon", "https://pokepast.es/fc8d44be1134623a", "OmegaDonut's 1st Place US Nationals Team"]
         ],
         "tournote": ""
+    },
+    "gen9oricoriooverload":
+    {
+        "tourformat": "gen91v1",
+        "tourname": "[Gen 9] Oricorio Overload",
+        "tourrules": "-All Pokemon, +Oricorio, +Focus Sash, +Focus Band, +Quick Claw, +King's Rock, !Evasion Items Clause, !Accuracy Moves Clause, !Endless Battle Clause, !Sleep Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Oricorio Overload",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Oricorio Overload! Only Oricorio is allowed."
     },
     "gen9cacneaattacknea":
     {

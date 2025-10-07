@@ -36,7 +36,8 @@ exports.commands = {
 			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
 			arglist[0] + " is like a cloud. When they disappear, it's a beautiful day!",
 			"I've seen people like " + arglist[0] + " before, but I had to pay an admission.",
-			"Why did " + arglist[0] + " catch hypothermia? They went to see the movie \"Closed for Winter\" at the drive-in theater."
+			"Why did " + arglist[0] + " catch hypothermia? They went to see the movie \"Closed for Winter\" at the drive-in theater.",
+			arglist[0] + " eats peanut butter with a fork."
 		];
 
 		let text = "";
@@ -292,7 +293,7 @@ exports.commands = {
 						<psicon pokemon="wooperpaldea"> \
 		</a> \
 		</div> \
-		<div style = "width: 590px; margin: auto;"> \
+		<div style = "width: 590px; margin: auto; margin-bottom: 10px;"> \
 		<div style = "display: inline-block; vertical-align: 50%; padding-right: 10px;"> \
 				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block; padding-bottom: 20px;"> \
 				<img src = "https://play.pokemonshowdown.com/sprites/gen5/clodsire.png" width="96" height="96" style="transform: scaleX(-1); display: block;"> \
