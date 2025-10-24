@@ -25,9 +25,17 @@
         "tourname": "[Gen 9] VGC 2025 Regulation H",
         "tourrules": "",
         "formatname": "VGC 2025 Regulation H",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2025 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon."
+        "formatDescription": "VGC 2025 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon.",
+        "sampleTeams": [
+            ["gholdengo", "sneasler", "rillaboom", "ninetalesalola", "ursalunabloodmoon", "incineroar", "https://pokepast.es/6616dce7bc4ced09", "Lele's 1st Place Regionals Team"],
+            ["charizard", "torkoal", "porygon2", "incineroar", "jumpluff", "ursaluna", "https://pokepast.es/4d6561780dbd9327", "marcofiero's 1st Place LAIC Team"],
+            ["gholdengo", "dragonite", "rillaboom", "annihilape", "ursalunabloodmoon", "maushold", "https://pokepast.es/16ea0ac32c4eb14e", "zeen's Top 4 Regionals Team"],
+            ["gholdengo", "sneasler", "rillaboom", "ninetalesalola", "dragonite", "arcaninehisui", "https://pokepast.es/a9ba795c80ac91b0", "unironicpanda's Top 4 Regionals Team"],
+            ["gholdengo", "amoonguss", "incineroar", "pelipper", "basculegion", "archaludon", "https://pokepast.es/c222fe71099def23", "Kirans's Top 8 Regionals Team"],
+            ["sneasler", "indeedee", "volarona", "ursalunabloodmoon", "annihilape", "tyranitar", "https://pokepast.es/fd9b045ea864e540", "chuppa / Striider's Top 4 Regionals Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroad.pro/sv-rental-teams/", "More Regulation H Teams - Victory Road"]
+        ],
+        "tournote": ""
     },
     "gen9vgc2024regulationg":
     {
