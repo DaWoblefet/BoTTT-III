@@ -59,7 +59,7 @@
     {
         "tourformat": "gen9vgc2026regf",
         "tourname": "[Gen 9] VGC 2026 Regulation F",
-        "tourrules": "!Limit One Restricted, -Restricted Legendary",
+        "tourrules": "",
         "formatname": "VGC 2026 Regulation F",
         "formatDescription": "VGC 2026 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
