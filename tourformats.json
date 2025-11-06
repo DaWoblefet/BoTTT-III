@@ -55,13 +55,13 @@
         ],
         "tournote": ""
     },
-    "gen9vgc2024regulationf":
+    "gen9vgc2026regulationf":
     {
-        "tourformat": "gen9vgc2024regg",
-        "tourname": "[Gen 9] VGC 2024 Regulation F",
+        "tourformat": "gen9vgc2026regf",
+        "tourname": "[Gen 9] VGC 2026 Regulation F",
         "tourrules": "!Limit One Restricted, -Restricted Legendary",
-        "formatname": "VGC 2024 Regulation F",
-        "formatDescription": "VGC 2024 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
+        "formatname": "VGC 2026 Regulation F",
+        "formatDescription": "VGC 2026 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
             ["incineroar", "gholdengo", "ogerponwellspring", "tornadus", "ragingbolt", "urshifu", "https://pokepast.es/be75bd3316fedc0f", "dimsun's 1st Place Regionals Team"],
             ["rillaboom", "incineroar", "farigiraf", "fluttermane", "urshifurapidstrike", "ogerponhearthflame", "https://pokepast.es/b37eac7592d6b22f", "Wolfey's 1st Place Regionals Team"],
