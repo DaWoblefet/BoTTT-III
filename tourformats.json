@@ -21,9 +21,9 @@
     },
     "gen9vgc2025regulationh":
     {
-        "tourformat": "gen9vgc2025regh",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2025 Regulation H",
-        "tourrules": "",
+        "tourrules": "-Sub-Legendary, -Paradox, -Gouging Fire, -Iron Boulder, -Iron Crown, -Raging Bolt, !Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2025 Regulation H",
         "formatDescription": "VGC 2025 Regulation H allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except Paradox, Legendary, and Mythical Pokemon.",
         "sampleTeams": [
