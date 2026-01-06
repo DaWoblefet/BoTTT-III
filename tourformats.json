@@ -11,9 +11,9 @@
     },
     "gen9vgc2025regulationi":
     {
-        "tourformat": "gen9vgc2025regi",
+        "tourformat": "gen9vgc2026regi",
         "tourname": "[Gen 9] VGC 2025 Regulation I",
-        "tourrules": "",
+        "tourrules": "Open Team Sheets",
         "formatname": "VGC 2025 Regulation I",
         "formatDescription": "",
         "sampleTeams": [],
