@@ -617,7 +617,7 @@
     {
         "tourformat": "gen9vgc2026regf",
         "tourname": "[Gen 9] BUG MONTH VGC",
-        "tourrules": "Force Monotype: Bug",
+        "tourrules": "Force Monotype = Bug",
         "formatname": "BUG MONTH VGC",
         "formatDescription": "",
         "sampleTeams": [],
