@@ -613,6 +613,16 @@
         ],
         "tournote": ""
     },
+    "gen9bugmonthvgc":
+    {
+        "tourformat": "gen9vgc2026regf",
+        "tourname": "[Gen 9] BUG MONTH VGC",
+        "tourrules": "Force Monotype: Bug",
+        "formatname": "BUG MONTH VGC",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "BUG MONTH means you can only use BUGS. It's Reg F but with BUGS."
+    },
     "gen8vgchackmons":
     {
         "tourformat": "gen8vgc2021",
