@@ -1,4 +1,14 @@
 {
+    "championsvgc2026regma":
+    {
+        "tourformat": "gen9championsvgc2026regma",
+        "tourname": "[Champions] VGC 2026 Regulation M-A",
+        "tourrules": "",
+        "formatname": "VGC 2026 Regulation M-A",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": ""
+    },
     "gen9vgc2025regulationj":
     {
         "tourformat": "gen9vgc2025regj",
