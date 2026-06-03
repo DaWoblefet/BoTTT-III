@@ -4,11 +4,11 @@ exports.aliases = {
     ma: "championsvgc2026regma",
 
     // Gen 9 VGC formats
-    25: "gen9vgc2026regulationi",
-    vgc25: "gen9vgc2026regulationi",
-    vgc2025: "gen9vgc2026regulationi",
+    25: "gen9vgc2025regulationi",
+    vgc25: "gen9vgc2025regulationi",
+    vgc2025: "gen9vgc2025regulationi",
     regj: "gen9vgc2025regulationj",
-    regi: "gen9vgc2026regulationi",
+    regi: "gen9vgc2025regulationi",
     regh: "gen9vgc2025regulationh",
     regg: "gen9vgc2024regulationg",
     regf: "gen9vgc2026regulationf",

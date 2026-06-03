@@ -19,15 +19,15 @@
         "sampleTeams": [],
         "tournote": "VGC 2025 Regulation J allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon (including Mythicals)."
     },
-    "gen9vgc2026regulationi":
+    "gen9vgc2025regulationi":
     {
-        "tourformat": "gen9vgc2026regi",
-        "tourname": "[Gen 9] VGC 2025 Regulation I",
+        "tourformat": "gen9vgc2025regi",
+        "tourname": "[Gen 9] VGC 2026 Regulation I",
         "tourrules": "Open Team Sheets",
-        "formatname": "VGC 2025 Regulation I",
+        "formatname": "VGC 2026 Regulation I",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "VGC 2025 Regulation I allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon."
+        "tournote": "VGC 2026 Regulation I allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, including two Restricted Legendary Pokemon."
     },
     "gen9vgc2025regulationh":
     {
@@ -67,9 +67,9 @@
     },
     "gen9vgc2026regulationf":
     {
-        "tourformat": "gen9vgc2026regf",
+        "tourformat": "gen9vgc2024regg",
         "tourname": "[Gen 9] VGC 2026 Regulation F",
-        "tourrules": "",
+        "tourrules": "!Limit One Restricted, -Restricted Legendary",
         "formatname": "VGC 2026 Regulation F",
         "formatDescription": "VGC 2026 Regulation F allows all Pokemon obtainable in Scarlet/Violet, including from the DLCs, except restricted legendaries and Mythical Pokemon.",
         "sampleTeams": [
