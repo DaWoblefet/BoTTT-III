@@ -1,6 +1,7 @@
 exports.aliases = {
     // Champions formats
-    champions: "championsvgc2026regma",
+    champions: "championsvgc2026regmb",
+    mb: "championsvgc2026regmb",
     ma: "championsvgc2026regma",
 
     // Gen 9 VGC formats
