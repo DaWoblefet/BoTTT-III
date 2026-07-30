@@ -5,8 +5,16 @@
         "tourname": "[Champions] VGC 2026 Regulation M-B",
         "tourrules": "",
         "formatname": "VGC 2026 Regulation M-B",
-        "formatDescription": "",
-        "sampleTeams": [],
+        "formatDescription": "VGC 2026 Regulation M-B allowed all Pokemon and items obtainable Pokemon Champions, running from June 17 - August 31, 2026.",
+        "sampleTeams": [
+            ["aerodactylmega", "charizardmegay", "garchomp", "sylveon", "kingambit", "incineroar", "https://champions.karthikb.dev/replica/AUUHR6AESE?view=paste", "zeen ZardY Aero"],
+            ["froslassmega", "scovillainmega", "lycanrocdusk", "sneasler", "basculegion", "kingambit", "https://champions.karthikb.dev/replica/H5JHJYN1GE?view=paste", "Twilite Froslass Scovillian"],
+            ["charizardmegay", "floettemega", "kingambit", "garchomp", "basculegion", "whimsicott", "https://pokepast.es/49f523b61ada17ce", "fortevgc ZardY Floette"],
+            ["delphoxmega", "blastoisemega", "incineroar", "sneasler", "sinistcha", "kingambit", "https://champions.karthikb.dev/replica/X0F0J93G3A?view=paste", "zeen Delphox Blastoise"],
+            ["swampertmega", "venusaurmega", "pelipper", "archaludon", "basculegion", "grimmsnarl", "https://champions.karthikb.dev/replica/DPHCCER15H?view=paste", "Oupas Swampert Venusaur"],
+            ["staraptormega", "tyranitarmega", "excadrill", "milotic", "sinistcha", "gholdengo", "https://pokepast.es/fd9b045ea864e540", "YoshimaP Staraptor Tyranitar"],
+            ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/3785112/", "More Regulation M-B Teams - Smogon"]
+        ],
         "tournote": ""
     },
     "championsvgc2026regma":
